@@ -1,6 +1,6 @@
 ---
-title: Estensione del metamodello predefinito
-description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di Automated forms conversion.
+title: Estendere il metamodello predefinito
+description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di Automated forms conversion (AFCS).
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
 
-# Estensione del metamodello predefinito {#extend-the-default-meta-model}
+# Estendere il metamodello predefinito {#extend-the-default-meta-model}
 
-Il servizio di automated forms conversion identifica ed estrae gli oggetti modulo dai moduli di origine. La funzione di mappatura semantica consente al servizio di decidere in che modo gli oggetti estratti vengono rappresentati in un modulo adattivo. Ad esempio, un modulo di origine può avere diversi tipi di rappresentazioni di una data. La mappatura semantica consente di mappare tutte le rappresentazioni degli oggetti modulo data del modulo di origine con il componente data dei moduli adattivi. La funzione di mappatura semantica consente inoltre al servizio di preconfigurare e applicare convalide, regole, pattern di dati, testo della Guida e proprietà di accessibilità ai componenti dei moduli adattivi durante la conversione.
+Il servizio di automated forms conversion (AFCS) identifica ed estrae gli oggetti dai moduli di origine. La funzione di mappatura semantica consente al servizio di decidere in che modo gli oggetti estratti vengono rappresentati in un modulo adattivo. Ad esempio, un modulo di origine può avere diversi tipi di rappresentazioni di una data. La mappatura semantica consente di mappare tutte le rappresentazioni degli oggetti modulo data del modulo di origine con il componente data dei moduli adattivi. La funzione di mappatura semantica consente inoltre al servizio di preconfigurare e applicare convalide, regole, pattern di dati, testo della Guida e proprietà di accessibilità ai componenti dei moduli adattivi durante la conversione.
 
 ![](assets/meta-model.gif)
 
@@ -25,7 +25,7 @@ Il metamodello è uno schema JSON. Prima di iniziare con il metamodello, assicur
 
 ## Metamodello predefinito {#default-meta-model}
 
-Il servizio di automated forms conversion dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di Automated forms conversion. Puoi trovare una copia del metamodello sul tuo server AEM locale all’indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. È inoltre possibile [fai clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json), e [Portoghese](assets/pt_br.globalschema.json) sono disponibili per il download anche le lingue.
+Il servizio di automated forms conversion (AFCS) dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di Automated forms conversion (AFCS). Puoi trovare una copia del metamodello sul tuo server AEM locale all’indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. È inoltre possibile [fai clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json), e [Portoghese](assets/pt_br.globalschema.json) sono disponibili per il download anche le lingue.
 
 Lo schema del metamodello deriva dalle entità dello schema in https://schema.org/docs/schemas.html. Dispone di Persona, IndirizzoPostale, LocalBusiness e più entità come definito su https://schema.org. Ogni entità del metamodello aderisce al tipo di oggetto dello schema JSON. Il codice che segue rappresenta una struttura di metamodello di esempio:
 
@@ -120,7 +120,7 @@ In questo esempio, il servizio di conversione cerca le parole chiave relative a 
 
 ### Proprietà dello schema JSON per i campi del modulo adattivo generati {#jsonschemaproperties}
 
-Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i campi del modulo adattivo generati utilizzando il servizio di Automated forms conversion:
+Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i campi del modulo adattivo generati utilizzando il servizio di Automated forms conversion (AFCS):
 
 <table> 
  <tbody> 
@@ -164,7 +164,7 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
 
 ### Ricerca basata su parole chiave per applicare proprietà ai campi del modulo adattivo generati {#keywordsearch}
 
-Il servizio di automated forms conversion esegue una ricerca per parola chiave nel modulo di origine durante la conversione. Dopo aver filtrato i campi che soddisfano i criteri di ricerca, il servizio di conversione applica le proprietà definite per tali campi nel metamodello ai campi del modulo adattivo generato.
+Il servizio di automated forms conversion (AFCS) esegue una ricerca per parola chiave nel modulo di origine durante la conversione. Dopo aver filtrato i campi che soddisfano i criteri di ricerca, il servizio di conversione applica le proprietà definite per tali campi nel metamodello ai campi del modulo adattivo generato.
 
 Le parole chiave sono referenziate utilizzando **aem:affKeyword** proprietà.
 
@@ -181,7 +181,7 @@ In questo esempio, il servizio di conversione utilizza il testo **aem:affKeyword
 
 ### Proprietà aggiuntive per i campi modulo adattivo generati {#additionalproperties}
 
-È possibile utilizzare **aem:afProperties** proprietà nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati utilizzando il servizio di Automated forms conversion:
+È possibile utilizzare **aem:afProperties** proprietà nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati utilizzando il servizio di Automated forms conversion (AFCS):
 
 <table> 
  <tbody> 
@@ -217,7 +217,7 @@ In questo esempio, il servizio di conversione utilizza il testo **aem:affKeyword
 
 ## Creare un metamodello personalizzato nella propria lingua{#language-specific-meta-model}
 
-Puoi creare un metamodello specifico per la lingua. Questo metamodello consente di creare regole di mappatura nel linguaggio desiderato. Il servizio di automated forms conversion consente di creare metamodelli nelle seguenti lingue:
+Puoi creare un metamodello specifico per la lingua. Questo metamodello consente di creare regole di mappatura nel linguaggio desiderato. Il servizio di automated forms conversion (AFCS) consente di creare metamodelli nelle seguenti lingue:
 
 * Inglese (en)
 * Francese (fr)
@@ -258,9 +258,9 @@ L’immagine seguente mostra alcuni esempi di metamodello in lingua inglese e de
 
 ## Modificare i campi del modulo adattivo utilizzando un metamodello personalizzato {#modify-adaptive-form-fields-using-custom-meta-model}
 
-Nell’organizzazione possono essere presenti modelli e convalide oltre a quelli elencati nel metamodello predefinito. Puoi estendere il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione. Il servizio di automated forms conversion applica il metamodello personalizzato ai campi del modulo durante la conversione. Puoi continuare ad aggiornare il metamodello man mano che vengono rilevati nuovi modelli, convalide ed entità specifiche della tua organizzazione.
+Nell’organizzazione possono essere presenti modelli e convalide oltre a quelli elencati nel metamodello predefinito. Puoi estendere il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione. Il servizio di automated forms conversion (AFCS) applica il metamodello personalizzato ai campi del modulo durante la conversione. Puoi continuare ad aggiornare il metamodello man mano che vengono rilevati nuovi modelli, convalide ed entità specifiche della tua organizzazione.
 
-Il servizio di automated forms conversion utilizza un metamodello predefinito salvato nella posizione seguente per mappare i campi del modulo di origine ai campi del modulo adattivo durante la conversione:
+Il servizio di automated forms conversion (AFCS) utilizza un metamodello predefinito salvato nella posizione seguente per mappare i campi del modulo di origine ai campi del modulo adattivo durante la conversione:
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 

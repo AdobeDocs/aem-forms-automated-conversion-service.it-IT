@@ -10,10 +10,10 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ Il DoR utilizza un modello base per definirne il layout. Puoi generare un DoR ut
 
 Per ulteriori informazioni sulla generazione di un documento record, vedi [Generare un documento di record per i moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-Il [servizio automated forms conversion](/help/using/introduction.md) converte i seguenti moduli sorgente in moduli adattivi:
+Il [Servizio di automated forms conversion (AFCS)](/help/using/introduction.md) converte i seguenti moduli sorgente in moduli adattivi:
 
 * PDF forms non interattivi
 * Acro Forms
@@ -87,7 +87,7 @@ Questo articolo descrive i percorsi consigliati per generare un DoR basato sui t
 
 ## Genera documento di record per PDF forms non interattivi {#generate-document-of-record-non-interactive-pdf}
 
-Se si utilizza un modulo di PDF non interattivo come modulo di origine per il servizio di Automated forms conversion, è possibile:
+Se si utilizza un modulo di PDF non interattivo come modulo di origine per il servizio di Automated forms conversion (AFCS), è possibile:
 
 * abilitare la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando un modello predefinito
 * o modificare le proprietà dei moduli adattivi dopo la conversione dei moduli adattivi per abilitare la generazione DoR utilizzando l’impostazione predefinita o qualsiasi altro modello di modulo
@@ -121,7 +121,7 @@ All’invio del modulo adattivo convertito, il DoR viene generato automaticament
 
 ## Genera documento di record per PDF forms basati su Acro Forms o XFA {#generate-document-of-record-acroform-xfaform}
 
-Se si utilizza un modulo Acro Form o un modulo PDF basato su XFA come modulo di origine per il servizio di Automated forms conversion, è possibile:
+Se si utilizza un modulo Acro o un modulo PDF basato su XFA come modulo di origine per il servizio di Automated forms conversion (AFCS), è possibile:
 
 * abilitare la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando il modulo di origine come modello
 

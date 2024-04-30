@@ -1,12 +1,12 @@
 ---
 title: Inviare moduli adattivi al database tramite Forms Portal
-description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di Automated forms conversion.
+description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di Automated forms conversion (AFCS).
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Integrare i moduli adattivi con il database utilizzando Forms Portal {#submit-forms-to-database-using-forms-portal}
 
-Il servizio di automated forms conversion consente di convertire un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
+Il servizio di automated forms conversion (AFCS) consente di convertire un modulo di PDF non interattivo, un modulo Acro o un modulo di PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
 
 Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati modulo, uno schema XML o uno schema JSON dopo la conversione. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database utilizzando il portale Forms.
 
@@ -31,7 +31,7 @@ L&#39;esempio, discusso in questo articolo, è un&#39;implementazione di riferim
 * Configurare un’istanza di authoring AEM 6.4 o 6.5
 * Installa [service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per l’istanza AEM
 * Versione più recente del pacchetto del componente aggiuntivo AEM Forms
-* Configura [servizio automated forms conversion](configure-service.md)
+* Configura [Servizio di automated forms conversion (AFCS)](configure-service.md)
 * Configurare un database. Il database utilizzato nell&#39;implementazione di esempio è MySQL 5.6.24. Tuttavia, puoi integrare il modulo adattivo convertito con qualsiasi database di tua scelta.
 
 ## Configurare la connessione tra l’istanza AEM e il database {#set-up-connection-aem-instance-database}
@@ -272,7 +272,7 @@ Per installare e configurare l’esempio in tutte le istanze di authoring e pubb
 [Ottieni file](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. Vai al gestore di pacchetti AEM all’indirizzo *http://[host]:[porta]/crx/packmgr/*.
-1. Clic **[!UICONTROL Upload Package]**.
+1. Fai clic su **[!UICONTROL Upload Package]**.
 1. Sfoglia per selezionare **aem-fp-db-integration-sample-pkg-6.1.2.zip** pacchetto e fai clic su **[!UICONTROL OK]**.
 1. Clic **[!UICONTROL Install]** accanto al pacchetto per installarlo.
 

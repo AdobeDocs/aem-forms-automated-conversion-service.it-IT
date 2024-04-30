@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 2%
+source-wordcount: '1506'
+ht-degree: 1%
 
 ---
 
-# Integrazione del modulo adattivo con il database utilizzando workflow AEM {#submit-forms-to-database-using-forms-portal}
+# Integrare un modulo adattivo con un database utilizzando il flusso di lavoro AEM {#submit-forms-to-database-using-forms-portal}
 
-Il servizio di automated forms conversion consente di convertire un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
+Il servizio di automated forms conversion (AFCS) consente di convertire un modulo di PDF non interattivo, un modulo Acro o un modulo di PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
 
 Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati del modulo, uno schema XML o uno schema JSON dopo la conversione. Per il modello dati modulo, è necessario associare manualmente i campi del modulo adattivo al modello dati modulo. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database. Analogamente, una volta completata l’integrazione con il database, è possibile configurare i campi nel modulo adattivo convertito per recuperare i valori dal database e precompilare i campi del modulo adattivo.
 
@@ -43,7 +43,7 @@ Puoi scaricare il modulo Contattaci di esempio utilizzando:
 
 [Ottieni file](assets/sample_contact_us_form.pdf)
 
-Il file PDF funge da input per il servizio di Automated forms conversion. Il servizio converte questo file in un modulo adattivo. Nell&#39;immagine seguente viene illustrato il modulo Contattaci di esempio in formato PDF.
+Il file PDF funge da input per il servizio di Automated forms conversion (AFCS). Il servizio converte questo file in un modulo adattivo. Nell&#39;immagine seguente viene illustrato il modulo Contattaci di esempio in formato PDF.
 
 ![modulo di richiesta di prestito di esempio](assets/sample_contact_us_form.png)
 
@@ -184,7 +184,7 @@ Puoi scaricare il modello dati del modulo di esempio utilizzando:
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il [Servizio automated forms conversion da convertire](convert-existing-forms-to-adaptive-forms.md) il [Modulo Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il [Servizio di automated forms conversion (AFCS) da convertire](convert-existing-forms-to-adaptive-forms.md) il [Modulo Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con binding JSON](assets/generate_af_with_data_bindings.png)
 
@@ -239,7 +239,7 @@ Per creare un modello di flusso di lavoro per inviare i dati del modulo adattivo
 
 1. In **[!UICONTROL Service Arguments]** , fornire i seguenti valori per gli argomenti del modello dati modulo:
 
-   ![Richiama il servizio del modello di dati modulo](assets/invoke_form_data_model_service.png)
+   ![Richiama servizio modello dati modulo](assets/invoke_form_data_model_service.png)
 
    I campi del modello dati del modulo, ad esempio il nome del punto di contatto, sono mappati a **afData.afBoundData.data.name1**, che fa riferimento alle associazioni dello schema JSON per il modulo adattivo inviato.
 

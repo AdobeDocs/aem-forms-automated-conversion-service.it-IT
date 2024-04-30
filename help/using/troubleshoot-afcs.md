@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi - Servizio di conversione automatica dei moduli
+title: Risoluzione dei problemi - Servizio di conversione automatica dei moduli (AFCS)
 description: Problemi comuni di AFCS e relative soluzioni
 solution: Experience Manager Forms
 feature: Adaptive Forms
@@ -9,14 +9,14 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 89%
+source-wordcount: '655'
+ht-degree: 85%
 
 ---
 
-# Risoluzione dei problemi - Servizio di conversione automatica dei moduli
+# Risoluzione dei problemi - Servizio di conversione automatica dei moduli (AFCS)
 
 Questo documento illustra le procedure di base per la risoluzione dei problemi causati da errori comuni.
 
@@ -27,7 +27,7 @@ Questo documento illustra le procedure di base per la risoluzione dei problemi c
 | Errore | Esempio |
 |--- |--- |
 | **Messaggio di errore** <br> L’intestazione del token di accesso non è disponibile. <br><br> **Causa** <br> L’amministratore ha creato più configurazioni IMS o la configurazione IMS non è in grado di raggiungere il servizio AFCS su Adobe Cloud. <br><br>**Risoluzione** <br> Se sono presenti più configurazioni, eliminale tutte e [creane una nuova](configure-service.md#obtainpubliccertificates). <br> Se è presente una singola configurazione, utilizza **Verifica integrità** per effettuare un [controllo della connettività](configure-service.md#createintegrationoption). | ![L’intestazione del token di accesso non è disponibile](assets/invalid-ims-configurations.png) |
-| **Messaggio di errore** <br> Impossibile connettersi al servizio.  <br><br>**Causa** <br> Nei servizi cloud del Servizio di conversione automatica dei moduli è menzionato l’URL di servizio errato o non è menzionato nessun URL di servizio. <br><br>**Risoluzione** <br> URL di servizio [corretto](configure-service.md#configure-the-cloud-service) nei servizi cloud del Servizio di conversione automatica dei moduli. | ![Impossibile connettersi al servizio.](assets/wrong-service-url-configured.png) |
+| **Messaggio di errore** <br> Impossibile connettersi al servizio.  <br><br>**Motivo** <br> Nei servizi cloud AFCS (Automated forms conversion Service) viene menzionato un URL di servizio errato o non è menzionato alcun URL di servizio. <br><br>**Risoluzione** <br> Corretto [URL servizio](configure-service.md#configure-the-cloud-service) nei servizi cloud di Automated forms conversion Service (AFCS). | ![Impossibile connettersi al servizio.](assets/wrong-service-url-configured.png) |
 | **Messaggio di errore** <br> Conversione del modulo non riuscita.  <br><br>**Causa** <br> Problemi di connettività di rete nel sistema dell’utente, inattività del servizio a causa di manutenzione programmata o interruzione su Adobe Cloud. <br><br>**Risoluzione** <br> Risolvi i problemi di connettività di rete nel tuo sistema e verifica lo stato del servizio su https://status.adobe.com/ per sapere se è in corso un’interruzione programmata/non programmata. | ![Impossibile connettersi al servizio.](assets/conversion-failure.png) |
 | **Messaggio di errore** <br> Il numero di pagine è superiore a 15.  <br><br>**Causa** <br> La lunghezza del modulo di origine supera le 15 pagine.  <br><br>**Risoluzione** <br> Utilizza Adobe Acrobat per dividere i moduli con più di 15 pagine. Assegna a ciascun modulo un numero di pagine inferiore a 15. | ![Impossibile connettersi al servizio.](assets/number-of-pages.png) |
 | **Messaggio di errore** <br> Il numero di file è superiore a 15.  <br><br>**Causa** <br>   La cartella contiene più di 15 moduli. <br><br>**Risoluzione** <br> Assegna a ciascuna cartella un numero di moduli inferiore o uguale a 15. Il numero totale di pagine contenute in ciascuna cartella deve essere inferiore a 50. Le dimensioni della cartella devono essere inferiori a 10 MB. Non salvare i moduli in sottocartelle. Organizza i moduli di origine in un batch di 8-15 moduli. | ![Impossibile connettersi al servizio.](assets/number-of-pages.png) |
@@ -52,7 +52,7 @@ Questo documento illustra le procedure di base per la risoluzione dei problemi c
 <td><img alt="The access token header is not available" src="assets/invalid-ims-configuration.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service Cloud services.</td>
+<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service (AFCS) cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service (AFCS) Cloud services.</td>
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>

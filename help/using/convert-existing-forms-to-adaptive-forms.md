@@ -1,27 +1,28 @@
 ---
 title: Conversione di PDF forms in moduli adattivi
 seo-title: Convert PDF forms to adaptive forms
-description: Esegui il servizio di Automated forms conversion per convertire i PDF forms in moduli adattivi
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: Esegui il servizio di Automated forms conversion (AFCS) per convertire i PDF forms in moduli adattivi
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
 contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1616'
 ht-degree: 7%
 
 ---
 
 # Conversione di PDF forms in moduli adattivi {#convert-print-forms-to-adaptive-forms}
 
-Il servizio di Automated forms conversion AEM Forms, basato su Adobe Sensei, converte automaticamente i PDF forms in moduli adattivi facili da usare e reattivi. Che si utilizzino PDF forms non interattivi, Acro Forms o PDF forms basati su XFA, il servizio di Automated forms conversion può facilmente convertire questi moduli in moduli adattivi. Per informazioni sulle funzionalità, sul flusso di lavoro di conversione e sull’onboarding consulta [Automated forms conversion](introduction.md) servizio.
+Il servizio di Automated forms conversion AEM Forms (AFCS), basato su Adobe Sensei, converte automaticamente i PDF forms in moduli adattivi facili da usare e reattivi. Che si utilizzino PDF forms non interattivi, Acro Forms o PDF forms basati su XFA, il servizio di Automated forms conversion (AFCS) può facilmente convertire questi moduli in moduli adattivi. Per informazioni sulle funzionalità, sul flusso di lavoro di conversione e sull’onboarding consulta [Automated forms conversion](introduction.md) servizio.
 
 ## Prerequisiti {#pre-requisites}
 
 * [**Configurare il servizio di conversione**](configure-service.md)
 
-* **Prepara il [modelli](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) da applicare ai moduli convertiti:** L’utilizzo di un modello consente di applicare un branding coerente in tutti i moduli adattivi. Inoltre, il servizio di Automated forms conversion non estrae e utilizza l’intestazione e il piè di pagina dei documenti PDF di origine. È possibile utilizzare modelli di modulo adattivi per specificare intestazione e piè di pagina. L’intestazione e il piè di pagina specificati nel modello vengono applicati al modulo adattivo durante la conversione. Quando crei una cartella per i modelli, seleziona la **[!UICONTROL Browse configurations]** per tutti.
+* **Prepara il [modelli](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) da applicare ai moduli convertiti:** L’utilizzo di un modello consente di applicare un branding coerente in tutti i moduli adattivi. Inoltre, il servizio di Automated forms conversion (AFCS) non estrae e utilizza l’intestazione e il piè di pagina dei documenti PDF di origine. È possibile utilizzare modelli di modulo adattivi per specificare intestazione e piè di pagina. L’intestazione e il piè di pagina specificati nel modello vengono applicati al modulo adattivo durante la conversione. Quando crei una cartella per i modelli, seleziona la **[!UICONTROL Browse configurations]** per tutti.
 
 * **Prepara il [temi](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) da applicare ai moduli convertiti:** L’utilizzo di un tema consente di applicare uno stile coerente a tutti i moduli adattivi dell’organizzazione.
 

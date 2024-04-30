@@ -1,5 +1,5 @@
 ---
-title: Introduzione al servizio automated forms conversion
+title: Introduzione al servizio di automated forms conversion (AFCS)
 description: Accelerazione della conversione dei moduli di stampa in moduli adattivi
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 64%
+source-wordcount: '711'
+ht-degree: 58%
 
 ---
 
-# Introduzione {#introduction-to-automated-forms-conversion-service}
+# Servizio di automated forms conversion (AFCS) {#introduction-to-automated-forms-conversion-service}
 
-Il servizio di conversione automatica dei moduli aiuta ad accelerare la digitalizzazione e la modernizzazione dell’esperienza di acquisizione dei dati attraverso la conversione automatica dei moduli PDF in moduli adattivi. Il servizio, basato su Adobe Sensei, converte automaticamente i moduli PDF in moduli adattivi facili da usare su diversi dispositivi, reattivi e basati su HTML5. Pur sfruttando gli investimenti esistenti nei moduli PDF e XFA, il servizio applica anche convalide, stili e layout appropriati ai campi del modulo adattivo durante la conversione. Il servizio consente di:
+Il servizio di automated forms conversion (AFCS) consente di accelerare la digitalizzazione e la modernizzazione dell’esperienza di acquisizione dei dati attraverso la conversione automatica dei PDF forms in moduli adattivi. Il servizio, basato su Adobe Sensei, converte automaticamente i moduli PDF in moduli adattivi facili da usare su diversi dispositivi, reattivi e basati su HTML5. Pur sfruttando gli investimenti esistenti nei moduli PDF e XFA, il servizio applica anche convalide, stili e layout appropriati ai campi del modulo adattivo durante la conversione. Il servizio consente di:
 
 * Evitare la conversione manuale dei moduli di stampa in moduli adattivi, con risparmio di tempo e risorse
 * Applicare modelli e convalide appropriati durante la conversione
@@ -43,13 +43,13 @@ Il servizio può convertire i moduli in lingua inglese, francese, tedesca, spagn
 
 ## Flusso di lavoro di conversione  {#conversion-workflow}
 
-Il servizio di conversione automatica dei moduli è compatibile con Adobe Cloud. Connetti la tua istanza AEM al servizio, carica i moduli nella tua istanza AEM e avvia la conversione. Il processo di conversione completo è descritto di seguito:
+Il servizio di automated forms conversion (AFCS) viene eseguito su Adobe Cloud. Connetti la tua istanza AEM al servizio, carica i moduli nella tua istanza AEM e avvia la conversione. Il processo di conversione completo è descritto di seguito:
 
 ![Flusso di lavoro](assets/conversion-workflow.png)
 
 ### 1. Configurare l’ambiente {#set-up-the-environment}
 
-Il servizio di conversione automatica dei moduli è compatibile con Adobe Cloud. [Configura l’account Adobe I/O della tua organizzazione e connetti la tua istanza AEM locale](configure-service.md) al servizio di conversione in esecuzione su Adobe Cloud.
+Il servizio di automated forms conversion (AFCS) viene eseguito su Adobe Cloud. [Configura l’account Adobe I/O della tua organizzazione e connetti la tua istanza AEM locale](configure-service.md) al servizio di conversione in esecuzione su Adobe Cloud.
 
 ### 2. Conversione di PDF forms in moduli adattivi {#use-the-conversion-service}
 

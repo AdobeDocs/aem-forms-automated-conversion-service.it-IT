@@ -1,5 +1,5 @@
 ---
-title: Procedure consigliate e considerazioni
+title: Best practice e considerazioni
 description: NON PUBBLICARE
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
@@ -8,15 +8,15 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 7%
+source-wordcount: '539'
+ht-degree: 6%
 
 ---
 
 
-# Procedure consigliate e considerazioni {#do-not-publish-best-practices-and-considerations}
+# Best practice e considerazioni {#do-not-publish-best-practices-and-considerations}
 
 <!--
 [DO NOT PUBLISH]
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 Il servizio di conversione automatica di AEM Forms converte un modulo PDF in un modulo adattivo. Il servizio utilizza algoritmi di intelligenza artificiale e machine learning per comprendere il layout e i campi del modulo sorgente. Ogni servizio di apprendimento automatico apprende continuamente dai dati di origine e produce un output migliorato ad ogni abbandono. Questi servizi imparano dall&#39;esperienza come gli esseri umani.
 
-Il servizio di automated forms conversion viene addestrato su un ampio insieme di moduli. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, ci sono alcuni campi e stili nelle PDF forms che sono facilmente visibili all&#39;occhio umano, ma difficili da capire per il servizio. Il servizio può assegnare ad alcuni campi o stili tipi di campi diversi da quelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
+Il servizio di automated forms conversion (AFCS) viene addestrato su un ampio insieme di moduli. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, ci sono alcuni campi e stili nelle PDF forms che sono facilmente visibili all&#39;occhio umano, ma difficili da capire per il servizio. Il servizio può assegnare ad alcuni campi o stili tipi di campi diversi da quelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
 
 Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare [Revisione e correzione](review-correct-ui-edited.md) per risolvere tali problemi. Prima di iniziare a risolvere i problemi o leggere ulteriori informazioni, acquisisci familiarità con [componenti modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 

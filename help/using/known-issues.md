@@ -1,6 +1,6 @@
 ---
 title: Problemi noti
-description: problemi noti e limitazioni del servizio Automated forms conversion
+description: problemi noti e limitazioni del servizio di Automated forms conversion (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 43616abd46a17a8eeda30a116f09b88780ce9a77
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '789'
 ht-degree: 1%
 
 ---
 
 # Problemi noti e limitazioni {#known-issues-limitations}
 
-Prima di iniziare a utilizzare il servizio di Automated forms conversion AEM Forms, esamina i problemi noti e le limitazioni seguenti:
+Prima di iniziare a utilizzare il servizio di Automated forms conversion AEM Forms (AFCS), esamina i problemi e le limitazioni noti seguenti:
 
 ## Problemi noti {#known-issues}
 

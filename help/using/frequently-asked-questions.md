@@ -8,28 +8,28 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1799'
-ht-degree: 4%
+source-wordcount: '1777'
+ht-degree: 3%
 
 ---
 
 # Domande frequenti{#frequently-asked-questions}
 
-1. **Quale versione di AEM Forms è supportata dal servizio Automated forms conversion?**
-   <p>Il servizio di automated forms conversion supporta AEM 6.4 Forms e AEM 6.5 Forms. Funziona sia con AEM Forms su OSGi che con i moduli AEM su JEE. Per utilizzare il servizio è necessario il pacchetto del componente aggiuntivo AEM Forms più recente oltre all’istanza di authoring dell’AEM. Per istruzioni dettagliate, consulta <a href="configure-service.md">Configurare il Automated forms conversion</a> servizio.</p> 
+1. **Quale versione di AEM Forms è supportata dal servizio di Automated forms conversion (AFCS)?**
+   <p>Il servizio di automated forms conversion (AFCS) supporta AEM 6.4 Forms e AEM 6.5 Forms. Funziona sia con AEM Forms su OSGi che con i moduli AEM su JEE. Per utilizzare il servizio è necessario il pacchetto del componente aggiuntivo AEM Forms più recente oltre all’istanza di authoring dell’AEM. Per istruzioni dettagliate, consulta <a href="configure-service.md">Configurare il Automated forms conversion</a> servizio.</p> 
     <br>
 
 1. **Il servizio può essere installato on-premise?**
-   <p>Adobe addestra regolarmente gli algoritmi AI e ML del servizio di Automated forms conversion con nuovi set di dati per migliorare la precisione della conversione. Gli algoritmi aggiornati vengono distribuiti periodicamente al servizio di conversione in esecuzione su Adobe Cloud. Tutti i clienti del servizio usufruiscono degli algoritmi aggiornati. Pertanto, l’implementazione centrale ospitata sul cloud è ideale per consentire al servizio di Automated forms conversion di imparare continuamente e offrire miglioramenti a tutti i clienti.</p> 
+   <p>Adobe addestra regolarmente gli algoritmi AI e ML del servizio di Automated forms conversion (AFCS) con nuovi set di dati per migliorare la precisione della conversione. Gli algoritmi aggiornati vengono distribuiti periodicamente al servizio di conversione in esecuzione su Adobe Cloud. Tutti i clienti del servizio usufruiscono degli algoritmi aggiornati. Pertanto, l’implementazione centrale ospitata sul cloud è ideale per il servizio di Automated forms conversion (AFCS) che consente di apprendere e migliorare continuamente tutti i clienti.</p> 
     <p>Il servizio converte i moduli vuoti in moduli adattivi. Il servizio non supporta i moduli compilati e l’estrazione di dati dai moduli compilati. Inserire nell'elenco Consentiti Rimuovere i dati dai moduli compilati e rimuovere o le informazioni proprietarie dai moduli prima di inviarli al servizio per la conversione</p> <br>
 
 1. **Il servizio supporta tutti i formati di PDF forms? Quali sono tutte le lingue supportate?**
    <p>Il servizio può convertire PDF forms non interattivi, XDP e PDF forms basati su XFA e AcroForms in moduli adattivi. Il servizio non supporta moduli digitalizzati o compilati. Per altre limitazioni, consulta <a href="known-issues.md">problemi noti</a> articolo.<br /> </p> 
     <p>Stiamo aggiungendo regolarmente il supporto per altri tipi di origine. Mantieni <a href="introduction.md">moduli PDF supportati</a> nella tua watchlist per un aggiornamento regolare sulle nuove funzioni e funzionalità aggiunte.</p>
 
-   Il servizio può convertire in moduli adattivi solo i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese. Puoi tradurre i moduli adattativi generati in un’altra lingua usando [workflow di traduzione AEM.](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   Il servizio può convertire in moduli adattivi solo i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese. Puoi tradurre i moduli adattivi generati in un’altra lingua utilizzando [Flusso di lavoro di traduzione AEM.](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **Il servizio può produrre un XDP invece di un modulo adattivo?**
    <p>Il servizio non produce un output XDP. Aggiungiamo regolarmente funzionalità e al servizio. Mantieni <a href="introduction.md">lingue e PDF forms supportati</a> nella tua watchlist per un aggiornamento regolare sulle nuove funzioni e funzionalità aggiunte.</p> <br>
@@ -68,7 +68,7 @@ I motivi più comuni per cui la conversione non riesce sono:</p>
    * Il PDF di origine ha un’immagine del modulo invece del modulo effettivo.
    * Il servizio non è configurato correttamente, l’URL del servizio non è stato fornito o l’URL del servizio fornito non è corretto. Controlla la [configurazione del servizio](configure-service.md#configure-the-cloud-service) a **[!UICONTROL AEM]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion configuration]**.
    * Configurazione IMS non configurata correttamente. Esegui un controllo di integrità sulla configurazione IMS per assicurarti che funzioni correttamente. Per verificare se la configurazione IMS è corretta o meno:
-      1. Passa a `http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
+      1. Vai a `http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
       2. Seleziona la configurazione. Fai clic su **[!UICONTROL Check Health]** dall’intestazione e fai clic su **[!UICONTROL Check]**. In caso di esito positivo, **[!UICONTROL Token retrieved successfully!]** messaggio. <br> <br>
 
 1. **L’utilizzo di font personalizzati influisce sulla conversione?**
@@ -83,7 +83,7 @@ I motivi più comuni per cui la conversione non riesce sono:</p>
    <p>Il servizio non converte automaticamente gli script di moduli basati su XFA o Acro Forms nelle regole dei moduli adattivi corrispondenti. Gli autori dei moduli possono utilizzare <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">Editor regole</a> per aggiungere interattività a un modulo adattivo.</p> <br>
 
 1. **Alcuni oggetti modulo non vengono convertiti correttamente in componenti modulo adattivi. Come risolvere il problema?**
-   <p>Il servizio di automated forms conversion viene addestrato su un ampio insieme di moduli. Tuttavia, le applicazioni basate su AI/ML sono limitate dai relativi dati e modelli di formazione. Potrebbero esistere più tipi di campo, layout, pattern e contesto distinguibili dalla percezione umana, ma difficili per il riconoscimento automatico. Il servizio potrebbe non identificare tali oggetti o riconoscerli in modo errato. È possibile utilizzare <a href="review-correct-ui-edited.md" target="_blank">Revisione e correzione</a> per apportare le modifiche necessarie nel formato cartaceo del modulo di input.</p> <br/>
+   <p>Il servizio di automated forms conversion (AFCS) viene addestrato su un ampio insieme di moduli. Tuttavia, le applicazioni basate su AI/ML sono limitate dai relativi dati e modelli di formazione. Potrebbero esistere più tipi di campo, layout, pattern e contesto distinguibili dalla percezione umana, ma difficili per il riconoscimento automatico. Il servizio potrebbe non identificare tali oggetti o riconoscerli in modo errato. È possibile utilizzare <a href="review-correct-ui-edited.md" target="_blank">Revisione e correzione</a> per apportare le modifiche necessarie nel formato cartaceo del modulo di input.</p> <br/>
 
 1. **Alcune correzioni vengono ripetute tra i moduli. Il servizio è in grado di identificare e correggere tutte queste istanze nelle conversioni future?**
 
@@ -108,14 +108,14 @@ L&#39;errore sopra riportato si verifica quando la delega di avvio non è config
    1. Arresta l’istanza AEM. Accedi a `[AEM installation directory]\crx-quickstart\conf\` cartella. Apri il file sling.properties per la modifica. Se usa `[AEM installation directory]\crx-quickstart\bin\start.bat` per avviare un’istanza AEM, modifica il file sling.properties che si trova in `[AEM_root]\crx-quickstart\`.
    1. Aggiungi le seguenti proprietà al file sling.properties:<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. Salva e chiudi il file. <br/>
-   1. Avvia l’istanza di AEM.<br/>
+   1. Avvia l’istanza AEM.<br/>
    <br/>
 
 1. **Come modificare automaticamente le maiuscole/minuscole del testo di un modulo adattivo?**
    <p>Puoi utilizzare l’editor di stili o temi adattivo per modificare le maiuscole/minuscole di un campo di modulo adattivo. Ad esempio, puoi aprire l’editor tema e impostare il valore della proprietà Case di tutto il testo del modulo su maiuscolo, minuscolo o camelCase. Puoi anche utilizzare l’opzione CSS Override nell’editor di temi per creare diversi tipi di stili.</p>
 
-1. **Posso utilizzare i tag di testo di Adobe Sign con il servizio di Automated forms conversion?**
-   <p> Quando si utilizza il servizio di Automated forms conversion per convertire un modulo PDF in un modulo adattivo e il modulo PDF dispone di tag di testo Adobe Sign, tali tag vengono convertiti nei campi del modulo adattivo corrispondenti e i dettagli del firmatario vengono compilati automaticamente.  La funzione è disponibile solo per Acro Forms e i moduli adattivi supportano un numero limitato di campi Adobe Sign.</p>  </br>
+1. **Posso utilizzare i tag di testo di Adobe Sign con il servizio di Automated forms conversion (AFCS)?**
+   <p> Quando si utilizza il servizio di Automated forms conversion (AFCS) per convertire un modulo di PDF in un modulo adattivo e il modulo di PDF dispone di tag di testo Adobe Sign, tali tag vengono convertiti nei campi del modulo adattivo corrispondenti e i dettagli del firmatario vengono popolati automaticamente.  La funzione è disponibile solo per Acro Forms e i moduli adattivi supportano un numero limitato di campi Adobe Sign.</p>  </br>
 
 1. **Come si crea un modulo PDF abilitato per Adobe Sign?**
    </p>Per creare un modulo PDF abilitato per Adobe Sign:</p>

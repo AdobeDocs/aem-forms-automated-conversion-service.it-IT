@@ -1,6 +1,6 @@
 ---
 title: Rivedere e correggere i moduli convertiti
-description: Rivedi e correggi i moduli adattivi convertiti dal servizio di Automated forms conversion.
+description: Rivedi e correggi i moduli adattivi convertiti dal servizio di Automated forms conversion (AFCS).
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2510'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
 
 # Rivedere e correggere i moduli convertiti{#review-and-correct-converted-forms}
 
-Il servizio di Automated forms conversion AEM Forms identifica campi, contenuto e layout del documento di input PDF e converte il documento di input PDF in un modulo adattivo. Il modulo adattivo di output può contenere alcuni campi mancanti o convertiti in modo errato. Puoi utilizzare l’editor di revisione e correzione per apportare miglioramenti ai campi identificati e rigenerare il modulo adattivo per avvicinare l’output all’esperienza desiderata. Dopo la prima conversione, puoi aprire il documento PDF di input nell’editor per:
+Il servizio di Automated forms conversion AEM Forms (AFCS) identifica campi, contenuto e layout del documento di input PDF e converte il documento di input PDF in un modulo adattivo. Il modulo adattivo di output può contenere alcuni campi mancanti o convertiti in modo errato. Puoi utilizzare l’editor di revisione e correzione per apportare miglioramenti ai campi identificati e rigenerare il modulo adattivo per avvicinare l’output all’esperienza desiderata. Dopo la prima conversione, puoi aprire il documento PDF di input nell’editor per:
 
 * Visualizza tutti i campi e i contenuti identificati durante la conversione
 * Identifica i campi e il contenuto persi durante la conversione

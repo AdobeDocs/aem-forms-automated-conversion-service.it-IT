@@ -1,6 +1,6 @@
 ---
-title: Procedure consigliate e considerazioni
-description: Procedure consigliate e considerazioni per il servizio di Automated forms conversion
+title: Best practice e considerazioni
+description: Best practice e considerazioni per il servizio di Automated forms conversion (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 4b227a2cd0253b8ab471007b41787de60c2a1851
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 3%
+source-wordcount: '1229'
+ht-degree: 2%
 
 ---
 
 # Best practice e modelli complessi noti {#Best-practices-and-considerations2}
 
-Questo documento fornisce linee guida e raccomandazioni utili per amministratori, autori e sviluppatori di moduli quando lavorano con [!DNL Automated Forms Conversion service]. Descrive le best practice che vanno dalla preparazione dei moduli sorgente alla correzione di modelli complessi che richiedono un ulteriore sforzo per la conversione automatica. Queste best practice contribuiscono collettivamente alle prestazioni e ai risultati complessivi del [!DNL Automated Forms Conversion service].
+Questo documento fornisce linee guida e raccomandazioni utili per amministratori, autori e sviluppatori di moduli quando lavorano con [!DNL Automated Forms Conversion service] (AFCS) Descrive le best practice che vanno dalla preparazione dei moduli sorgente alla correzione di modelli complessi che richiedono un ulteriore sforzo per la conversione automatica. Queste best practice contribuiscono collettivamente alle prestazioni e ai risultati complessivi del [!DNL Automated Forms Conversion service] (AFCS)
 
 ## Best practice
 
@@ -28,7 +28,7 @@ Il servizio di conversione converte i PDF forms disponibili sul tuo AEM [!DNL Fo
 Se necessario, puoi caricare tutti i PDF forms in una sola volta o in modo graduale. Prima di caricare i moduli, considera quanto segue:
 
 * Mantenere il numero di moduli in una cartella inferiore a 15 e il numero totale di pagine in una cartella inferiore a 50.
-* Mantieni le dimensioni della cartella inferiori a 10 MB. Non salvare i moduli in sottocartelle.
+* Mantieni le dimensioni della cartella inferiori a 10 MB. Non mantenere i moduli in una sottocartella.
 * Mantieni il numero di pagine in un modulo inferiore a 15.
 * Organizzare i documenti di origine in un batch di 8-15 documenti. Mantieni i moduli sorgente con i frammenti di moduli adattivi comuni in un singolo batch.
 * Non caricare i moduli protetti. Il servizio non converte i moduli protetti da password e protetti.
