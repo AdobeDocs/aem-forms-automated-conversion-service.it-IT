@@ -39,7 +39,7 @@ Il servizio supporta moduli PDF non interattivi, moduli creati con Adobe Acrobat
 
 Il servizio supporta anche PDF forms abilitati per Adobe Sign. Se il modulo PDF di origine ha i tag di testo Adobe Sign, il servizio conserva tutte le informazioni relative ad Adobe Sign durante la conversione e associa le informazioni sul firmatario presente nel PDF di origine con i corrispondenti campi del modulo adattivo. La funzione è disponibile solo per AcroForms.
 
-Il servizio può convertire i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese in moduli adattivi. Puoi anche tradurre i moduli adattivi generati in un’altra lingua utilizzando [Flusso di lavoro di traduzione AEM](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+Il servizio può convertire i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese in moduli adattivi. Puoi anche tradurre i moduli adattivi generati in un&#39;altra lingua utilizzando [flusso di lavoro di traduzione AEM](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## Flusso di lavoro di conversione  {#conversion-workflow}
 

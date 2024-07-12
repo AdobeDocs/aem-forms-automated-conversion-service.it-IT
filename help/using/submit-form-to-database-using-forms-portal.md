@@ -20,7 +20,7 @@ Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integr
 
 La figura seguente illustra diverse fasi dell’integrazione di un modulo adattivo convertito con un database tramite Forms Portal:
 
-![integrazione del database](assets/database_integration.gif)
+![integrazione database](assets/database_integration.gif)
 
 Questo articolo descrive le istruzioni dettagliate per eseguire correttamente tutte queste fasi di integrazione.
 
@@ -29,9 +29,9 @@ L&#39;esempio, discusso in questo articolo, è un&#39;implementazione di riferim
 ## Prerequisiti {#pre-requisites}
 
 * Configurare un’istanza di authoring AEM 6.4 o 6.5
-* Installa [service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per l’istanza AEM
+* Installa [il service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per l&#39;istanza AEM
 * Versione più recente del pacchetto del componente aggiuntivo AEM Forms
-* Configura [Servizio di automated forms conversion (AFCS)](configure-service.md)
+* Configura servizio di Automated forms conversion [ (AFCS)](configure-service.md)
 * Configurare un database. Il database utilizzato nell&#39;implementazione di esempio è MySQL 5.6.24. Tuttavia, puoi integrare il modulo adattivo convertito con qualsiasi database di tua scelta.
 
 ## Configurare la connessione tra l’istanza AEM e il database {#set-up-connection-aem-instance-database}
@@ -50,11 +50,11 @@ L&#39;impostazione di una connessione tra un&#39;istanza AEM e un database MYSQL
 
 Per installare il file mysql-connector-java-5.1.39-bin.jar, su tutte le istanze di authoring e pubblicazione, effettua le seguenti operazioni:
 
-1. Passa a http://[server]:[porta]/system/console/depfinder e cercare il pacchetto com.mysql.jdbc.
+1. Passa a http://[server]:[porta]/sistema/console/depfinder e cerca il pacchetto com.mysql.jdbc.
 1. Nella colonna Esportato da, controlla se il pacchetto viene esportato da un bundle. Procedi se il pacchetto non viene esportato da alcun bundle.
-1. Passa a http://[server]:[porta]/system/console/bundles e fai clic su **[!UICONTROL Install/Update]**.
-1. Clic **[!UICONTROL Choose File]** e seleziona il file mysql-connector-java-5.1.39-bin.jar. Inoltre, seleziona **[!UICONTROL Start Bundle]** e **[!UICONTROL Refresh Packages]** caselle di controllo.
-1. Clic **[!UICONTROL Install]** o **[!UICONTROL Update]**. Al termine, riavviare il server.
+1. Passa a http://[server]:[porta]/sistema/console/bundle e fai clic su **[!UICONTROL Install/Update]**.
+1. Fare clic su **[!UICONTROL Choose File]** e selezionare il file mysql-connector-java-5.1.39-bin.jar. Selezionare inoltre le caselle di controllo **[!UICONTROL Start Bundle]** e **[!UICONTROL Refresh Packages]**.
+1. Fare clic su **[!UICONTROL Install]** o **[!UICONTROL Update]**. Al termine, riavviare il server.
 1. (Solo per Windows) Disattivare il firewall di sistema per il sistema operativo in uso.
 
 ### Creare schemi e tabelle nel database {#create-schema-and-tables-in-database}
@@ -67,9 +67,9 @@ Per creare schemi e tabelle nel database, effettuare le operazioni riportate di 
    CREATE SCHEMA `formsportal` ;
    ```
 
-   dove **sportivo formale** fa riferimento al nome dello schema.
+   dove **formsportal** fa riferimento al nome dello schema.
 
-1. Creare un **dati** nello schema del database utilizzando la seguente istruzione SQL:
+1. Crea una tabella **dati** nello schema del database utilizzando la seguente istruzione SQL:
 
    ```sql
     CREATE TABLE `data` (
@@ -81,7 +81,7 @@ Per creare schemi e tabelle nel database, effettuare le operazioni riportate di 
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Creare un **metadati** nello schema del database utilizzando la seguente istruzione SQL:
+1. Crea una tabella **metadata** nello schema del database utilizzando la seguente istruzione SQL:
 
    ```sql
    CREATE TABLE `metadata` (
@@ -121,7 +121,7 @@ Per creare schemi e tabelle nel database, effettuare le operazioni riportate di 
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Creare un **metadati aggiuntivi** nello schema del database utilizzando la seguente istruzione SQL:
+1. Creare una tabella **additionalmetadatatable** nello schema del database utilizzando la seguente istruzione SQL:
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -133,7 +133,7 @@ Per creare schemi e tabelle nel database, effettuare le operazioni riportate di 
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Creare un **commenttable** nello schema del database utilizzando la seguente istruzione SQL:
+1. Creare una tabella **commenttable** nello schema del database utilizzando la seguente istruzione SQL:
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -148,8 +148,8 @@ Per creare schemi e tabelle nel database, effettuare le operazioni riportate di 
 
 Per creare una connessione tra l&#39;istanza AEM e il database MYSQL, effettuare le seguenti operazioni di configurazione:
 
-1. Vai alla pagina Configurazione della console web AEM all’indirizzo *http://[host]:[porta]/system/console/configMgr*.
-1. Fai clic per aprire **[!UICONTROL Forms Portal Draft and Submission Configuration]** in modalità di modifica.
+1. Vai alla pagina Configurazione console Web AEM all&#39;indirizzo *http://[host]:[porta]/system/console/configMgr*.
+1. Fare clic per aprire **[!UICONTROL Forms Portal Draft and Submission Configuration]** in modalità di modifica.
 1. Specificare i valori per le proprietà come descritto nella tabella seguente:
 
    <table> 
@@ -191,8 +191,8 @@ Per creare una connessione tra l&#39;istanza AEM e il database MYSQL, effettuare
     </tr>
     </tbody> 
     </table>
-1. Lascia invariate le altre configurazioni e fai clic su **[!UICONTROL Save]**.
-1. Trova e fai clic per aprire **[!UICONTROL Apache Sling Connection Pooled DataSource]** in modalità di modifica nella configurazione della console web. Specificare i valori per le proprietà come descritto nella tabella seguente:
+1. Lasciare invariate le altre configurazioni e fare clic su **[!UICONTROL Save]**.
+1. Trovare e fare clic per aprire **[!UICONTROL Apache Sling Connection Pooled DataSource]** in modalità di modifica nella configurazione della console Web. Specificare i valori per le proprietà come descritto nella tabella seguente:
 
    <table> 
     <tbody> 
@@ -267,35 +267,35 @@ Per creare una connessione tra l&#39;istanza AEM e il database MYSQL, effettuare
 
 Per installare e configurare l’esempio in tutte le istanze di authoring e pubblicazione, effettua le seguenti operazioni:
 
-1. Scarica quanto segue **aem-fp-db-integration-sample-pkg-6.1.2.zip** nel file system.
+1. Scarica il seguente pacchetto **aem-fp-db-integration-sample-pkg-6.1.2.zip** nel file system.
 
 [Ottieni file](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Vai al gestore di pacchetti AEM all’indirizzo *http://[host]:[porta]/crx/packmgr/*.
+1. Vai a Gestione pacchetti AEM all&#39;indirizzo *http://[host]:[porta]/crx/packmgr/*.
 1. Fai clic su **[!UICONTROL Upload Package]**.
-1. Sfoglia per selezionare **aem-fp-db-integration-sample-pkg-6.1.2.zip** pacchetto e fai clic su **[!UICONTROL OK]**.
-1. Clic **[!UICONTROL Install]** accanto al pacchetto per installarlo.
+1. Individua il pacchetto **aem-fp-db-integration-sample-pkg-6.1.2.zip** e fai clic su **[!UICONTROL OK]**.
+1. Fare clic su **[!UICONTROL Install]** accanto al pacchetto per installarlo.
 
 ## Configurare il modulo adattivo convertito per l’integrazione con Forms Portal {#configure-converted-adaptive-form-for-forms-portal-integration}
 
 Per abilitare l’invio di moduli adattivi tramite la pagina Forms Portal, effettua le seguenti operazioni:
 1. [Eseguire la conversione](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) per convertire un modulo di origine in un modulo adattivo.
 1. Apri il modulo adattivo in modalità di modifica.
-1. Tocca Contenitore modulo e seleziona Configura ![Configurare un modulo adattivo](assets/configure-adaptive-form.png).
-1. In **[!UICONTROL Submission]** sezione, seleziona **[!UICONTROL Forms Portal Submit Action]** dal **[!UICONTROL Submit Action]** elenco a discesa.
+1. Tocca Contenitore modulo e seleziona Configura ![Modulo adattivo](assets/configure-adaptive-form.png).
+1. Nella sezione **[!UICONTROL Submission]**, selezionare **[!UICONTROL Forms Portal Submit Action]** dall&#39;elenco a discesa **[!UICONTROL Submit Action]**.
 1. Tocca ![Salva criterio modello](assets/edit_template_done.png) per salvare le impostazioni.
 
 ## Creare e configurare la pagina di Forms Portal {#create-configure-forms-portal-page}
 
 Per creare una pagina di Forms Portal e configurarla in modo da poter inviare moduli adattivi utilizzando questa pagina, effettua le seguenti operazioni:
 
-1. Accedi all’istanza di authoring dell’AEM e tocca **[!UICONTROL Adobe Experience Manager]** >  **[!UICONTROL Sites]**.
-1. Seleziona il percorso in cui desideri salvare la nuova pagina del portale Forms e tocca **[!UICONTROL Create]** > **[!UICONTROL Page]**.
-1. Seleziona il modello per la pagina e tocca **[!UICONTROL Next]**, specifica un titolo per la pagina e tocca **[!UICONTROL Create]**.
+1. Accedere all&#39;istanza di creazione dell&#39;AEM e toccare **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Sites]**.
+1. Selezionare il percorso in cui si desidera salvare la nuova pagina di Forms Portal e toccare **[!UICONTROL Create]** > **[!UICONTROL Page]**.
+1. Seleziona il modello per la pagina, tocca **[!UICONTROL Next]**, specifica un titolo per la pagina e tocca **[!UICONTROL Create]**.
 1. Tocca **[!UICONTROL Edit]** per configurare la pagina.
-1. Nell’intestazione della pagina, tocca ![Modifica modello](assets/edit_template_sites.png)  > **[!UICONTROL Edit Template]** per aprire il modello della pagina.
-1. Tocca Contenitore di layout e tocca ![Modifica criterio modello](assets/edit_template_policy.png). In **[!UICONTROL Allowed Components]** , abilita **[!UICONTROL Document Services]** e **[!UICONTROL Document Services Predicates]** opzioni e tocca ![Salva criterio modello](assets/edit_template_done.png).
-1. Inserisci **[!UICONTROL Search & Lister]** nella pagina. Di conseguenza, tutti i moduli adattivi esistenti disponibili nell’istanza AEM sono elencati nella pagina.
-1. Inserisci **[!UICONTROL Drafts & Submissions]** nella pagina. Due schede, **[!UICONTROL Draft Forms]** e **[!UICONTROL Submitted Forms]**, vengono visualizzati nella pagina del portale Forms. Il **[!UICONTROL Draft Forms]** nella scheda viene visualizzato anche il modulo adattivo convertito generato mediante i passaggi indicati in [Configurare il modulo adattivo convertito per l’integrazione con Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. Nell&#39;intestazione della pagina, toccare ![Modifica modello](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]** per aprire il modello della pagina.
+1. Tocca Contenitore di layout e tocca ![Modifica criterio modello](assets/edit_template_policy.png). Nella scheda **[!UICONTROL Allowed Components]**, abilita le opzioni **[!UICONTROL Document Services]** e **[!UICONTROL Document Services Predicates]** e tocca ![Salva criterio modello](assets/edit_template_done.png).
+1. Inserisci il componente **[!UICONTROL Search & Lister]** nella pagina. Di conseguenza, tutti i moduli adattivi esistenti disponibili nell’istanza AEM sono elencati nella pagina.
+1. Inserisci il componente **[!UICONTROL Drafts & Submissions]** nella pagina. Nella pagina del portale Forms vengono visualizzate due schede, **[!UICONTROL Draft Forms]** e **[!UICONTROL Submitted Forms]**. Nella scheda **[!UICONTROL Draft Forms]** viene inoltre visualizzato il modulo adattivo convertito generato mediante i passaggi indicati in [Configurare il modulo adattivo convertito per l&#39;integrazione con Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
 
 1. Tocca **[!UICONTROL Preview]**, tocca il modulo adattivo convertito, specifica i valori per i campi del modulo adattivo e invialo. I valori specificati per i campi del modulo adattivo vengono inviati al database integrato.

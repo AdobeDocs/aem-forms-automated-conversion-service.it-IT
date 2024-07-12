@@ -24,9 +24,9 @@ Il DoR utilizza un modello base per definirne il layout. Puoi generare un DoR ut
 
 ![Documento di record generato](assets/document_of_record.gif)
 
-Per ulteriori informazioni sulla generazione di un documento record, vedi [Generare un documento di record per i moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
+Per ulteriori informazioni sulla generazione di un documento record, vedere [Generate Document of Record for adaptive forms](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-Il [Servizio di automated forms conversion (AFCS)](/help/using/introduction.md) converte i seguenti moduli sorgente in moduli adattivi:
+Il servizio di Automated forms conversion [ (AFCS)](/help/using/introduction.md) converte i seguenti moduli di origine in moduli adattivi:
 
 * PDF forms non interattivi
 * Acro Forms
@@ -43,7 +43,7 @@ Nella tabella seguente viene illustrato un esempio dell&#39;effetto del modello 
 <table> 
  <tbody>
  <tr>
-  <td><p><strong>Modulo di origine</strong></p></td>
+  <td><p><strong>Source Form</strong></p></td>
   <td><p><strong>DoR generato</strong></p></td> 
    </tr>
   <tr>
@@ -63,7 +63,7 @@ Questo articolo descrive i percorsi consigliati per generare un DoR basato sui t
 <table> 
  <tbody> 
   <tr> 
-   <th><strong>Modulo di origine</strong></th> 
+   <th><strong>Source Form</strong></th> 
    <th><strong>Metodi per generare il DoR</strong></th> 
   </tr> 
   <tr> 
@@ -94,30 +94,30 @@ Se si utilizza un modulo di PDF non interattivo come modulo di origine per il se
 
 ### Abilita generazione DoR prima della conversione per generare DoR utilizzando il modello predefinito {#generate-document-of-record-using-cloud-configuration}
 
-1. Seleziona **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Proprietà della configurazione cloud utilizzate per la conversione > **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** opzione.
+1. Selezionare **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Proprietà della configurazione cloud utilizzata per la conversione > **[!UICONTROL Advanced]** > opzione **[!UICONTROL Generate Document of Record]**.
 
-   ![Generare un documento di record utilizzando la configurazione cloud](assets/generate_dor_cloud_config.gif)
+   ![Genera documento di record utilizzando la configurazione cloud](assets/generate_dor_cloud_config.gif)
 
 1. Tocca **[!UICONTROL Save & Close]** per salvare le impostazioni.
 
-1. [Eseguire la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md). Assicurati di utilizzare la configurazione cloud modificata nel passaggio 1 di queste istruzioni.
+1. [Esegui la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md). Assicurati di utilizzare la configurazione cloud modificata nel passaggio 1 di queste istruzioni.
 All’invio del modulo adattivo convertito, il DoR viene generato automaticamente utilizzando il modello predefinito.
 
 ### Modifica le proprietà del modulo adattivo dopo la conversione per abilitare la generazione DoR {#edit-adaptive-form-properties-generate-document-of-record}
 
 Se non abiliti la generazione DoR prima di convertire il modulo di origine in un modulo adattivo, puoi comunque farlo dopo la conversione.
 
-1. [Eseguire la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md) sul modulo PDF non interattivo per generare un modulo adattivo.
+1. [Esegui la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md) nel modulo PDF non interattivo per generare un modulo adattivo.
 
-1. Seleziona il modulo adattivo nel **[!UICONTROL output]** cartella e tocca **[!UICONTROL Properties]**.
+1. Seleziona il modulo adattivo nella cartella **[!UICONTROL output]** e tocca **[!UICONTROL Properties]**.
 
-1. In **[!UICONTROL Form Model]** , espandere la scheda **[!UICONTROL Document of Record Template Configuration]** sezione e seleziona **[!UICONTROL Generate Document of Record]**.
+1. Nella scheda **[!UICONTROL Form Model]**, espandere la sezione **[!UICONTROL Document of Record Template Configuration]** e selezionare **[!UICONTROL Generate Document of Record]**.
 
    ![Genera documento di record](assets/generate_dor_af_properties.png)
 
 1. Tocca **[!UICONTROL Save & Close]** per salvare le impostazioni.
 
-All’invio del modulo adattivo convertito, il DoR viene generato automaticamente utilizzando il modello predefinito. Per associare qualsiasi altro modello DoR al modulo adattivo convertito, puoi selezionare **[!UICONTROL Associate form template as the Document of Record template]** opzione.
+All’invio del modulo adattivo convertito, il DoR viene generato automaticamente utilizzando il modello predefinito. Se si desidera associare qualsiasi altro modello DoR al modulo adattivo convertito, è possibile selezionare l&#39;opzione **[!UICONTROL Associate form template as the Document of Record template]**.
 
 ## Genera documento di record per PDF forms basati su Acro Forms o XFA {#generate-document-of-record-acroform-xfaform}
 
@@ -129,25 +129,25 @@ Se si utilizza un modulo Acro o un modulo PDF basato su XFA come modulo di origi
 
 ### Abilita generazione DoR prima della conversione per generare DoR utilizzando il modello del modulo di origine {#use-input-form-as-template-to-generate-document-of-record}
 
-1. Seleziona **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Proprietà della configurazione cloud utilizzate per la conversione > **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** opzione.
+1. Selezionare **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Proprietà della configurazione cloud utilizzata per la conversione > **[!UICONTROL Advanced]** > opzione **[!UICONTROL Generate Document of Record]**.
 
 1. Tocca **[!UICONTROL Save & Close]** per salvare le impostazioni.
 
-1. [Eseguire la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md). Assicurati di utilizzare la configurazione cloud modificata nel passaggio 1 di queste istruzioni.
+1. [Esegui la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md). Assicurati di utilizzare la configurazione cloud modificata nel passaggio 1 di queste istruzioni.
 Il servizio di conversione associa automaticamente il modulo Acro Form o il modulo PDF basato su XFA al modulo adattivo convertito come modello DoR.
-È possibile aprire le proprietà del modulo adattivo per visualizzare il modello DoR in **[!UICONTROL Document of Record Template Configuration]** sezione di **[!UICONTROL Form Model]** scheda.
+È possibile aprire le proprietà del modulo adattivo per visualizzare il modello DoR nella sezione **[!UICONTROL Document of Record Template Configuration]** della scheda **[!UICONTROL Form Model]**.
 
-   ![Modifica le proprietà del modulo adattivo per generare un documento di record](assets/generate_dor_af_properties_xdp_acro.png)
+   ![Modifica le proprietà del modulo adattivo per generare il documento record](assets/generate_dor_af_properties_xdp_acro.png)
 
    All’invio del modulo adattivo convertito, il DoR viene generato automaticamente utilizzando il modello di modulo di origine.
 
 ### Modifica le proprietà del modulo adattivo dopo la conversione per abilitare la generazione DoR {#edit-adaptive-form-properties-to-generate-document-of-record}
 
-1. [Eseguire la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md) sul modulo PDF non interattivo per generare un modulo adattivo.
+1. [Esegui la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md) nel modulo PDF non interattivo per generare un modulo adattivo.
 
-1. Seleziona il modulo adattivo nel **[!UICONTROL output]** cartella e tocca **[!UICONTROL Properties]**.
+1. Seleziona il modulo adattivo nella cartella **[!UICONTROL output]** e tocca **[!UICONTROL Properties]**.
 
-1. In **[!UICONTROL Form Model]** , espandere la scheda **[!UICONTROL Document of Record Template Configuration]** sezione e seleziona **[!UICONTROL Generate Document of Record]** per abilitare la generazione DoR utilizzando il modello predefinito.
-È inoltre possibile selezionare **[!UICONTROL Associate form template as the Document of Record template]** e selezionare il modello per abilitare la generazione DoR utilizzando il modello di modulo di origine o qualsiasi altro modello di modulo.
+1. Nella scheda **[!UICONTROL Form Model]**, espandi la sezione **[!UICONTROL Document of Record Template Configuration]** e seleziona **[!UICONTROL Generate Document of Record]** per abilitare la generazione DoR utilizzando il modello predefinito.
+È inoltre possibile selezionare l&#39;opzione **[!UICONTROL Associate form template as the Document of Record template]** e selezionare il modello per abilitare la generazione DoR utilizzando il modello di modulo di origine o qualsiasi altro modello di modulo.
 
 1. Tocca **[!UICONTROL Save & Close]** per salvare le impostazioni.

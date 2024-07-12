@@ -22,13 +22,13 @@ Prima di iniziare a utilizzare il servizio di Automated forms conversion AEM For
 ## Problemi noti {#known-issues}
 
 * La cartella contenente i moduli per la conversione non può contenere più di 15 moduli e 50 pagine in totale. Le dimensioni della cartella di origine non devono superare i 10 MB. Non creare sottocartelle nella cartella di origine.
-* Alcuni oggetti di forma sono facilmente visibili all&#39;occhio umano, ma [difficile da identificare per il servizio](styles-and-pattern-considerations-and-best-practices.md). Utilizzare [Rivedi e correggi l’editor](review-correct-ui-edited.md) identificare e convertire tali oggetti modulo.
+* Alcuni oggetti modulo sono facilmente visibili all&#39;occhio umano ma sono [difficili da identificare per il servizio](styles-and-pattern-considerations-and-best-practices.md). Utilizza [Rivedi e correggi l&#39;editor](review-correct-ui-edited.md) per identificare e convertire tali oggetti modulo.
 * Editor di revisione e correzione:
 
    * Nessuna azione di annullamento. Il pulsante Salva salva le modifiche in modo permanente.
    * Non supporta pannelli ripetibili per moduli basati su XFA.
    * Se modificate un elenco in una tabella utilizzando l&#39;editor Revisione e correzione, la larghezza della riga non viene regolata automaticamente e il testo potrebbe fuoriuscire sulla riga successiva della tabella.
-   * Il **[!UICONTROL Auto-detect multi-column layout from input forms]** Questa funzione non funziona con l’editor di revisione e correzione e con i frammenti di modulo.
+   * La funzionalità **[!UICONTROL Auto-detect multi-column layout from input forms]** non funziona con l&#39;editor di revisione e correzione e i frammenti di modulo.
    * La firma scarabocchio creata con l’editor di revisione e correzione non viene caricata per i moduli adattivi pubblicati.
 
 
@@ -37,9 +37,9 @@ Prima di iniziare a utilizzare il servizio di Automated forms conversion AEM For
    * Script XFA non supportati. Ad esempio, script per la generazione automatica di valori per un componente del menu a discesa.
    * Il metamodello non funziona per il gruppo di scelta
    * L’opzione Gruppi di scelte con un singolo carattere non è identificata
-   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà di presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
+   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
 
-* Quando si utilizza **Utilizzare AcroForm di input come documento di record (DoR) per i moduli adattivi generati** opzione, considera quanto segue:
+* Quando utilizzi l&#39;opzione **Usa AcroForm di input come documento di record (DoR) per i moduli adattivi generati**, considera quanto segue:
 
 <table>
     <tr>
@@ -76,7 +76,7 @@ Prima di iniziare a utilizzare il servizio di Automated forms conversion AEM For
 * I PDF forms di dimensioni superiori a 15 pagine non sono supportati.
 * I documenti crittografati, protetti da password e protetti non vengono convertiti. Rimuovere la crittografia o le password prima di eseguire la conversione.
 * Le tabelle complesse come tabelle senza bordi, tabelle nidificate e tabelle con valori segnaposto non sono supportate. Utilizza l’editor di moduli adattivi per aggiungere o modificare tabelle complesse dopo la conversione. Sono supportate solo tabelle semplici, con campi vuoti, intestazioni corrette e limiti chiari.
-* Il servizio converte in moduli adattivi solo i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese. È possibile tradurre i moduli adattivi convertiti in un’altra lingua utilizzando [Flusso di lavoro di traduzione AEM](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* Il servizio converte in moduli adattivi solo i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese. Puoi tradurre i moduli adattivi convertiti in un&#39;altra lingua utilizzando [flusso di lavoro di traduzione AEM](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms non supporta il rilevamento automatico del layout a più colonne dei moduli di input.
 * Le informazioni codificate utilizzando i colori nel modulo PDF di origine non vengono trasferite al modulo adattivo.
 * I colori del modulo PDF di origine non vengono trasferiti ai temi dei moduli adattivi.

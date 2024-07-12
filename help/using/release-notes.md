@@ -10,8 +10,8 @@ level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
 source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 66%
+source-wordcount: '487'
+ht-degree: 63%
 
 ---
 
@@ -30,7 +30,7 @@ Il servizio di conversione automatica dei moduli viene migliorato continuamente.
 
 ## 24 febbraio 2022 (AFC-2022.02.0) {#feb-2022}
 
-* Funzionalità aggiunta a [convertire automaticamente le sezioni in frammenti](convert-existing-forms-to-adaptive-forms.md) per migliorare la velocità di rendering dei moduli convertiti e semplificare il caricamento di moduli di grandi dimensioni nell’editor di moduli adattivi.
+* È stata aggiunta la possibilità a [convertire automaticamente le sezioni in frammenti](convert-existing-forms-to-adaptive-forms.md) per migliorare la velocità di rendering dei moduli convertiti e semplificare il caricamento di moduli di grandi dimensioni nell&#39;editor di moduli adattivi.
 
 ## 29 agosto 2021 (AFC-2021.08.0) {#aug-2021}
 

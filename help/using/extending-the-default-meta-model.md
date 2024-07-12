@@ -25,7 +25,7 @@ Il metamodello è uno schema JSON. Prima di iniziare con il metamodello, assicur
 
 ## Metamodello predefinito {#default-meta-model}
 
-Il servizio di automated forms conversion (AFCS) dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di Automated forms conversion (AFCS). Puoi trovare una copia del metamodello sul tuo server AEM locale all’indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. È inoltre possibile [fai clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json), e [Portoghese](assets/pt_br.globalschema.json) sono disponibili per il download anche le lingue.
+Il servizio di automated forms conversion (AFCS) dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di Automated forms conversion (AFCS). È possibile trovare una copia del metamodello sul proprio server AEM locale all&#39;indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Puoi anche [fare clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json) e [Portoghese](assets/pt_br.globalschema.json) lingue è disponibile per il download.
 
 Lo schema del metamodello deriva dalle entità dello schema in https://schema.org/docs/schemas.html. Dispone di Persona, IndirizzoPostale, LocalBusiness e più entità come definito su https://schema.org. Ogni entità del metamodello aderisce al tipo di oggetto dello schema JSON. Il codice che segue rappresenta una struttura di metamodello di esempio:
 
@@ -50,8 +50,8 @@ Lo schema del metamodello deriva dalle entità dello schema in https://schema.or
 Per scaricare il metamodello predefinito nel file system locale, effettua le seguenti operazioni:
 
 1. Accedi all’istanza di AEM Forms.
-1. Accedi a **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]** cartella.
-1. Seleziona la **[!UICONTROL global.schema.json]** file e tocca **[!UICONTROL Download]**. Viene visualizzata una finestra di dialogo per il download. Seleziona la **[!UICONTROL Download asset(s) as binary files]** opzione. Tocca **[!UICONTROL Download]**. Viene scaricato un archivio.
+1. Passare alla cartella **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]**.
+1. Seleziona il file **[!UICONTROL global.schema.json]** e tocca **[!UICONTROL Download]**. Viene visualizzata una finestra di dialogo per il download. Selezionare l&#39;opzione **[!UICONTROL Download asset(s) as binary files]**. Toccare **[!UICONTROL Download]**. Viene scaricato un archivio.
 
    <!--
    Comment Type: draft
@@ -98,13 +98,13 @@ Un metamodello fa riferimento a un file di schema JSON che contiene entità. Tut
     }
 ```
 
-In questo esempio, **Evento** rappresenta il nome di un’entità con un valore per **id** as **Eventid**. L’entità Event include più proprietà:
+In questo esempio, **Event** rappresenta il nome di un&#39;entità con un valore per **id** come **Eventid**. L’entità Event include più proprietà:
 
 * startDate
 * endDate
 * luogo
 
-Il **allOf** costrutto nel metamodello consente l’ereditarietà tra le entità.
+Il costrutto **allOf** nel metamodello abilita l&#39;ereditarietà tra le entità.
 
 Ogni proprietà può inoltre includere:
 
@@ -112,7 +112,7 @@ Ogni proprietà può inoltre includere:
 * [Ricerca basata su parole chiave per applicare proprietà ai campi del modulo adattivo generati](#keywordsearch)
 * [Proprietà aggiuntive](#additionalproperties)
 
-![Proprietà del metamodello](assets/meta_model_elements.gif)
+![Proprietà metamodello](assets/meta_model_elements.gif)
 
 In base alle parole chiave a cui si fa riferimento utilizzando **aem:affKeyword**, il servizio di conversione esegue un&#39;operazione di ricerca nei campi del modulo di origine. Il servizio di conversione applica le proprietà dello schema JSON e proprietà aggiuntive ai campi che soddisfano i criteri di ricerca.
 
@@ -131,11 +131,11 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
   <tr> 
    <td><p>titolo</p></td> 
    <td> 
-    <p>Il testo menzionato all’interno della proprietà title in un metamodello funge da parola chiave di ricerca per eseguire azioni sui campi del modulo adattivo generato. Ad esempio, modificando l’etichetta di un campo modulo adattivo. Per ulteriori informazioni, consulta <strong>Modificare l’etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>Il testo menzionato all’interno della proprietà title in un metamodello funge da parola chiave di ricerca per eseguire azioni sui campi del modulo adattivo generato. Ad esempio, modificando l’etichetta di un campo modulo adattivo. Per ulteriori informazioni, vedere <strong>Modificare l'etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
   <td><p>descrizione</p></td> 
    <td> 
-    <p>La proprietà description imposta il testo della Guida per il campo modulo adattivo generato. Per ulteriori informazioni, consulta <strong>Aggiungere testo della Guida a un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>La proprietà description imposta il testo della Guida per il campo modulo adattivo generato. Per ulteriori informazioni, vedere <strong>Aggiungere il testo della Guida a un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
   <td><p>tipo</p></td> 
    <td> 
@@ -145,19 +145,19 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
      <li>number: genera un campo modulo adattivo di tipo dati numerico.</li>
      <li>integer: genera un campo modulo adattivo di tipo dati numerico con sottotipo impostato su integer.</li>
      <li>booleano: genera un componente modulo adattivo sostitutivo.</li>
-     </ul><p>Per ulteriori informazioni sull’utilizzo della proprietà type in un metamodello, consulta <strong>Modificare il tipo di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p></td> 
+     </ul><p>Per ulteriori informazioni sull'utilizzo della proprietà type in un metamodello, vedere <strong>Modificare il tipo di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p></td> 
   </tr>
   <td><p>pattern</p></td> 
    <td> 
-    <p>La proprietà pattern limita il valore del campo modulo adattivo generato basato su un’espressione regolare. Ad esempio, il seguente codice nel metamodello limita a dieci cifre il valore per il campo del modulo adattivo generato:<br>"pattern": "/\\d{10}/"<br>Analogamente, il codice seguente nel metamodello limita il valore di un campo a un formato di data specifico.<br> "pattern": "date{DD MMMM, YYYY}",</p> </td> 
+    <p>La proprietà pattern limita il valore del campo modulo adattivo generato basato su un’espressione regolare. Ad esempio, il codice seguente nel metamodello limita il valore del campo del modulo adattivo generato a dieci cifre:<br>"pattern": "/\\d{10}/"<br>Analogamente, il codice seguente nel metamodello limita il valore di un campo a un formato di data specifico."pattern" <br>: "date{DD MMMM, YYYY}",</p> </td> 
   </tr>
   <td><p>formato</p></td> 
    <td> 
-    <p>La proprietà format limita il valore del campo modulo adattivo generato in base a un pattern denominato anziché a un’espressione regolare. I valori possibili per la proprietà format includono:<ul><li>e-mail: genera un componente modulo adattivo e-mail.</li><li>hostname: genera un componente modulo adattivo casella di testo.</li></ul>Per ulteriori informazioni sull'utilizzo della proprietà format in un metamodello, consultate <strong>Modificare il formato di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>La proprietà format limita il valore del campo modulo adattivo generato in base a un pattern denominato anziché a un’espressione regolare. I valori possibili per la proprietà format includono:<ul><li>e-mail: genera un componente modulo adattivo e-mail.</li><li>hostname: genera un componente modulo adattivo casella di testo.</li></ul>Per ulteriori informazioni sull'utilizzo della proprietà format in un metamodello, vedere <strong>Modificare il formato di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
   <td><p>enum ed enumNames</p></td> 
    <td> 
-    <p>Le proprietà enum e enumNames limitano i valori dei campi elenco a discesa, casella di controllo o pulsante di scelta a un set fisso. I valori elencati in enumNames vengono visualizzati nell'interfaccia utente. I valori elencati utilizzando la proprietà enum vengono utilizzati per il calcolo.<br>Per ulteriori informazioni, consulta <strong>Convertire un campo modulo in caselle di controllo a scelta multipla nel modulo adattivo</strong>, <strong>Convertire un campo di testo in un elenco a discesa nel modulo adattivo</strong>, e <strong>Aggiungi opzioni aggiuntive all’elenco a discesa</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>Le proprietà enum e enumNames limitano i valori dei campi elenco a discesa, casella di controllo o pulsante di scelta a un set fisso. I valori elencati in enumNames vengono visualizzati nell'interfaccia utente. I valori elencati utilizzando la proprietà enum vengono utilizzati per il calcolo.<br>Per ulteriori informazioni, consulta <strong>Convertire un campo modulo in caselle di controllo a scelta multipla nel modulo adattivo</strong>, <strong>Convertire un campo di testo in elenco a discesa nel modulo adattivo</strong> e <strong>Aggiungere opzioni aggiuntive all'elenco a discesa</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
  </tbody> 
 </table>
@@ -166,7 +166,7 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
 
 Il servizio di automated forms conversion (AFCS) esegue una ricerca per parola chiave nel modulo di origine durante la conversione. Dopo aver filtrato i campi che soddisfano i criteri di ricerca, il servizio di conversione applica le proprietà definite per tali campi nel metamodello ai campi del modulo adattivo generato.
 
-Le parole chiave sono referenziate utilizzando **aem:affKeyword** proprietà.
+Viene fatto riferimento alle parole chiave utilizzando la proprietà **aem:affKeyword**.
 
 ```
 {
@@ -177,11 +177,11 @@ Le parole chiave sono referenziate utilizzando **aem:affKeyword** proprietà.
 }
 ```
 
-In questo esempio, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Numero conto bancario** nel modulo, il servizio di conversione converte il campo in un **numero** digita utilizzando **tipo** proprietà.
+In questo esempio, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo **numero** utilizzando la proprietà **tipo**.
 
 ### Proprietà aggiuntive per i campi modulo adattivo generati {#additionalproperties}
 
-È possibile utilizzare **aem:afProperties** proprietà nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati utilizzando il servizio di Automated forms conversion (AFCS):
+Puoi utilizzare la proprietà **aem:afProperties** nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati tramite il servizio di Automated forms conversion (AFCS):
 
 <table> 
  <tbody> 
@@ -192,25 +192,25 @@ In questo esempio, il servizio di conversione utilizza il testo **aem:affKeyword
   <tr> 
    <td><p>multiLine</p></td> 
    <td> 
-    <p>La proprietà multiLine converte un campo del modulo di origine in un campo con più righe nel modulo adattivo dopo la conversione. Per ulteriori informazioni, consulta <strong>Convertire un campo stringa in un campo a più righe</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>La proprietà multiLine converte un campo del modulo di origine in un campo con più righe nel modulo adattivo dopo la conversione. Per ulteriori informazioni, vedere <strong>Convertire un campo stringa in un campo con più righe</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
   <td><p>obbligatorio</p></td> 
    <td> 
-    <p>La proprietà required imposta come obbligatorio l’input per un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, consulta <strong>Aggiungere convalide ai campi del modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p>
+    <p>La proprietà required imposta come obbligatorio l’input per un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, consulta <strong>Aggiungere convalide ai campi del modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p>
     </td> 
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>La proprietà jcr:title, con la proprietà schema JSON title, consente di modificare l’etichetta di un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, consulta <strong>Modificare l’etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a><br>Consulta <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Creazione di moduli adattivi tramite schema JSON</a> per informazioni su altre proprietà che puoi applicare ai campi del modulo adattivo utilizzando lo schema JSON.</p>
+    <p>La proprietà jcr:title, con la proprietà schema JSON title, consente di modificare l’etichetta di un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, vedere <strong>Modificare l'etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a><br>Consulta <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Creazione di moduli adattivi utilizzando lo schema JSON</a> per informazioni su altre proprietà che puoi applicare ai campi del modulo adattivo utilizzando lo schema JSON.</p>
     <p></p></td> 
   </tr>
   <td><p>sling:resourceType e guideNodeClass</p></td> 
    <td> 
-    <p>Le proprietà sling:resourceType e guideNodeClass consentono di mappare un campo modulo a un componente modulo adattivo corrispondente.<br>Per ulteriori informazioni, consulta <strong>Convertire un campo modulo in caselle di controllo a scelta multipla nel modulo adattivo</strong> e <strong>Convertire un campo di testo in un elenco a discesa nel modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</a></p> </td> 
+    <p>Le proprietà sling:resourceType e guideNodeClass consentono di mappare un campo modulo a un componente modulo adattivo corrispondente.<br>Per ulteriori informazioni, consulta <strong>Convertire un campo modulo in caselle di controllo a scelta multipla nel modulo adattivo</strong> e <strong>Convertire un campo di testo in elenco a discesa nel modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a></p> </td> 
   </tr>
   <td><p>validatePictureClause</p></td> 
    <td> 
-    <p>La proprietà validatePictureClause imposta una convalida sul formato consentito nel campo del modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, consulta <strong>Aggiungere convalide ai campi del modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzati.</p> </td> 
+    <p>La proprietà validatePictureClause imposta una convalida sul formato consentito nel campo del modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, consulta <strong>Aggiungere convalide ai campi del modulo adattivo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</p> </td> 
   </tr>
  </tbody> 
 </table>
@@ -226,7 +226,7 @@ Puoi creare un metamodello specifico per la lingua. Questo metamodello consente 
 * Italiano (it)
 * Portoghese (pt-br)
 
-Aggiungi il *aem:Lingua* tag metatag nella parte superiore di un metamodello per specificarne il linguaggio. Ad esempio:
+Aggiungi il tag metatag *aem:Language* in alto a un metamodello per specificarne la lingua. Ad esempio:
 
 ```JSON
 "metaTags": {
@@ -250,7 +250,7 @@ Se non viene specificata alcuna lingua, il servizio considera che il metamodello
 
   Ad esempio, quando la lingua del metamodello è il francese (&quot;aem:Language&quot;: &quot;fr&quot;), accertati che tutte le descrizioni e i messaggi siano in lingua francese.
 
-* Assicurati tutto [Proprietà schema JSON](#jsonschemaproperties) utilizza solo valori supportati. Ad esempio, la proprietà type può estendersi solo su valori selezionati di String, Number, Integer e Boolean.
+* Assicurati che tutte le [proprietà dello schema JSON](#jsonschemaproperties) utilizzino solo valori supportati. Ad esempio, la proprietà type può estendersi solo su valori selezionati di String, Number, Integer e Boolean.
 
 L’immagine seguente mostra alcuni esempi di metamodello in lingua inglese e del corrispondente metamodello in lingua francese:
 
@@ -270,13 +270,13 @@ Tuttavia, puoi salvare un metamodello personalizzato in una cartella e modificar
 
 Per utilizzare un metamodello personalizzato durante la conversione, effettua le seguenti operazioni:
 
-1. Creare una cartella in **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** e carica il file dello schema JSON del metamodello personalizzato nella cartella.
+1. Crea una cartella in **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** e carica il file di schema JSON del metamodello personalizzato nella cartella.
 1. Apri le proprietà del servizio di conversione utilizzando:
 
-   **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > **&lt;properties of=&quot;&quot; selected=&quot;&quot; configuration=&quot;&quot;>**
+   **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > **&lt;Proprietà della configurazione selezionata>**
 
-1. In **[!UICONTROL Basic]** , specifica la posizione del metamodello personalizzato nel **[!UICONTROL Custom Meta-model]** campo e tocco **[!UICONTROL Save & Close]**.
-1. [Eseguire la conversione](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) per applicare il metamodello personalizzato al processo di conversione.
+1. Nella scheda **[!UICONTROL Basic]**, specifica la posizione del metamodello personalizzato nel campo **[!UICONTROL Custom Meta-model]** e tocca **[!UICONTROL Save & Close]**.
+1. [Esegui la conversione](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) per applicare il metamodello personalizzato al processo di conversione.
 
 ### Esempi di metamodello personalizzati {#custommetamodelexamples}
 
@@ -294,9 +294,9 @@ Alcuni esempi comuni di utilizzo di un metamodello personalizzato per modificare
 
 #### Modificare l’etichetta di un campo modulo {#modify-the-label-of-a-form-field}
 
-**Esempio:** Modifica l’etichetta del numero di conto bancario nel modulo in Numero di conto personalizzato nel modulo adattivo dopo la conversione.
+**Esempio:** dopo la conversione, modifica l&#39;etichetta del numero di conto bancario nel modulo in Numero di conto personalizzato nel modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza **titolo** come parola chiave di ricerca. Dopo aver recuperato **Numero conto bancario** nel modulo, il servizio di conversione sostituisce il testo con il **Numero conto cliente** stringa citata con **jcr:title** proprietà in **aem:afProperties** sezione.
+In questo metamodello personalizzato, il servizio di conversione utilizza la proprietà **title** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione sostituisce il testo con la stringa **numero di conto cliente** indicata con la proprietà **jcr:title** nella sezione **aem:afProperties**.
 
 ```
 {
@@ -312,9 +312,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza **tito
 
 #### Modificare il tipo di un campo modulo {#modify-the-type-of-a-form-field}
 
-**Esempio**: modifica il **Numero conto bancario** campo di tipo testo nel modulo prima della conversione in un campo di tipo numero nel modulo adattivo dopo la conversione.
+**Esempio**: modifica il campo **Numero conto bancario** di tipo testo nel modulo prima della conversione in un campo di tipo numero nel modulo adattivo dopo la conversione.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Numero conto bancario** testo nel modulo, il servizio di conversione converte il campo in un tipo di numero utilizzando **tipo** proprietà.
+In questo metamodello personalizzato, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo numerico utilizzando la proprietà **type**.
 
 ```
 {
@@ -327,9 +327,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Aggiungere testo della Guida a un campo modulo {#add-help-text-to-a-form-field}
 
-**Esempio**: aggiungi testo della Guida al **Numero conto bancario** modulo adattivo.
+**Esempio**: aggiungi il testo della Guida al campo **Numero conto bancario** del modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Numero conto bancario** nel modulo, il servizio di conversione aggiunge il testo della Guida al campo del modulo adattivo utilizzando il **descrizione** proprietà.
+In questo metamodello personalizzato, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **conto bancario** nel modulo, il servizio di conversione aggiunge il testo della Guida al campo del modulo adattivo utilizzando la proprietà **description**.
 
 ```
 {
@@ -343,16 +343,16 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Convertire un campo modulo in caselle di controllo a scelta multipla nel modulo adattivo {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
-**Esempio**: converti il **Paese** campo di tipo stringa nel modulo prima della conversione in caselle di controllo nel modulo adattivo dopo la conversione.
+**Esempio**: converti il campo **Paese** del tipo di stringa nel modulo prima della conversione in caselle di controllo nel modulo adattivo dopo la conversione.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Paese** nel modulo, il servizio di conversione converte il campo in caselle di controllo utilizzando il comando **enum** proprietà:
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo **Country** nel modulo, il servizio di conversione converte il campo nelle caselle di controllo seguenti utilizzando la proprietà **enum**:
 
 * India
 * Inghilterra
 * Australia
 * Nuova Zelanda
 
-**sling:resourceType** e **guideNodeClass** proprietà mappa un campo modulo al componente modulo adattivo della casella di controllo.
+Le proprietà **sling:resourceType** e **guideNodeClass** associano un campo modulo al componente modulo adattivo della casella di controllo.
 
 ```
 {
@@ -377,9 +377,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Modificare il formato di un campo modulo {#modify-the-format-of-a-form-field}
 
-**Esempio**: modifica il formato della **Indirizzo e-mail** in un formato e-mail.
+**Esempio**: modifica il formato del campo **Indirizzo e-mail** in un formato e-mail.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Indirizzo e-mail** nel modulo, il servizio di conversione converte il campo in un formato e-mail utilizzando **formato** proprietà.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **Indirizzo e-mail** nel modulo, il servizio di conversione converte il campo in un formato e-mail utilizzando la proprietà **format**.
 
 ```
 {
@@ -393,9 +393,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Aggiungere convalide ai campi del modulo adattivo {#add-validations-to-adaptive-form-fields}
 
-**Esempio 1:** Aggiungi una convalida al **Codice postale** del modulo adattivo.
+**Esempio 1:** Aggiungi una convalida al campo **CAP** del modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Codice postale** testo nel modulo, il servizio di conversione aggiunge una convalida al campo utilizzando **validatePictureClause** proprietà definita nella **aem:afProperties** sezione. In base alla convalida, l’input specificato per il **Codice postale** nel modulo adattivo dopo la conversione deve contenere sei caratteri.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **Codice postale** nel modulo, il servizio di conversione aggiunge una convalida al campo utilizzando la proprietà **validatePictureClause** definita nella sezione **aem:afProperties**. In base alla convalida, l&#39;input specificato per il campo **Codice postale** nel modulo adattivo dopo la conversione deve includere sei caratteri.
 
 ```
 {
@@ -409,9 +409,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 }
 ```
 
-**Esempio 2:** Aggiungi una convalida al **Numero conto bancario** del modulo adattivo.
+**Esempio 2:** Aggiungi una convalida al campo **Numero conto bancario** del modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Numero conto bancario** testo nel modulo, il servizio di conversione aggiunge una convalida al campo utilizzando **obbligatorio** proprietà definita nella **aem:afProperties** sezione. In base alla convalida, devi specificare un valore per **Numero conto bancario** prima di inviare il modulo dopo la conversione.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione aggiunge una convalida al campo utilizzando la proprietà **required** definita nella sezione **aem:afProperties**. In base alla convalida, è necessario specificare un valore per il campo **Numero conto bancario** prima di inviare il modulo dopo la conversione.
 
 ```
 {
@@ -427,16 +427,16 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Convertire un campo di testo in un elenco a discesa nel modulo adattivo {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
-**Esempio**: converti il **Paese** campo di tipo stringa nel modulo prima della conversione in opzioni a discesa nel modulo adattivo dopo la conversione.
+**Esempio**: converti il campo **Paese** del tipo di stringa nel modulo prima della conversione in opzioni a discesa nel modulo adattivo dopo la conversione.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Paese** nel modulo, il servizio di conversione converte il campo nelle seguenti opzioni di elenco a discesa utilizzando **enum** proprietà:
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo **Country** nel modulo, il servizio di conversione converte il campo nelle seguenti opzioni dell&#39;elenco a discesa utilizzando la proprietà **enum**:
 
 * India
 * Inghilterra
 * Australia
 * Nuova Zelanda
 
-**sling:resourceType** e **guideNodeClass** proprietà mappa un campo modulo al componente modulo adattivo a discesa.
+Le proprietà **sling:resourceType** e **guideNodeClass** associano un campo modulo al componente modulo adattivo a discesa.
 
 ```
 {
@@ -461,9 +461,9 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 #### Aggiungi opzioni aggiuntive all’elenco a discesa {#add-additional-options-to-the-drop-down-list}
 
-**Esempio:** Aggiungi **Sri Lanka** come opzione aggiuntiva a un elenco a discesa esistente che utilizza un metamodello personalizzato.
+**Esempio:** Aggiungi **Sri Lanka** come opzione aggiuntiva a un elenco a discesa esistente utilizzando un metamodello personalizzato.
 
-Per aggiungere un’opzione aggiuntiva, aggiorna il **enum** con la nuova opzione. In questo esempio, aggiorna il **enum** proprietà con **Sri Lanka** come opzione aggiuntiva. Valori elencati in **enum** nell&#39;elenco a discesa.
+Per aggiungere un&#39;opzione aggiuntiva, aggiornare la proprietà **enum** con la nuova opzione. In questo esempio, aggiorna la proprietà **enum** con **Sri Lanka** come opzione aggiuntiva. I valori elencati nella proprietà **enum** vengono visualizzati nell&#39;elenco a discesa.
 
 ```
 {
@@ -489,9 +489,9 @@ Per aggiungere un’opzione aggiuntiva, aggiorna il **enum** con la nuova opzion
 
 #### Convertire un campo stringa in un campo a più righe {#convert-a-string-field-to-a-multi-line-field}
 
-**Esempio:** Converti il **Indirizzo** campo di tipo stringa in un campo a più righe nel modulo dopo la conversione.
+**Esempio:** Converti il campo **Indirizzo** di tipo stringa in un campo a più righe nel modulo dopo la conversione.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato **Indirizzo** testo nel modulo, il servizio converte il campo di testo in un campo su più righe utilizzando **multiLine** proprietà definita nella **aem:afProperties** sezione.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo **Address** nel modulo, il servizio converte il campo di testo in un campo su più righe utilizzando la proprietà **multiLine** definita nella sezione **aem:afProperties**.
 
 ```
 {
