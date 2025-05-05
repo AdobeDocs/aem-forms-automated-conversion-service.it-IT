@@ -70,8 +70,10 @@ Dopo aver caricato i moduli e configurato il servizio, effettua le seguenti oper
 
    1. Verifica di aver abilitato [Componenti core](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction) nell&#39;istanza di AEM Forms. Se non è abilitato, puoi [abilitare i componenti core nel tuo ambiente AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) o [Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
    1. Seleziona un tema e un modello di modulo adattivo basato su [Componenti core](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) come illustrato nell&#39;immagine seguente:
+
       ![Seleziona modello di modulo adattivo](assets/select-af-template-1.png).
    1. Tocca **[!UICONTROL Start Conversion]** per convertire il PDF in un modulo basato su Componenti core.
+
    >[!NOTE]
    > * Proprietà come l’associazione dati o lo schema del modello dati non sono disponibili per i moduli adattivi basati su componenti core, ma sono disponibili anche per i componenti di base.
    > * [I moduli convertiti](#review-and-correct-the-converted-forms) non sono stati revisionati e corretti perché non sono disponibili per i moduli basati su componenti core.
@@ -102,7 +104,7 @@ Se selezioni questa opzione, il servizio di conversione genera un modulo adattiv
    >[!NOTE]
    >
    >
-   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL  Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
+   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL &#x200B; Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
    > * È possibile utilizzare l&#39;opzione **[!UICONTROL Use existing adaptive form fragments]** solo con PDF forms non interattivo. Altri tipi di modulo non sono ancora supportati.
    > * Con il servizio di conversione automatica è possibile utilizzare solo frammenti non associati o frammenti associati a uno schema JSON. Non utilizzare frammenti XFA. Frammenti XFA non supportati.
    >

@@ -85,7 +85,7 @@ Per iniziare a esaminare le conversioni, seleziona il documento PDF di origine u
 
    * Per eliminare un pannello, selezionalo e tocca l&#39;icona Elimina ![](assets/delete-icon.png) nella barra degli strumenti. Nella finestra di dialogo di conferma, toccare **[!UICONTROL Confirm]**. Tocca **[!UICONTROL Save]** per salvare le modifiche.
 
-   * Per separare un pannello, selezionalo e tocca l’icona Separa nella barra degli strumenti. Il pannello è separato e i campi secondari del pannello separato vengono regolati sul campo principale. Tocca **[!UICONTROL Save]**per salvare le modifiche.
+   * Per separare un pannello, selezionalo e tocca l’icona Separa nella barra degli strumenti. Il pannello è separato e i campi secondari del pannello separato vengono regolati sul campo principale. Tocca **[!UICONTROL Save]**&#x200B;per salvare le modifiche.
 
 1. **Crea gruppi logici di testo**: convalida i testi identificati per completezza e correttezza. Inoltre, verificate che i testi siano posizionati in modo logico in pannelli o gruppi corretti. Ad esempio, in un layout a più colonne, i testi di un gruppo logico e inseriti in un altro gruppo.
 
