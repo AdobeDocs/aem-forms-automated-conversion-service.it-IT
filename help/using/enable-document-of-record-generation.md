@@ -24,7 +24,7 @@ Il DoR utilizza un modello base per definirne il layout. Puoi generare un DoR ut
 
 ![Documento di record generato](assets/document_of_record.gif)
 
-Per ulteriori informazioni sulla generazione di un documento record, vedere [Generate Document of Record for adaptive forms](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
+Per ulteriori informazioni sulla generazione di un documento record, vedere [Generate Document of Record for adaptive forms](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
 Il servizio di Automated forms conversion [ (AFCS)](/help/using/introduction.md) converte i seguenti moduli di origine in moduli adattivi:
 

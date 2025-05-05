@@ -63,7 +63,7 @@ Dopo la prima conversione riuscita, il servizio di conversione sovrappone il doc
 
 ### Prima di iniziare {#before-you-start}
 
-* L’editor di revisione e correzione non supporta i frammenti. Non utilizzare l&#39;editor per esaminare le conversioni per le quali l&#39;opzione **Estrai frammento** era abilitata durante le conversioni. Per queste conversioni è possibile utilizzare [l&#39;editor di moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+* L’editor di revisione e correzione non supporta i frammenti. Non utilizzare l&#39;editor per esaminare le conversioni per le quali l&#39;opzione **Estrai frammento** era abilitata durante le conversioni. Per queste conversioni è possibile utilizzare [l&#39;editor di moduli adattivi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 * L’editor di revisione e correzione non dispone dell’azione di annullamento. Utilizza il pulsante Salva solo per salvare in modo permanente le modifiche.
 
@@ -187,7 +187,7 @@ Tocca il pulsante **[!UICONTROL Save]** per salvare le modifiche o utilizza il p
 
 Dopo aver apportato tutte le modifiche necessarie nell’editor di revisione e correzione, puoi inviare nuovamente il modulo per la conversione. Per inviare il modulo per la conversione, toccare **[!UICONTROL Save & Convert]**. **[!UICONTROL Sent for conversion label]** viene applicato alla cartella contenente il documento di origine e il modulo di origine aggiornato viene caricato nel servizio di conversione in esecuzione su Adobe I/O.
 
-A seconda della complessità del modulo, la conversione del modulo può richiedere del tempo. Una volta completata la conversione, il modulo adattivo convertito e le relative risorse vengono scaricati sul computer. È possibile rivedere il modulo nell&#39;editor al termine della conversione e aprire il modulo adattivo in [editor moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html) per l&#39;insieme finale di correzioni, se necessario.
+A seconda della complessità del modulo, la conversione del modulo può richiedere del tempo. Una volta completata la conversione, il modulo adattivo convertito e le relative risorse vengono scaricati sul computer. È possibile rivedere il modulo nell&#39;editor al termine della conversione e aprire il modulo adattivo in [editor moduli adattivi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/introduction-forms-authoring.html) per l&#39;insieme finale di correzioni, se necessario.
 
 Se invii nuovamente un modulo per la conversione dopo averlo aggiornato nell’editor di moduli adattivi, tutte le modifiche apportate in tale modulo andranno perse. È possibile aprire un modulo in revisione e nell’editor corretto solo dopo una conversione riuscita.
 

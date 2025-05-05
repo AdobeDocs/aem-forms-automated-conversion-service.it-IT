@@ -56,13 +56,13 @@ Prima di utilizzare il servizio, prepara l’istanza di authoring di AEM per la 
 
 Il servizio di conversione automatica dei moduli (AFCS) viene eseguito sull’istanza di authoring di AEM. Per configurare un’istanza di authoring AEM è necessario AEM 6.5 o AEM Forms as a Cloud Service.
 
-* Se AEM 6.5 non è ancora operativo, scaricalo dalle seguenti posizioni. Dopo aver scaricato AEM, per istruzioni su come configurare un&#39;istanza di AEM Author, vedi [distribuzione e manutenzione](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
+* Se AEM 6.5 non è ancora operativo, scaricalo dalle seguenti posizioni. Dopo aver scaricato AEM, per istruzioni su come configurare un&#39;istanza di AEM Author, vedi [distribuzione e manutenzione](https://helpx.adobe.com/it/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
 
    * Se sei già un cliente di AEM, scarica AEM 6.5 dal [sito Web Adobe Licensing](http://licensing.adobe.com).
 
    * Se sei un partner Adobe, utilizza il [Programma di formazione per i partner Adobe](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) per richiedere AEM 6.5.
 
-* Se utilizzi AEM Forms as a Cloud Service, consulta onboarding per [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment) e [configurare un ambiente di sviluppo locale](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment).
+* Se utilizzi AEM Forms as a Cloud Service, consulta onboarding per [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=it#setup-environment) e [configurare un ambiente di sviluppo locale](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=it#setup-environment).
 
 ### 2. Scarica e installa AEM l’ultimo Service Pack (solo per AEM 6.5) {#servicepack}
 
@@ -70,7 +70,7 @@ Scarica e installa il Service Pack più recente di AEM. Per istruzioni dettaglia
 
 ### 3. Scarica e installa il pacchetto del componente aggiuntivo AEM Forms (solo per AEM 6.5)   {#downloadaemformsaddon}
 
-Un’istanza di AEM contiene funzionalità di base per i moduli. Il servizio di conversione richiede le funzionalità complete di AEM Forms. Scarica e installa il pacchetto del componente aggiuntivo AEM Forms per usufruire di tutte le funzionalità di AEM Forms. Il pacchetto è necessario per configurare ed eseguire il servizio di conversione. Per istruzioni dettagliate, vedere [Installare e configurare le funzionalità di acquisizione dati.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+Un’istanza di AEM contiene funzionalità di base per i moduli. Il servizio di conversione richiede le funzionalità complete di AEM Forms. Scarica e installa il pacchetto del componente aggiuntivo AEM Forms per usufruire di tutte le funzionalità di AEM Forms. Il pacchetto è necessario per configurare ed eseguire il servizio di conversione. Per istruzioni dettagliate, vedere [Installare e configurare le funzionalità di acquisizione dati.](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 https://adminconsole.adobe.com/
 >[!NOTE]
 > Dopo l’installazione del pacchetto aggiuntivo, assicurati di eseguire le configurazioni obbligatorie di post-installazione.
@@ -119,7 +119,7 @@ Per creare un profilo e aggiungervi sviluppatori, effettua le seguenti operazion
    1. Immetti l’indirizzo e-mail degli sviluppatori e, facoltativamente, il nome e il cognome.
    1. Seleziona i profili di prodotto. Fare clic su **[!UICONTROL Save]**.
 
-Ripeti i passaggi precedenti per tutti gli utenti. Per ulteriori dettagli sull&#39;aggiunta di sviluppatori, vedere [Gestione sviluppatori](https://helpx.adobe.com/enterprise/using/manage-developers.html).
+Ripeti i passaggi precedenti per tutti gli utenti. Per ulteriori dettagli sull&#39;aggiunta di sviluppatori, vedere [Gestione sviluppatori](https://helpx.adobe.com/it/enterprise/using/manage-developers.html).
 
 Quando un amministratore aggiunge sviluppatori al profilo di Adobe I/O, gli sviluppatori ricevono una notifica tramite e-mail (se configurata).
 
@@ -137,7 +137,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email). -->
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=it#sending-email). -->
 
 ### Aggiungi utente al gruppo forms-users {#adduserstousergroup}
 
