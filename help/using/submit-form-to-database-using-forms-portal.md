@@ -31,7 +31,7 @@ L&#39;esempio, discusso in questo articolo, è un&#39;implementazione di riferim
 * Configurare un’istanza di authoring AEM 6.4 o 6.5
 * Installa [il service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per l&#39;istanza AEM
 * Versione più recente del pacchetto del componente aggiuntivo AEM Forms
-* Configura servizio di Automated forms conversion [ (AFCS)](configure-service.md)
+* Configura servizio di Automated forms conversion [&#x200B; (AFCS)](configure-service.md)
 * Configurare un database. Il database utilizzato nell&#39;implementazione di esempio è MySQL 5.6.24. Tuttavia, puoi integrare il modulo adattivo convertito con qualsiasi database di tua scelta.
 
 ## Configurare la connessione tra l’istanza AEM e il database {#set-up-connection-aem-instance-database}

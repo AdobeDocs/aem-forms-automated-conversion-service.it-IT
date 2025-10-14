@@ -184,7 +184,7 @@ Puoi scaricare il modello dati del modulo di esempio utilizzando:
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il servizio di Automated forms conversion [ per convertire](convert-existing-forms-to-adaptive-forms.md) il modulo [Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il servizio di Automated forms conversion [&#x200B; per convertire](convert-existing-forms-to-adaptive-forms.md) il modulo [Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con associazione JSON](assets/generate_af_with_data_bindings.png)
 

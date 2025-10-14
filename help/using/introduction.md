@@ -25,7 +25,7 @@ Il servizio di automated forms conversion (AFCS) consente di accelerare la digit
 * Raggruppare i campi più comuni in frammenti di modulo riutilizzabili
 * Abilita Adobe Analytics durante la conversione
 
-![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. ](assets/pdf-to-adaptive-form-gitx50.gif)
+![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. &#x200B;](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## Onboarding {#onboarding}
 

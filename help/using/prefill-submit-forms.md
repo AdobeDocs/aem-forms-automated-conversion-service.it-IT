@@ -103,7 +103,7 @@ Le informazioni fornite in questo articolo si basano sul presupposto che chiunqu
 ## Prerequisiti {#pre-requisites}
 
 * Configura un&#39;istanza [dell&#39;autore dell&#39;AEM](https://helpx.adobe.com/it/experience-manager/6-5/sites/deploying/using/deploy.html)
-* Configura il servizio di Automated forms conversion [ nell&#39;istanza di creazione dell&#39;AEM](configure-service.md)
+* Configura il servizio di Automated forms conversion [&#x200B; nell&#39;istanza di creazione dell&#39;AEM](configure-service.md)
 
 ## Modulo adattivo di esempio {#sample-adaptive-form}
 
@@ -379,7 +379,7 @@ Nel campo Riferimento binding, selezionare **Candidato** > **Nome**, quindi tocc
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il servizio di Automated forms conversion [ per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il servizio di Automated forms conversion [&#x200B; per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con associazione JSON](assets/generate_af_with_data_bindings.png)
 
