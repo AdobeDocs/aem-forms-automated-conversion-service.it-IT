@@ -29,7 +29,7 @@ ht-degree: 40%
 + [Estendere il metamodello predefinito](extending-the-default-meta-model.md)
 + [Workflow di preriempimento basato su origine di dati e invio consigliati per i moduli adattivi](prefill-submit-forms.md)
 + [Workflow di abilitazione della generazione di documenti di record consigliati per i moduli adattivi](enable-document-of-record-generation.md)
-+ [Integrare un modulo adattivo con un database utilizzando il flusso di lavoro AEM](submit-converted-adaptive-form-to-database.md)
++ [Integrare un modulo adattivo con un database utilizzando flusso di lavoro AEM](submit-converted-adaptive-form-to-database.md)
 + [Domande frequenti](frequently-asked-questions.md)
 + [Problemi noti](known-issues.md)
 + [Risoluzione dei problemi](troubleshoot-afcs.md)
