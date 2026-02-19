@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 53%
+source-wordcount: '503'
+ht-degree: 50%
 
 ---
 
 # Note sulla versione
 
-Il servizio di conversione automatica dei moduli viene migliorato continuamente. Per rimanere aggiornato sugli sviluppi più recenti, visita questa pagina regolarmente. Questa pagina fornisce informazioni su:
+Il servizio di conversione automatica dei moduli viene migliorato continuamente. Per rimanere aggiornato sugli ultimi sviluppi, visita questa pagina regolarmente. Questa pagina fornisce informazioni su:
 
 * Accesso anticipato
 * Versioni più recenti
@@ -89,3 +89,4 @@ Il servizio ora è più efficiente nel rilevamento degli elenchi puntati e numer
 Per utilizzare le funzioni e i miglioramenti più recenti forniti nella versione AFC-2020.03.1, è necessario il pacchetto del connettore 1.1.38 o versioni successive.
 
 Se disponi già di un ambiente attivo del servizio di conversione automatica dei moduli (AEM 6.5 o AEM 6.5 LTS), per utilizzare le funzioni più recenti del servizio di conversione installa il service pack più recente, il pacchetto del componente aggiuntivo AEM Forms più recente e il pacchetto del connettore più recente nell’ordine indicato. Per AEM Forms as a Cloud Service, gli aggiornamenti vengono consegnati automaticamente. Per istruzioni dettagliate, vedi l’articolo [Configurazione del servizio di conversione automatica dei moduli](configure-service.md).
+

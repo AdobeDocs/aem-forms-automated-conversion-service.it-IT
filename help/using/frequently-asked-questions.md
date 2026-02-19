@@ -8,7 +8,7 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 3%
@@ -43,8 +43,8 @@ ht-degree: 3%
 1. **È possibile convertire un modulo di Microsoft Word in moduli adattivi?**
    <p>No, il servizio non converte un modulo di Microsoft Word in un modulo adattivo. È possibile salvare un modulo di Microsoft Word in un modulo di PDF e convertire il modulo di PDF in un modulo adattivo. Il processo completo è </p> <br>
 
-   1. Utilizzare Adobe Acrobat per [convertire il documento di Word in un PDF non interattivo](https://helpx.adobe.com/it/acrobat/how-to/create-pdf-files-word-excel-website.html).
-   1. Utilizza Adobe Acrobat per [convertire il PDF forms prodotto in PDF Form compilabile](https://helpx.adobe.com/it/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
+   1. Utilizzare Adobe Acrobat per [convertire il documento di Word in un PDF non interattivo](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html).
+   1. Utilizza Adobe Acrobat per [convertire il PDF forms prodotto in PDF Form compilabile](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
    1. Utilizza Adobe Acrobat per aggiornare e correggere manualmente i campi del modulo.
    1. Salvare il modulo PDF. Ora è possibile utilizzare il modulo con il servizio di conversione per generare un modulo adattivo. È inoltre possibile utilizzare il modulo come modello di documento di record.
 
@@ -77,10 +77,10 @@ I motivi più comuni per cui la conversione non riesce sono:</p>
     <p> </p> <br>
 
 1. **Il servizio identifica e utilizza i font del PDF di origine nei moduli adattivi di output?**
-   <p>Lo stile e il layout di un modulo HTML dinamico sono generalmente diversi da quelli di un modulo PDF o cartaceo. Per supportare layout e stili coerenti nelle organizzazioni, i moduli adattivi utilizzano <a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/themes.html">temi per assegnare uno stile a un modulo</a>. Il servizio di conversione utilizza i font e gli stili di font specificati nel tema applicato durante la conversione. È possibile modificare i font e gli stili dei font del tema per conferire un aspetto distinto ai componenti di un modulo adattivo.</p> <br>
+   <p>Lo stile e il layout di un modulo HTML dinamico sono generalmente diversi da quelli di un modulo PDF o cartaceo. Per supportare layout e stili coerenti nelle organizzazioni, i moduli adattivi utilizzano <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html">temi per assegnare uno stile a un modulo</a>. Il servizio di conversione utilizza i font e gli stili di font specificati nel tema applicato durante la conversione. È possibile modificare i font e gli stili dei font del tema per conferire un aspetto distinto ai componenti di un modulo adattivo.</p> <br>
 
 1. **Il servizio estrae automaticamente JavaScript dai moduli basati su XDP e lo applica ai moduli adattivi corrispondenti?**
-   <p>Il servizio non converte automaticamente gli script di moduli basati su XFA o Acro Forms nelle regole dei moduli adattivi corrispondenti. Gli autori dei moduli possono utilizzare l'<a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/rule-editor.html">editor di regole</a> per aggiungere interattività a un modulo adattivo.</p> <br>
+   <p>Il servizio non converte automaticamente gli script di moduli basati su XFA o Acro Forms nelle regole dei moduli adattivi corrispondenti. Gli autori dei moduli possono utilizzare l'<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">editor di regole</a> per aggiungere interattività a un modulo adattivo.</p> <br>
 
 1. **Alcuni oggetti modulo non vengono convertiti correttamente in componenti modulo adattivi. Come risolvere il problema?**
    <p>Il servizio AFCS (Automated Forms Conversion Service) è stato addestrato su un ampio insieme di moduli. Tuttavia, le applicazioni basate su AI/ML sono limitate dai relativi dati e modelli di formazione. Potrebbero esistere più tipi di campo, layout, pattern e contesto distinguibili dalla percezione umana, ma difficili per il riconoscimento automatico. Il servizio potrebbe non identificare tali oggetti o riconoscerli in modo errato. È possibile utilizzare l'editor <a href="review-correct-ui-edited.md" target="_blank">Revisione e correzione</a> per apportare le modifiche necessarie nel layout del modulo di input basato su un semplice modulo cartaceo.</p> <br/>
@@ -101,7 +101,7 @@ Il servizio supporta solo moduli vuoti o non compilati. Non caricare moduli comp
    <p>La quantità di tempo dipende dalle dimensioni e dalla complessità dei moduli di input e dal numero di richieste. Il servizio intende ridurre in modo significativo il time-to-value convertendo PDF forms in moduli adattivi a un ritmo molto più rapido rispetto al processo manuale di conversione dei moduli. </p> <br />
 
 1. **Come procedere in caso di errore relativo alle librerie RSA? Il messaggio di errore è simile al seguente:** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 L&#39;errore sopra riportato si verifica quando la delega di avvio non è configurata per le librerie RSA/BouncyCastle. Per risolvere il problema, effettua le seguenti operazioni:
    <p> </p>
 
@@ -120,4 +120,5 @@ L&#39;errore sopra riportato si verifica quando la delega di avvio non è config
 1. **Come si crea un modulo PDF abilitato per Adobe Sign?**
    </p>Per creare un modulo PDF abilitato per Adobe Sign:</p>
 
-   Aggiungi [tag di testo Adobe Sign](https://helpx.adobe.com/it/sign/using/text-tag.html) ai nomi dei campi o utilizza l&#39;opzione [Converti in modulo Adobe Sign](https://helpx.adobe.com/it/sign/using/create-forms-with-acrobat.html).
+   Aggiungi [tag di testo Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) ai nomi dei campi o utilizza l&#39;opzione [Converti in modulo Adobe Sign](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html).
+

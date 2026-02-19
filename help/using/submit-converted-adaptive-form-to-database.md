@@ -8,18 +8,18 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
 
 # Integrare un modulo adattivo con un database utilizzando flusso di lavoro AEM {#submit-forms-to-database-using-forms-portal}
 
-Il servizio AFCS (Automated Forms Conversion Service) consente di convertire in un modulo adattivo un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
+Il servizio AFCS (Automated Forms Conversion Service) consente di convertire un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
 
-Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati del modulo, uno schema XML o uno schema JSON dopo la conversione. Per il modello dati modulo, è necessario associare manualmente i campi del modulo adattivo al modello dati modulo. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database. Analogamente, una volta completata l’integrazione con il database, è possibile configurare i campi nel modulo adattivo convertito per recuperare i valori dal database e precompilare i campi del modulo adattivo.
+Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati modulo, uno schema XML o uno schema JSON dopo la conversione. Per il modello dati modulo, devi associare manualmente i campi del modulo adattivo al modello dati modulo. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database. Analogamente, una volta completata l’integrazione con il database, è possibile configurare i campi nel modulo adattivo convertito per recuperare i valori dal database e precompilare i campi del modulo adattivo.
 
 La figura seguente illustra diverse fasi dell’integrazione di un modulo adattivo convertito con un database:
 
@@ -184,7 +184,7 @@ Puoi scaricare il modello dati del modulo di esempio utilizzando:
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il servizio di conversione automatica dei moduli (AFCS) di [&#x200B; per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il servizio di conversione automatica dei moduli (AFCS) di [ per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con associazione JSON](assets/generate_af_with_data_bindings.png)
 
@@ -276,3 +276,4 @@ Esegui la procedura seguente per configurare il modulo adattivo per la precompil
 Puoi scaricare il modulo adattivo convertito di esempio utilizzando:
 
 [Ottieni il file](assets/DownloadedFormsPackage_1498226829041200.zip)
+

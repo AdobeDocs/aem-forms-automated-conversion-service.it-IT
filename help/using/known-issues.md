@@ -8,9 +8,9 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 4393ab4c56174f1dd9ad2979ce18b1d18ee09f6b
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Prima di iniziare a utilizzare il servizio di conversione automatica dei moduli 
    * Script XFA non supportati. Ad esempio, script per la generazione automatica di valori per un componente del menu a discesa.
    * Il modello Meta non funziona per il gruppo di scelta
    * L’opzione Gruppi di scelte con un singolo carattere non è identificata
-   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
+   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
 
 * Quando utilizzi l&#39;opzione **Usa AcroForm di input come documento di record (DoR) per i moduli adattivi generati**, considera quanto segue:
 
@@ -83,3 +83,4 @@ Prima di iniziare a utilizzare il servizio di conversione automatica dei moduli 
 * I PDF forms colorati vengono trattati come moduli in scala di grigio e i campi vengono rilevati di conseguenza.
 * Proprietà come l’associazione dati o lo schema del modello dati non sono disponibili per i moduli adattivi basati su componenti core.
 * La revisione e la correzione dei moduli convertiti non è disponibile per i moduli basati su componenti core.
+

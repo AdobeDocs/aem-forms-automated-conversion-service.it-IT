@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '739'
 ht-degree: 53%
 
 ---
 
 # Servizio di conversione automatica dei moduli (AFCS) {#introduction-to-automated-forms-conversion-service}
 
-Il servizio AFCS (Automated Forms Conversion Service) consente di accelerare la digitalizzazione e la modernizzazione dell’esperienza di acquisizione dati tramite la conversione automatica di PDF forms in moduli adattivi. Il servizio, basato su Adobe Sensei, converte automaticamente i moduli PDF in moduli adattivi facili da usare su diversi dispositivi, reattivi e basati su HTML5. Pur sfruttando gli investimenti esistenti nei moduli PDF e XFA, il servizio applica anche convalide, stili e layout appropriati ai campi del modulo adattivo durante la conversione. Il servizio consente di:
+Il servizio AFCS (Automated Forms Conversion Service) consente di accelerare la digitalizzazione e la modernizzazione delle esperienze di acquisizione dati tramite la conversione automatica di PDF forms in moduli adattivi. Il servizio, basato su Adobe Sensei, converte automaticamente i moduli PDF in moduli adattivi facili da usare su diversi dispositivi, reattivi e basati su HTML5. Pur sfruttando gli investimenti esistenti nei moduli PDF e XFA, il servizio applica anche convalide, stili e layout appropriati ai campi del modulo adattivo durante la conversione. Il servizio consente di:
 
 * Evitare la conversione manuale dei moduli di stampa in moduli adattivi, con risparmio di tempo e risorse
 * Applicare modelli e convalide appropriati durante la conversione
@@ -25,7 +25,7 @@ Il servizio AFCS (Automated Forms Conversion Service) consente di accelerare la 
 * Raggruppare i campi più comuni in frammenti di modulo riutilizzabili
 * Abilita Adobe Analytics durante la conversione
 
-![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. &#x200B;](assets/pdf-to-adaptive-form-gitx50.gif)
+![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. ](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## Onboarding {#onboarding}
 
@@ -67,3 +67,4 @@ Dopo aver configurato l’ambiente di AEM Forms per convertire i moduli PDF in m
 I moduli reali possono presentare requisiti di acquisizione dati complessi in termini di layout dei campi, denominazione o suggerimenti impliciti che potrebbero non essere acquisiti con precisione da una logica di rilevamento basata su AI/ML. Una volta completata la conversione automatica, è possibile utilizzare l’[editor di revisione e correzione](review-correct-ui-edited.md) per rivedere il modulo convertito, apportare gli aggiornamenti necessari e generare un output migliorato più simile all’esperienza desiderata. Dopo aver apportato le modifiche necessarie, invia nuovamente il modulo per convertirlo.
 
 Il tempo necessario per la conversione automatica dipende da vari fattori quali le dimensioni del modulo di input, la complessità del modulo e il prestito sulla coda di elaborazione del servizio. L’utente viene informato regolarmente dell’avanzamento tramite l’indicatore di stato sulla cartella/sul file. Al termine della conversione, viene inviata anche una notifica e-mail all’indirizzo e-mail configurato.
+

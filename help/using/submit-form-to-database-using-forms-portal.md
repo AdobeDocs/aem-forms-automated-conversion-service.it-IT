@@ -4,9 +4,9 @@ description: Estendi il metamodello predefinito per aggiungere pattern, convalid
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Integrare i moduli adattivi con il database utilizzando Forms Portal {#submit-forms-to-database-using-forms-portal}
 
-Il servizio AFCS (Automated Forms Conversion Service) consente di convertire in un modulo adattivo un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
+Il servizio AFCS (Automated Forms Conversion Service) consente di convertire un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
 
 Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati modulo, uno schema XML o uno schema JSON dopo la conversione. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database utilizzando il portale Forms.
 
@@ -299,3 +299,4 @@ Per creare una pagina di Forms Portal e configurarla in modo da poter inviare mo
 1. Inserisci il componente **[!UICONTROL Drafts & Submissions]** nella pagina. Nella pagina del portale Forms vengono visualizzate due schede, **[!UICONTROL Draft Forms]** e **[!UICONTROL Submitted Forms]**. Nella scheda **[!UICONTROL Draft Forms]** viene inoltre visualizzato il modulo adattivo convertito generato mediante i passaggi indicati in [Configurare il modulo adattivo convertito per l&#39;integrazione con Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
 
 1. Tocca **[!UICONTROL Preview]**, tocca il modulo adattivo convertito, specifica i valori per i campi del modulo adattivo e invialo. I valori specificati per i campi del modulo adattivo vengono inviati al database integrato.
+
