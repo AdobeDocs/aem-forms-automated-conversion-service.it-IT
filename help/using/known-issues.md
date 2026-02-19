@@ -37,7 +37,7 @@ Prima di iniziare a utilizzare il servizio di conversione automatica dei moduli 
    * Script XFA non supportati. Ad esempio, script per la generazione automatica di valori per un componente del menu a discesa.
    * Il modello Meta non funziona per il gruppo di scelta
    * L’opzione Gruppi di scelte con un singolo carattere non è identificata
-   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
+   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
 
 * Quando utilizzi l&#39;opzione **Usa AcroForm di input come documento di record (DoR) per i moduli adattivi generati**, considera quanto segue:
 
