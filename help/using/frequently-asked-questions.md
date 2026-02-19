@@ -43,8 +43,8 @@ ht-degree: 3%
 1. **È possibile convertire un modulo di Microsoft Word in moduli adattivi?**
    <p>No, il servizio non converte un modulo di Microsoft Word in un modulo adattivo. È possibile salvare un modulo di Microsoft Word in un modulo di PDF e convertire il modulo di PDF in un modulo adattivo. Il processo completo è </p> <br>
 
-   1. Utilizzare Adobe Acrobat per [convertire il documento di Word in un PDF non interattivo](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html).
-   1. Utilizza Adobe Acrobat per [convertire il PDF forms prodotto in PDF Form compilabile](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
+   1. Utilizzare Adobe Acrobat per [convertire il documento di Word in un PDF non interattivo](https://helpx.adobe.com/it/acrobat/how-to/create-pdf-files-word-excel-website.html).
+   1. Utilizza Adobe Acrobat per [convertire il PDF forms prodotto in PDF Form compilabile](https://helpx.adobe.com/it/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
    1. Utilizza Adobe Acrobat per aggiornare e correggere manualmente i campi del modulo.
    1. Salvare il modulo PDF. Ora è possibile utilizzare il modulo con il servizio di conversione per generare un modulo adattivo. È inoltre possibile utilizzare il modulo come modello di documento di record.
 
@@ -77,10 +77,10 @@ I motivi più comuni per cui la conversione non riesce sono:</p>
     <p> </p> <br>
 
 1. **Il servizio identifica e utilizza i font del PDF di origine nei moduli adattivi di output?**
-   <p>Lo stile e il layout di un modulo HTML dinamico sono generalmente diversi da quelli di un modulo PDF o cartaceo. Per supportare layout e stili coerenti nelle organizzazioni, i moduli adattivi utilizzano <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html">temi per assegnare uno stile a un modulo</a>. Il servizio di conversione utilizza i font e gli stili di font specificati nel tema applicato durante la conversione. È possibile modificare i font e gli stili dei font del tema per conferire un aspetto distinto ai componenti di un modulo adattivo.</p> <br>
+   <p>Lo stile e il layout di un modulo HTML dinamico sono generalmente diversi da quelli di un modulo PDF o cartaceo. Per supportare layout e stili coerenti nelle organizzazioni, i moduli adattivi utilizzano <a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/themes.html">temi per assegnare uno stile a un modulo</a>. Il servizio di conversione utilizza i font e gli stili di font specificati nel tema applicato durante la conversione. È possibile modificare i font e gli stili dei font del tema per conferire un aspetto distinto ai componenti di un modulo adattivo.</p> <br>
 
 1. **Il servizio estrae automaticamente JavaScript dai moduli basati su XDP e lo applica ai moduli adattivi corrispondenti?**
-   <p>Il servizio non converte automaticamente gli script di moduli basati su XFA o Acro Forms nelle regole dei moduli adattivi corrispondenti. Gli autori dei moduli possono utilizzare l'<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">editor di regole</a> per aggiungere interattività a un modulo adattivo.</p> <br>
+   <p>Il servizio non converte automaticamente gli script di moduli basati su XFA o Acro Forms nelle regole dei moduli adattivi corrispondenti. Gli autori dei moduli possono utilizzare l'<a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/rule-editor.html">editor di regole</a> per aggiungere interattività a un modulo adattivo.</p> <br>
 
 1. **Alcuni oggetti modulo non vengono convertiti correttamente in componenti modulo adattivi. Come risolvere il problema?**
    <p>Il servizio AFCS (Automated Forms Conversion Service) è stato addestrato su un ampio insieme di moduli. Tuttavia, le applicazioni basate su AI/ML sono limitate dai relativi dati e modelli di formazione. Potrebbero esistere più tipi di campo, layout, pattern e contesto distinguibili dalla percezione umana, ma difficili per il riconoscimento automatico. Il servizio potrebbe non identificare tali oggetti o riconoscerli in modo errato. È possibile utilizzare l'editor <a href="review-correct-ui-edited.md" target="_blank">Revisione e correzione</a> per apportare le modifiche necessarie nel layout del modulo di input basato su un semplice modulo cartaceo.</p> <br/>
@@ -120,4 +120,4 @@ L&#39;errore sopra riportato si verifica quando la delega di avvio non è config
 1. **Come si crea un modulo PDF abilitato per Adobe Sign?**
    </p>Per creare un modulo PDF abilitato per Adobe Sign:</p>
 
-   Aggiungi [tag di testo Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) ai nomi dei campi o utilizza l&#39;opzione [Converti in modulo Adobe Sign](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html).
+   Aggiungi [tag di testo Adobe Sign](https://helpx.adobe.com/it/sign/using/text-tag.html) ai nomi dei campi o utilizza l&#39;opzione [Converti in modulo Adobe Sign](https://helpx.adobe.com/it/sign/using/create-forms-with-acrobat.html).
