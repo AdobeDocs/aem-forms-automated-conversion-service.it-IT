@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1508'
 ht-degree: 1%
 
 ---
 
-# Integrare un modulo adattivo con un database utilizzando il flusso di lavoro AEM {#submit-forms-to-database-using-forms-portal}
+# Integrare un modulo adattivo con un database utilizzando flusso di lavoro AEM {#submit-forms-to-database-using-forms-portal}
 
-Il servizio di automated forms conversion (AFCS) consente di convertire un modulo di PDF non interattivo, un modulo Acro o un modulo di PDF basato su XFA in un modulo adattivo. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
+Il servizio AFCS (Automated Forms Conversion Service) consente di convertire in un modulo adattivo un modulo PDF non interattivo, un modulo Acro o un modulo PDF basato su XFA. Quando si avvia il processo di conversione, è possibile generare un modulo adattivo con o senza associazioni di dati.
 
 Se scegli di generare un modulo adattivo senza associazioni di dati, puoi integrare il modulo adattivo convertito con un modello di dati del modulo, uno schema XML o uno schema JSON dopo la conversione. Per il modello dati modulo, è necessario associare manualmente i campi del modulo adattivo al modello dati modulo. Tuttavia, se generi un modulo adattivo con associazioni di dati, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione di dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Puoi quindi integrare il modulo adattivo con un database a tua scelta, compilare i dati nel modulo e inviarlo al database. Analogamente, una volta completata l’integrazione con il database, è possibile configurare i campi nel modulo adattivo convertito per recuperare i valori dal database e precompilare i campi del modulo adattivo.
 
@@ -29,10 +29,10 @@ Questo articolo descrive le istruzioni dettagliate per eseguire correttamente tu
 
 ## Prerequisiti {#pre-requisites}
 
-* Configurare un’istanza di authoring AEM 6.4 o 6.5
-* Installa [il service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per l&#39;istanza AEM
+* Configurare un’istanza Autore AEM 6.5 o AEM 6.5 LTS
+* Installa [il service pack più recente](https://helpx.adobe.com/it/experience-manager/aem-releases-updates.html) per la tua istanza di AEM
 * Versione più recente del pacchetto del componente aggiuntivo AEM Forms
-* Configura [servizio di Automated forms conversion](configure-service.md)
+* Configura [Servizio di conversione moduli automatica](configure-service.md)
 * Configurare un database. Il database utilizzato nell&#39;implementazione di esempio è MySQL 5.6.24. Tuttavia, puoi integrare il modulo adattivo convertito con qualsiasi database di tua scelta.
 
 ## Modulo adattivo di esempio {#sample-adaptive-form}
@@ -41,9 +41,9 @@ Per eseguire il caso d’uso per integrare i moduli adattivi convertiti con un d
 
 Puoi scaricare il modulo Contattaci di esempio utilizzando:
 
-[Ottieni file](assets/sample_contact_us_form.pdf)
+[Ottieni il file](assets/sample_contact_us_form.pdf)
 
-Il file PDF funge da input per il servizio di Automated forms conversion (AFCS). Il servizio converte questo file in un modulo adattivo. Nell&#39;immagine seguente viene illustrato il modulo Contattaci di esempio in formato PDF.
+Il file PDF funge da input per il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service). Il servizio converte questo file in un modulo adattivo. L&#39;immagine seguente mostra il modulo Contattaci di esempio in formato PDF.
 
 ![modulo di richiesta di prestito di esempio](assets/sample_contact_us_form.png)
 
@@ -60,7 +60,7 @@ Per installare il file mysql-connector-java-5.1.39-bin.jar, su tutte le istanze 
 
 ## Prepara dati per modello modulo {#prepare-data-for-form-model}
 
-L’integrazione dei dati di AEM Forms consente di configurare e connettersi a diverse origini dati. Dopo aver generato un modulo adattivo utilizzando il processo di conversione, puoi definire il modello del modulo in base a un modello di dati del modulo, XSD o uno schema JSON. È possibile utilizzare un database, Microsoft Dynamics o qualsiasi altro servizio di terze parti per creare un modello di dati modulo.
+L’integrazione dei dati di AEM Forms consente di configurare e connettersi a diverse origini dati. Dopo aver generato un modulo adattivo utilizzando il processo di conversione, puoi definire il modello del modulo in base a un modello di dati del modulo, XSD o uno schema JSON. È possibile utilizzare un database, un Microsoft Dynamics o qualsiasi altro servizio di terze parti per creare un modello di dati modulo.
 
 Questa esercitazione utilizza il database MySQL come origine per la creazione di un modello di dati modulo. Crea uno schema nel database e aggiungi la tabella **contactus** allo schema in base ai campi disponibili nel modulo adattivo.
 
@@ -78,11 +78,11 @@ CREATE TABLE `contactus` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-## Configurare la connessione tra l’istanza AEM e il database {#configure-connection-between-aem-instance-and-database}
+## Configurare la connessione tra l’istanza di AEM e il database {#configure-connection-between-aem-instance-and-database}
 
-Per creare una connessione tra l&#39;istanza AEM e il database MYSQL, effettuare le seguenti operazioni di configurazione:
+Per creare una connessione tra l’istanza di AEM e il database MYSQL, effettua le seguenti operazioni di configurazione:
 
-1. Passare alla pagina Configurazione console Web AEM all&#39;indirizzo `http://server:port/system/console/configMgr`.
+1. Passare alla pagina Configurazione della console Web AEM all&#39;indirizzo `http://server:port/system/console/configMgr`.
 1. Trovare e fare clic per aprire **[!UICONTROL Apache Sling Connection Pooled DataSource]** in modalità di modifica nella configurazione della console Web. Specificare i valori per le proprietà come descritto nella tabella seguente:
 
    <table> 
@@ -154,11 +154,11 @@ Per creare una connessione tra l&#39;istanza AEM e il database MYSQL, effettuare
     </tbody> 
     </table>
 
-## Crea modello dati modulo {#create-form-data-model}
+## Creare un modello di dati modulo {#create-form-data-model}
 
 Dopo aver configurato MYSQL come origine dati, eseguire i passaggi seguenti per creare un modello dati del modulo:
 
-1. Nell&#39;istanza di creazione AEM passare a **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
+1. Nell&#39;istanza Autore AEM, passa a **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 
 1. Toccare **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
 
@@ -180,11 +180,11 @@ Dopo aver configurato MYSQL come origine dati, eseguire i passaggi seguenti per 
 
 Puoi scaricare il modello dati del modulo di esempio utilizzando:
 
-[Ottieni file](assets/DownloadedFormsPackage_1497728018502500.zip)
+[Ottieni il file](assets/DownloadedFormsPackage_1497728018502500.zip)
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il servizio di Automated forms conversion [&#x200B; per convertire](convert-existing-forms-to-adaptive-forms.md) il modulo [Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il servizio di conversione automatica dei moduli (AFCS) di [ per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo Contattaci](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con associazione JSON](assets/generate_af_with_data_bindings.png)
 
@@ -275,4 +275,4 @@ Esegui la procedura seguente per configurare il modulo adattivo per la precompil
 
 Puoi scaricare il modulo adattivo convertito di esempio utilizzando:
 
-[Ottieni file](assets/DownloadedFormsPackage_1498226829041200.zip)
+[Ottieni il file](assets/DownloadedFormsPackage_1498226829041200.zip)

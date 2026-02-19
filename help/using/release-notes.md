@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 63%
+source-wordcount: '504'
+ht-degree: 53%
 
 ---
 
@@ -34,7 +34,7 @@ Il servizio di conversione automatica dei moduli viene migliorato continuamente.
 
 ## 29 agosto 2021 (AFC-2021.08.0) {#aug-2021}
 
-* È stata aggiunta la possibilità di convertire i PDF forms in lingua italiana e portoghese in un modulo adattivo.
+* È stata aggiunta la possibilità di convertire PDF forms in un modulo adattivo in italiano e portoghese.
 
 ## 29 luglio 2021 (AFC-2021.07.2) {#july-2021}
 
@@ -88,4 +88,4 @@ Il servizio ora è più efficiente nel rilevamento degli elenchi puntati e numer
 
 Per utilizzare le funzioni e i miglioramenti più recenti forniti nella versione AFC-2020.03.1, è necessario il pacchetto del connettore 1.1.38 o versioni successive.
 
-Se disponi già di un ambiente attivo del servizio di conversione automatica dei moduli, installa il service pack più recente, il pacchetto aggiuntivo AEM Forms più recente e il pacchetto del connettore più recente nell’ordine indicato per utilizzare le funzioni più recenti del servizio di conversione. Per istruzioni dettagliate, vedi l’articolo [Configurazione del servizio di conversione automatica dei moduli](configure-service.md).
+Se disponi già di un ambiente attivo del servizio di conversione automatica dei moduli (AEM 6.5 o AEM 6.5 LTS), per utilizzare le funzioni più recenti del servizio di conversione installa il service pack più recente, il pacchetto del componente aggiuntivo AEM Forms più recente e il pacchetto del connettore più recente nell’ordine indicato. Per AEM Forms as a Cloud Service, gli aggiornamenti vengono consegnati automaticamente. Per istruzioni dettagliate, vedi l’articolo [Configurazione del servizio di conversione automatica dei moduli](configure-service.md).

@@ -1,27 +1,30 @@
 ---
 title: Conversione di PDF forms in moduli adattivi
 description: Eseguire il servizio di conversione automatica dei moduli (AFCS) per convertire PDF forms in moduli adattivi
-feature: Adaptive Forms, Foundation Components
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
+contentOwner: khsingh
 role: Admin, Developer
-level: Beginner, Intermediate
-source-git-commit: 02e808d6d777078d148f073835e24fd20712eade
+topic-tags: forms
+feature: Adaptive Forms, Foundation Components, Core Components
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: 4393ab4c56174f1dd9ad2979ce18b1d18ee09f6b
 workflow-type: tm+mt
-source-wordcount: '1783'
-ht-degree: 8%
+source-wordcount: '1947'
+ht-degree: 7%
 
 ---
 
 # Conversione di PDF forms in moduli adattivi {#convert-print-forms-to-adaptive-forms}
 
-Il servizio AFCS (Automated Forms Conversion Service) di AEM Forms, basato su Adobe Sensei, converte automaticamente il PDF forms in moduli adattivi facili da usare e reattivi<!--foundation and [core components](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->. Che si utilizzi PDF forms non interattivo, Acro Forms o PDF forms basato su XFA, il servizio AFCS (Automated Forms Conversion Service) può facilmente convertire questi moduli in moduli adattivi. Per informazioni sulle funzionalità, sul flusso di lavoro di conversione e sulle informazioni di onboarding, consulta il servizio [Automated Forms Conversion](introduction.md).
+Il servizio AFCS (Automated Forms Conversion Service) di AEM Forms, basato su Adobe Sensei, converte automaticamente il PDF forms in moduli adattivi facili da usare e reattivi<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->. Che si utilizzi PDF forms non interattivo, Acro Forms o PDF forms basato su XFA, il servizio AFCS (Automated Forms Conversion Service) può facilmente convertire questi moduli in moduli adattivi. Per informazioni sulle funzionalità, sul flusso di lavoro di conversione e sulle informazioni di onboarding, consulta il servizio [Automated Forms Conversion](introduction.md).
 
 ## Prerequisiti {#pre-requisites}
 
 * [**Configura il servizio di conversione**](configure-service.md)
 
-* **Prepara i [modelli](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/template-editor.html) da applicare ai moduli convertiti:** L&#39;utilizzo di un modello consente di applicare un branding coerente in tutti i moduli adattivi. Inoltre, il servizio di conversione automatica dei moduli (AFCS) non estrae e utilizza l’intestazione e il piè di pagina dei documenti PDF di origine. È possibile utilizzare modelli di modulo adattivi per specificare intestazione e piè di pagina. L’intestazione e il piè di pagina specificati nel modello vengono applicati al modulo adattivo durante la conversione. Quando si crea una cartella per i modelli, selezionare l&#39;opzione **[!UICONTROL Browse configurations]** per tutti.
-
-* **Prepara i [temi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/themes.html) da applicare ai moduli convertiti:** L&#39;utilizzo di un tema consente di applicare uno stile coerente a tutti i moduli adattivi dell&#39;organizzazione.
+* **Modelli e temi per moduli convertiti:**
+   * **AEM Forms as a Cloud Service:** sono disponibili modelli e temi predefiniti, che è possibile utilizzare per la conversione o per la preparazione di modelli personalizzati.
+   * **AEM 6.5 e AEM 6.5 LTS:** Preparare [modelli](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) e [temi](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) da applicare ai moduli convertiti. Se desideri utilizzare modelli e temi basati su Componenti core modulo adattivo, devi [abilitare i componenti core modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=it) (vedi [Configurare il servizio](configure-service.md#referencepackage)). L’utilizzo di un modello consente di applicare un branding coerente; AFCS non estrae intestazione e piè di pagina dai PDF di origine, ma li specifica nel modello di modulo adattivo. L’utilizzo di un tema applica uno stile coerente tra i moduli. Quando si crea una cartella per i modelli, selezionare l&#39;opzione **[!UICONTROL Browse configurations]** per tutti.
 
 * **(facoltativo)** [**Converti il PDF forms di origine nel modulo Adobe Sign**](frequently-asked-questions.md)
 
@@ -68,15 +71,13 @@ Dopo aver caricato i moduli e configurato il servizio, effettua le seguenti oper
 
    Per convertire PDF forms in moduli basati su Foundation è necessaria l&#39;impostazione di conversione sopra riportata. Per convertire un modulo PDF in un modulo adattivo basato su Componenti core:
 
-   1. Verifica di aver abilitato [Componenti core](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/adaptive-forms/introduction) nell&#39;istanza di AEM Forms. Se non è abilitato, puoi [abilitare i componenti core nel tuo ambiente AEM 6.5](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) o [Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
-   1. Seleziona un tema e un modello di modulo adattivo basato su [Componenti core](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) come illustrato nell&#39;immagine seguente:
-
+   1. Verifica di aver abilitato [Componenti core](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction) nell&#39;istanza di AEM Forms. Se non è abilitato, puoi [abilitare i componenti core nel tuo ambiente AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) o [Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
+   1. Seleziona un tema e un modello di modulo adattivo basato su [Componenti core](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) come illustrato nell&#39;immagine seguente:
       ![Seleziona modello di modulo adattivo](assets/select-af-template-1.png).
    1. Tocca **[!UICONTROL Start Conversion]** per convertire il PDF in un modulo basato su Componenti core.
-
    >[!NOTE]
    > * Proprietà come l’associazione dati o lo schema del modello dati non sono disponibili per i moduli adattivi basati su componenti core, ma sono disponibili anche per i componenti di base.
-   > * [I moduli convertiti](#review-and-correct-the-converted-forms) non sono stati revisionati e corretti perché non sono disponibili per i moduli basati su componenti core.
+
 
 
 1. Nella scheda **[!UICONTROL Basic]** della finestra di dialogo Impostazioni di conversione:
@@ -85,7 +86,7 @@ Dopo aver caricato i moduli e configurato il servizio, effettua le seguenti oper
    * Specifica una posizione in cui salvare i moduli adattivi generati e lo schema corrispondente. È possibile utilizzare percorsi predefiniti o specificare percorsi personalizzati.
    * Utilizza l&#39;opzione **Genera moduli adattivi senza associazioni del modello dati** per selezionare se desideri generare un modulo adattivo con o senza associazioni al modello dati.
 Se non selezioni questa opzione, il servizio di conversione associa automaticamente i moduli adattivi a uno schema JSON e crea un’associazione dati tra i campi disponibili nel modulo adattivo e lo schema JSON. Nel campo **[!UICONTROL Save generated data model schema at]** viene visualizzata la posizione predefinita per il salvataggio dello schema JSON generato. Puoi anche personalizzare la posizione per salvare lo schema generato.
-Se selezioni questa opzione, il servizio di conversione genera un modulo adattivo senza associazioni del modello di dati. Dopo una conversione riuscita, puoi associare un modulo adattivo a un modello dati modulo, a uno schema XML o a uno schema JSON. Per ulteriori informazioni, consulta [Creazione di un modulo adattivo](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/creating-adaptive-form.html).
+Se selezioni questa opzione, il servizio di conversione genera un modulo adattivo senza associazioni del modello di dati. Dopo una conversione riuscita, puoi associare un modulo adattivo a un modello dati modulo, a uno schema XML o a uno schema JSON. Per ulteriori informazioni, consulta [Creazione di un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html).
 
    <!--
 
@@ -97,6 +98,29 @@ Se selezioni questa opzione, il servizio di conversione genera un modulo adattiv
    </note>
    -->
 
+   **Conversione di PDF in Forms adattivo basato su Componenti core**
+
+   >[!NOTE]
+   >
+   > Questa funzione si trova nel programma Early Adopter. Puoi scrivere a aem-forms-ea@adobe.com dal tuo ID e-mail ufficiale per partecipare al programma early adopter e richiedere l’accesso alla funzionalità.
+
+   Le impostazioni di conversione di cui sopra si applicano alla conversione di PDF forms in moduli adattivi basati su Componenti Foundation. Per convertire un modulo PDF in un modulo adattivo basato su Componenti core:
+
+   1. Verifica di aver abilitato i Componenti core nell’istanza AEM Forms. Per AEM 6.5 e AEM 6.5 LTS, vedi [abilitare i componenti core modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=it), se non già abilitati. Per AEM Forms as a Cloud Service non sono necessari passaggi aggiuntivi.
+   1. Nella scheda **[!UICONTROL Basic]** della finestra di dialogo Impostazioni conversione, seleziona un modello di modulo adattivo basato su Componenti core e un tema.
+
+      ![Specificare le configurazioni](assets/adaptive-forms-core-components-afcs.png)
+
+   1. Tocca **[!UICONTROL Start Conversion]** per convertire il PDF in un modulo adattivo basato su Componenti core.
+
+
+
+
+   >[!NOTE]
+   >
+   > * Proprietà come l’associazione dati o lo schema del modello dati non sono disponibili per i moduli adattivi basati su Componenti core, ma per i moduli basati su Componenti Foundation.
+   > * [Per i moduli adattivi basati su Componenti core non è disponibile la revisione e la correzione dei moduli convertiti](review-correct-ui-edited.md).
+
 1. Nella scheda **[!UICONTROL Additional]** della finestra di dialogo Impostazioni di conversione,
    * Selezionare l&#39;opzione **[!UICONTROL Extract fragment from adaptive forms]** per consentire al servizio di conversione di identificare, estrarre e scaricare frammenti di modulo per i moduli convertiti. Quando si seleziona l&#39;opzione **[!UICONTROL Extract fragment from adaptive forms]**, le opzioni per specificare i percorsi per il salvataggio dei frammenti di modulo estratti e degli schemi di frammenti di modulo corrispondenti sono abilitate.
    * Specifica il percorso di **[!UICONTROL existing adaptive form fragments]**, se disponi di alcuni frammenti di moduli adattivi basati su schema JSON e meno adattivi a livello di schema e intendi utilizzarli in moduli adattivi generati automaticamente. Il servizio di conversione rileva la presenza di frammenti di moduli adattivi basati su schema JSON disponibili e meno adattivi dallo schema con PDF forms di input (solo PDF forms non interattivo). In caso di corrispondenza, nei moduli adattivi corrispondenti viene utilizzato il frammento di modulo adattivo corrispondente.
@@ -104,7 +128,7 @@ Se selezioni questa opzione, il servizio di conversione genera un modulo adattiv
    >[!NOTE]
    >
    >
-   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL &#x200B; Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
+   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL  Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
    > * È possibile utilizzare l&#39;opzione **[!UICONTROL Use existing adaptive form fragments]** solo con PDF forms non interattivo. Altri tipi di modulo non sono ancora supportati.
    > * Con il servizio di conversione automatica è possibile utilizzare solo frammenti non associati o frammenti associati a uno schema JSON. Non utilizzare frammenti XFA. Frammenti XFA non supportati.
    >
@@ -124,7 +148,7 @@ Se selezioni questa opzione, il servizio di conversione genera un modulo adattiv
   >
   > * ristrutturare il modulo per creare una gerarchia semplificata
   > * [aumenta il valore del parametro sling.max.calls]a un numero sufficiente finché l&#39;eccezione non scompare.
-  > * [aumentare le dimensioni della cache](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html?lang=it). L&#39;errore si verifica se il modulo è troppo complesso, presenta un numero elevato di tabelle e una struttura gerarchica a più livelli.
+  > * [aumentare le dimensioni della cache](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html). L&#39;errore si verifica se il modulo è troppo complesso, presenta un numero elevato di tabelle e una struttura gerarchica a più livelli.
 
 1. Toccare **[!UICONTROL Start Conversion]**. La conversione viene avviata. L’avanzamento della conversione viene visualizzato nella cartella o nel modulo fino a quando la conversione non è in corso. Al termine della conversione, il messaggio viene sostituito da un altro messaggio di stato (Convertito, Parzialmente convertito o Conversione non riuscita). Al termine della conversione, sull’indirizzo e-mail configurato viene inviato anche un messaggio e-mail di stato:
 

@@ -8,9 +8,9 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: a2472d5a1a66ffada7be485415f50f32643e03fc
+source-git-commit: 4393ab4c56174f1dd9ad2979ce18b1d18ee09f6b
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -35,9 +35,9 @@ Prima di iniziare a utilizzare il servizio di conversione automatica dei moduli 
 * Per moduli basati su XFA:
    * L’estrazione di frammenti da un modulo basato su XFA non è supportata.
    * Script XFA non supportati. Ad esempio, script per la generazione automatica di valori per un componente del menu a discesa.
-   * Il metamodello non funziona per il gruppo di scelta
+   * Il modello Meta non funziona per il gruppo di scelta
    * L’opzione Gruppi di scelte con un singolo carattere non è identificata
-   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
+   * Quando il documento di origine è un XFA (.XDP) dinamico e [definisce il comportamento delle proprietà XFA in un modulo adattivo](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr), la proprietà Presenza del documento di origine non viene rispettata. Ad esempio, un campo nel documento di origine è contrassegnato come nascosto e uno script rende visibile il campo, quindi il campo rimane visibile nel modulo adattivo di output.
 
 * Quando utilizzi l&#39;opzione **Usa AcroForm di input come documento di record (DoR) per i moduli adattivi generati**, considera quanto segue:
 
@@ -77,7 +77,7 @@ Prima di iniziare a utilizzare il servizio di conversione automatica dei moduli 
 * I documenti crittografati, protetti da password e protetti non vengono convertiti. Rimuovere la crittografia o le password prima di eseguire la conversione.
 * Le tabelle complesse come tabelle senza bordi, tabelle nidificate e tabelle con valori segnaposto non sono supportate. Utilizza l’editor di moduli adattivi per aggiungere o modificare tabelle complesse dopo la conversione. Sono supportate solo tabelle semplici, con campi vuoti, intestazioni corrette e limiti chiari.
 * Il servizio converte in moduli adattivi solo i moduli in lingua inglese, francese, tedesca, spagnola, italiana e portoghese. Puoi tradurre i moduli adattivi convertiti in un&#39;altra lingua utilizzando [flusso di lavoro di traduzione AEM](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
-* AEM 6.4 Forms non supporta il rilevamento automatico del layout a più colonne dei moduli di input.
+* AEM 6.5 Forms non supporta il rilevamento automatico del layout a più colonne dei moduli di input in alcune configurazioni.
 * Le informazioni codificate utilizzando i colori nel modulo PDF di origine non vengono trasferite al modulo adattivo.
 * I colori del PDF Form di origine non vengono trasferiti ai temi dei moduli adattivi.
 * I PDF forms colorati vengono trattati come moduli in scala di grigio e i campi vengono rilevati di conseguenza.

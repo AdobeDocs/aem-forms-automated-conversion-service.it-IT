@@ -1,6 +1,6 @@
 ---
 title: Best practice e considerazioni
-description: Best practice e considerazioni per il servizio di Automated forms conversion (AFCS)
+description: Best practice e considerazioni per il servizio di conversione automatica dei moduli (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,9 +8,9 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 4b227a2cd0253b8ab471007b41787de60c2a1851
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1291'
 ht-degree: 2%
 
 ---
@@ -21,18 +21,18 @@ Questo documento fornisce le linee guida e i consigli di cui possono beneficiare
 
 ## Best practice
 
-Il servizio di conversione converte i PDF forms disponibili nell&#39;istanza [!DNL Forms] dell&#39;AEM in moduli adattivi. Le best practice elencate di seguito consentono di migliorare la velocità e l’accuratezza di conversione. Inoltre, queste best practice consentono di risparmiare tempo dedicato alle attività successive alla conversione.
+Il servizio di conversione converte i PDF forms disponibili nell&#39;istanza di AEM [!DNL Forms] in moduli adattivi. Le best practice elencate di seguito consentono di migliorare la velocità e l’accuratezza di conversione. Inoltre, queste best practice consentono di risparmiare tempo dedicato alle attività successive alla conversione.
 
 ### Prima di caricare l’origine
 
-Se necessario, puoi caricare tutti i PDF forms in una sola volta o in modo graduale. Prima di caricare i moduli, considera quanto segue:
+Se necessario, puoi caricare tutti i PDF forms contemporaneamente o in modo graduale. Prima di caricare i moduli, considera quanto segue:
 
 * Mantenere il numero di moduli in una cartella inferiore a 15 e il numero totale di pagine in una cartella inferiore a 50.
 * Mantieni le dimensioni della cartella inferiori a 10 MB. Non mantenere i moduli in una sottocartella.
 * Mantieni il numero di pagine in un modulo inferiore a 15.
 * Organizzare i documenti di origine in un batch di 8-15 documenti. Mantieni i moduli sorgente con i frammenti di moduli adattivi comuni in un singolo batch.
 * Non caricare i moduli protetti. Il servizio non converte i moduli protetti da password e protetti.
-* Non caricare [Portfoli PDF](https://helpx.adobe.com/it/acrobat/using/overview-pdf-portfolios.html). Il servizio non converte un Portfolio di PDF in un modulo adattivo.
+* Non caricare i [portafogli PDF](https://helpx.adobe.com/it/acrobat/using/overview-pdf-portfolios.html). Il servizio non converte un Portfolio PDF in un modulo adattivo.
 * Non caricare moduli di origine con spazi nel nome file. Rimuovere lo spazio dal nome del file prima di caricare i moduli.
 * Non caricare moduli digitalizzati, compilati e in lingue diverse da inglese, francese, tedesco, spagnolo, italiano e portoghese. Tali moduli non sono supportati.
 
@@ -40,12 +40,14 @@ Quando utilizzi un modulo XDP per la conversione, esegui i seguenti passaggi pri
 
 * Analizza il modulo XDP e correggi i problemi visivi. Assicurarsi che il documento di origine utilizzi i controlli e le strutture previsti. Ad esempio, è possibile che nel modulo di origine siano presenti caselle di controllo anziché pulsanti di scelta per una singola selezione. Per produrre un modulo adattivo con i componenti desiderati, modifica le caselle di controllo in pulsanti di scelta.
 * [Aggiungere associazioni al modulo XDP](http://www.adobe.com/go/learn_aemforms_designer_65) prima di avviare la conversione. Quando le associazioni sono disponibili nel modulo XDP di origine, il servizio applica automaticamente le associazioni ai campi del modulo adattivo corrispondenti durante la conversione. Consente di risparmiare il tempo necessario per applicare manualmente le associazioni.
-* [Aggiungere tag Adobe Sign](https://helpx.adobe.com/it/sign/using/text-tag.html) al file XDP. Il servizio converte automaticamente i tag Adobe Sign nei campi del modulo adattivo corrispondenti. Forms adattivo supporta un numero limitato di campi Adobe Sign. Per l&#39;elenco completo dei campi supportati, consulta [Utilizzo di Adobe Sign in un modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=it).
+* [Aggiungere tag Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) al file XDP. Il servizio converte automaticamente i tag Adobe Sign nei campi del modulo adattivo corrispondenti. Forms adattivo supporta un numero limitato di campi Adobe Sign. Per l&#39;elenco completo dei campi supportati, consulta [Utilizzo di Adobe Sign in un modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en).
 * Se possibile, convertire tabelle complesse in documenti XDP in tabelle semplici. Una tabella con campi modulo in celle di tabella, celle di dimensioni irregolari, celle con estensione di riga o colonna, celle unite, bordi parziali o nessun bordo visibile è considerata una tabella complessa. Una tabella con uno qualsiasi degli elementi sopra menzionati è considerata una tabella complessa.
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### Prima di avviare la conversione
 
+* **AEM Forms as a Cloud Service:** sono disponibili modelli e temi predefiniti. È possibile utilizzarli o creare modelli e temi personalizzati.
+* **AEM 6.5 e AEM 6.5 LTS:** creare modelli e temi per moduli adattivi (oppure installare le risorse di riferimento come descritto in [Configurare il servizio](configure-service.md#referencepackage)). Abilitare [Componenti core modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=it) se si desidera utilizzare modelli e temi basati su Componenti core.
 * Creare modelli di moduli adattivi. I modelli consentono di specificare una struttura uniforme per i moduli dell&#39;organizzazione o del reparto.
 * Specifica l’intestazione e il piè di pagina nei modelli di moduli adattivi. Il servizio ignora l’intestazione e il piè di pagina dei documenti di origine e utilizza l’intestazione e il piè di pagina specificati nel modello di modulo adattivo.
 * Crea temi per moduli adattivi. I temi consentono di conferire un aspetto uniforme alle forme dell&#39;organizzazione o del reparto.
@@ -57,17 +59,17 @@ Quando utilizzi un modulo XDP per la conversione, esegui i seguenti passaggi pri
 
 ## Conoscere pattern complessi
 
-L&#39;AEM [!DNL Forms Automated Conversion service] utilizza algoritmi di intelligenza artificiale e machine learning per comprendere il layout e i campi del modulo di origine. Ogni servizio di apprendimento automatico apprende continuamente dai dati di origine e produce un output migliorato ad ogni abbandono. Questi servizi imparano dall&#39;esperienza come gli esseri umani.
+AEM [!DNL Forms Automated Conversion service] utilizza algoritmi di intelligenza artificiale e machine learning per comprendere il layout e i campi del modulo di origine. Ogni servizio di apprendimento automatico apprende continuamente dai dati di origine e produce un output migliorato ad ogni abbandono. Questi servizi imparano dall&#39;esperienza come gli esseri umani.
 
-[!DNL Automated Forms Conversion service] è addestrato su un set di moduli di grandi dimensioni. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, ci sono alcuni campi e stili nelle PDF forms che sono facilmente visibili all&#39;occhio umano, ma difficili da capire per il servizio. Il servizio può assegnare ad alcuni campi o stili diversi dai tipi di campi o pannelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
+[!DNL Automated Forms Conversion service] è addestrato su un set di moduli di grandi dimensioni. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, in PDF forms sono presenti alcuni campi e stili facilmente visibili all’occhio umano, ma difficili da comprendere per il servizio. Il servizio può assegnare ad alcuni campi o stili diversi dai tipi di campi o pannelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
 
-Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ### Pattern generali {#general}
 
 | Pattern | Esempio |
 |--- |--- |
-| **Pattern** <br>Il servizio non converte i PDF forms compilati in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizza moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
+| **Pattern** <br>Il servizio non converte PDF forms compilato in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizza moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
 | **Pattern** <br>Il servizio potrebbe non riconoscere il testo e i campi in un formato denso. <br><br>**Risoluzione** <br> Aumenta la larghezza tra il testo e i campi di un modulo denso prima di avviare la conversione. |  |
 | **Pattern** <br>Il servizio non supporta i moduli digitalizzati. <br><br>**Risoluzione** <br>Non utilizzare moduli digitalizzati. | ![Modulo digitalizzato](assets/scanned-forms.png) |
 | **Pattern** <br>Il servizio non estrae immagini e testo all&#39;interno delle immagini. <br><br>**Risoluzione** <br> Aggiungere manualmente immagini o testo ai moduli convertiti. | ![Immagine con modulo testo](assets/best-practice-image-with-text.png) |
@@ -80,7 +82,7 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
 
 | Pattern | Risoluzione |
 |--- |--- |
-| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta &#x200B;](assets/best-practice-choice-group-options.png) |
+| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta ](assets/best-practice-choice-group-options.png) |
 
 ### Campi modulo {#form-fields}
 
