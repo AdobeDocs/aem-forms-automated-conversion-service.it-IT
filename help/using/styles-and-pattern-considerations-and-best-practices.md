@@ -82,7 +82,7 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
 
 | Pattern | Risoluzione |
 |--- |--- |
-| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta ](assets/best-practice-choice-group-options.png) |
+| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta &#x200B;](assets/best-practice-choice-group-options.png) |
 
 ### Campi modulo {#form-fields}
 
