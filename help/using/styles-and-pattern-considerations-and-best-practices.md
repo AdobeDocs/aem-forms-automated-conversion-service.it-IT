@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 2%
+source-wordcount: '1356'
+ht-degree: 4%
 
 ---
 
@@ -28,7 +28,7 @@ Il servizio di conversione converte i PDF forms disponibili nell&#39;istanza di 
 Se necessario, puoi caricare tutti i PDF forms contemporaneamente o in modo graduale. Prima di caricare i moduli, considera quanto segue:
 
 * Mantenere il numero di moduli in una cartella inferiore a 15 e il numero totale di pagine in una cartella inferiore a 50.
-* Mantieni le dimensioni della cartella inferiori a 10 MB. Non mantenere i moduli in una sottocartella.
+* Mantieni le dimensioni della cartella inferiori a 10 MB. Non salvare i moduli in sottocartelle.
 * Mantieni il numero di pagine in un modulo inferiore a 15.
 * Organizzare i documenti di origine in un batch di 8-15 documenti. Mantieni i moduli sorgente con i frammenti di moduli adattivi comuni in un singolo batch.
 * Non caricare i moduli protetti. Il servizio non converte i moduli protetti da password e protetti.
@@ -40,7 +40,7 @@ Quando utilizzi un modulo XDP per la conversione, esegui i seguenti passaggi pri
 
 * Analizza il modulo XDP e correggi i problemi visivi. Assicurarsi che il documento di origine utilizzi i controlli e le strutture previsti. Ad esempio, è possibile che nel modulo di origine siano presenti caselle di controllo anziché pulsanti di scelta per una singola selezione. Per produrre un modulo adattivo con i componenti desiderati, modifica le caselle di controllo in pulsanti di scelta.
 * [Aggiungere associazioni al modulo XDP](http://www.adobe.com/go/learn_aemforms_designer_65) prima di avviare la conversione. Quando le associazioni sono disponibili nel modulo XDP di origine, il servizio applica automaticamente le associazioni ai campi del modulo adattivo corrispondenti durante la conversione. Consente di risparmiare il tempo necessario per applicare manualmente le associazioni.
-* [Aggiungere tag Adobe Sign](https://helpx.adobe.com/it/sign/using/text-tag.html) al file XDP. Il servizio converte automaticamente i tag Adobe Sign nei campi del modulo adattivo corrispondenti. Forms adattivo supporta un numero limitato di campi Adobe Sign. Per l&#39;elenco completo dei campi supportati, consulta [Utilizzo di Adobe Sign in un modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=it).
+* [Aggiungere tag Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) al file XDP. Il servizio converte automaticamente i tag Adobe Sign nei campi del modulo adattivo corrispondenti. Forms adattivo supporta un numero limitato di campi Adobe Sign. Per l&#39;elenco completo dei campi supportati, consulta [Utilizzo di Adobe Sign in un modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en).
 * Se possibile, convertire tabelle complesse in documenti XDP in tabelle semplici. Una tabella con campi modulo in celle di tabella, celle di dimensioni irregolari, celle con estensione di riga o colonna, celle unite, bordi parziali o nessun bordo visibile è considerata una tabella complessa. Una tabella con uno qualsiasi degli elementi sopra menzionati è considerata una tabella complessa.
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -63,17 +63,17 @@ AEM [!DNL Forms Automated Conversion service] utilizza algoritmi di intelligenza
 
 [!DNL Automated Forms Conversion service] è addestrato su un set di moduli di grandi dimensioni. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, in PDF forms sono presenti alcuni campi e stili facilmente visibili all’occhio umano, ma difficili da comprendere per il servizio. Il servizio può assegnare ad alcuni campi o stili diversi dai tipi di campi o pannelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
 
-Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ### Pattern generali {#general}
 
 | Pattern | Esempio |
 |--- |--- |
-| **Pattern** <br>Il servizio non converte PDF forms compilato in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizza moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
-| **Pattern** <br>Il servizio potrebbe non riconoscere il testo e i campi in un formato denso. <br><br>**Risoluzione** <br> Aumenta la larghezza tra il testo e i campi di un modulo denso prima di avviare la conversione. |  |
+| **Pattern** <br>Il servizio non converte PDF forms compilato in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizzare moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
+| **Pattern** <br>Il servizio potrebbe non riconoscere il testo e i campi in un formato denso. <br><br>**Risoluzione** <br> Aumentare la larghezza tra il testo e i campi di una forma densa prima di avviare la conversione. |  |
 | **Pattern** <br>Il servizio non supporta i moduli digitalizzati. <br><br>**Risoluzione** <br>Non utilizzare moduli digitalizzati. | ![Modulo digitalizzato](assets/scanned-forms.png) |
-| **Pattern** <br>Il servizio non estrae immagini e testo all&#39;interno delle immagini. <br><br>**Risoluzione** <br> Aggiungere manualmente immagini o testo ai moduli convertiti. | ![Immagine con modulo testo](assets/best-practice-image-with-text.png) |
-| **Pattern** <br>Le tabelle con limiti e bordi punteggiati o non chiari non vengono convertite. <br><br>**Risoluzione** <br>Utilizzare tabelle con bordi e bordi espliciti. supportati. | ![Modulo tabella non chiaro](assets/best-practice-table-dotted-non-clear.png) |
+| **Pattern** <br>Il servizio non estrae immagini e testo all&#39;interno delle immagini. <br><br>**Risoluzione** <br> Aggiunta manuale di immagini o testo ai moduli convertiti. | ![Immagine con modulo testo](assets/best-practice-image-with-text.png) |
+| **Pattern** <br>Le tabelle con limiti e bordi punteggiati o non chiari non vengono convertite. <br><br>**Risoluzione** <br>Utilizzare tabelle con bordi e bordi espliciti e chiari. supportati. | ![Modulo tabella non chiaro](assets/best-practice-table-dotted-non-clear.png) |
 | **Pattern** <br> I moduli adattivi non supportano il testo verticale preconfigurato. Pertanto, il servizio non converte il testo verticale nel testo di Adaptive Forms corrispondente. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di moduli adattivi per aggiungere testo verticale, se necessario. | ![Modulo tabella non chiaro](assets/vertical-text.png) |
 
 
@@ -82,16 +82,16 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
 
 | Pattern | Risoluzione |
 |--- |--- |
-| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta &#x200B;](assets/best-practice-choice-group-options.png) |
+| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modificare le opzioni di scelta delle forme in caselle o cerchi oppure utilizzare l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta ](assets/best-practice-choice-group-options.png) |
 
 ### Campi modulo {#form-fields}
 
 | Pattern | Risoluzione |
 |--- |--- |
-| Il servizio **Pattern** <br> non identifica i campi senza cancellare i bordi. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi. | ![campi con limiti non chiari](assets/best-practice-fields-without-clear-borders.png) |
+| Il servizio **Pattern** <br> non identifica i campi senza cancellare i bordi. <br><br>**Risoluzione** <br> Utilizzare l&#39;editor di revisione e correzione per identificare tali campi. | ![campi con limiti non chiari](assets/best-practice-fields-without-clear-borders.png) |
 | **Pattern** <br> Il servizio potrebbe non identificare alcuni campi modulo del gruppo di scelte con didascalie nella parte inferiore o destra di un modulo. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi | ![Campo di scelta](assets/best-practice-caption-bottom-right.png) |
-| **Pattern** <br> Il servizio unisce o assegna un tipo errato ad alcuni campi modulo che sono molto vicini tra loro o che non hanno bordi chiari. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi. | ![Campo di scelta](assets/best-practice-placed-very-near.png) |
-| **Pattern** <br> Il servizio potrebbe non riconoscere i campi con didascalie lontane o una linea tratteggiata tra la didascalia e il campo di input. <br><br>**Risoluzione** <br> Utilizza i campi dei moduli con limiti chiari o utilizza l&#39;editor di revisione e correzione per risolvere tali problemi. | ![Campi lontani o linea tratteggiata tra il campo della didascalia](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **Pattern** <br> Il servizio unisce o assegna un tipo errato ad alcuni campi modulo che sono molto vicini tra loro o che non hanno bordi chiari. <br><br>**Risoluzione** <br> Utilizzare l&#39;editor di revisione e correzione per identificare tali campi. | ![Campo di scelta](assets/best-practice-placed-very-near.png) |
+| **Pattern** <br> Il servizio potrebbe non riconoscere i campi con didascalie lontane o una linea tratteggiata tra la didascalia e il campo di input. <br><br>**Risoluzione** <br> Utilizzare i campi dei moduli con limiti cancellati o utilizzare l&#39;editor di revisione e correzione per risolvere tali problemi. | ![Campi lontani o linea tratteggiata tra il campo della didascalia](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### Elenchi {#lists}
 

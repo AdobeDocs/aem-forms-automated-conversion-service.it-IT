@@ -1,6 +1,6 @@
 ---
 title: Best practice e considerazioni
-description: DO NOT PUBLISH
+description: NON PUBBLICARE
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
@@ -8,9 +8,9 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '550'
 ht-degree: 6%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 6%
 
 Il servizio di conversione automatica di AEM Forms converte un modulo PDF in un modulo adattivo. Il servizio utilizza algoritmi di intelligenza artificiale e machine learning per comprendere il layout e i campi del modulo sorgente. Ogni servizio di apprendimento automatico apprende continuamente dai dati di origine e produce un output migliorato ad ogni abbandono. Questi servizi imparano dall&#39;esperienza come gli esseri umani.
 
-Il servizio di automated forms conversion (AFCS) viene addestrato su un ampio insieme di moduli. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, ci sono alcuni campi e stili nelle PDF forms che sono facilmente visibili all&#39;occhio umano, ma difficili da capire per il servizio. Il servizio può assegnare ad alcuni campi o stili tipi di campi diversi da quelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
+Il servizio AFCS (Automated Forms Conversion Service) è stato addestrato su un ampio insieme di moduli. Identifica facilmente i campi in un modulo di origine e produce moduli adattivi. Tuttavia, in PDF forms sono presenti alcuni campi e stili facilmente visibili all’occhio umano, ma difficili da comprendere per il servizio. Il servizio può assegnare ad alcuni campi o stili tipi di campi diversi da quelli applicabili. Di seguito sono elencati tutti i modelli di campo e di stile.
 
-Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a questi modelli man mano che impara dai dati sorgente. Per il momento, puoi utilizzare l&#39;editor [Rivedi e correggi](review-correct-ui-edited.md) per risolvere questi problemi. Prima di iniziare a risolvere i problemi o ad approfondire la lettura, acquisisci familiarità con [componenti per moduli adattivi](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Generale {#general}
 
@@ -36,7 +36,7 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
    <td width="30%">Modelli noti e risoluzione</td> 
    <td width="70%">Esempio</td> 
   </tr>
-   <td><p><strong>Pattern</strong></p> <p>Il servizio non converte i PDF forms compilati in moduli adattivi.</p> <p> </p> <p><strong>Risoluzione</strong></p> <p>Utilizza moduli adattivi vuoti.</p> </td> 
+   <td><p><strong>Pattern</strong></p> <p>Il servizio non converte il PDF forms compilato in un modulo adattivo.</p> <p> </p> <p><strong>Risoluzione</strong></p> <p>Utilizza moduli adattivi vuoti.</p> </td> 
    <td style="text-align: left;"><img src="assets/pre-filled-form.png" /></td> 
   </tr>
   <tr>
