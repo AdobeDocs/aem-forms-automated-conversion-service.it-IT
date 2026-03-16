@@ -256,7 +256,7 @@ Accedi all’istanza di authoring per creare le configurazioni Adobe IMS. Utiliz
 
    Una volta stabilita la connessione, viene visualizzato il messaggio *Token recuperato correttamente*.
 
-   ![Se la connessione ha esito positivo, viene visualizzato il messaggio token recuperato correttamente. ](/help/using/assets/healthy-dialog.png)
+   ![Se la connessione ha esito positivo, viene visualizzato il messaggio token recuperato correttamente. &#x200B;](/help/using/assets/healthy-dialog.png)
 
 1. Fai clic su **Chiudi**.
 
