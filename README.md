@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # ARCHIVIATO
 
-Questo repository è stato migrato a <https://github.com/Adobe-Enterprise-Docs/aem-forms-automated-conversion-service.en>
+Questo repository è stato migrato a <https://github.com/Adobe-Enterprise-Docs/aem-forms-automated-conversion-service.it-IT>
