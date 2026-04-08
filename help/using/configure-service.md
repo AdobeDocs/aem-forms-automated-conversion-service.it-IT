@@ -8,9 +8,9 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+source-git-commit: 2ec7faabc02ec6f416aafcbe7f7305e9323bd9eb
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2663'
 ht-degree: 5%
 
 ---
@@ -235,7 +235,7 @@ Accedi all’istanza di authoring per creare le configurazioni Adobe IMS. Utiliz
       * **ID client**: copia e incolla **Chiave API(ID client)**.
       * **Segreto client**: copia e incolla **Segreto client**.
       * **Ambito**: copia e incolla **Ambiti**.
-      * **ID organizzazione**: copia e incolla **ID account tecnico**.
+      * **ID organizzazione**: copia e incolla **ID organizzazione**.
 
      ![Crea configurazione IMS Adobe](/help/using/assets/save-ims-configuration.png)
 
