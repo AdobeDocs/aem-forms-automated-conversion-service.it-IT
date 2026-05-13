@@ -8,9 +8,15 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 2ec7faabc02ec6f416aafcbe7f7305e9323bd9eb
+TQID: https://experienceleague.adobe.com/xxFiHKgzZsDqk1rjtsBOEa-gaEi5S7iRY-Ela1T6eL8
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: a1df6763-63b5-45b4-8c8a-155a692a2b3eid: ae478996-b206-4712-9b0c-dc78a2644453id: d49d6117-dd89-469c-a774-cc96b7eee433id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: 2663
 ht-degree: 5%
 
 ---
@@ -62,22 +68,22 @@ Prima di utilizzare il servizio, prepara l’istanza di authoring di AEM per la 
 
 Il servizio di conversione automatica dei moduli (AFCS) viene eseguito sull’istanza di authoring di AEM. Per configurare un’istanza di authoring di AEM è necessario disporre di AEM 6.5, AEM 6.5 LTS o AEM Forms as a Cloud Service.
 
-* Se AEM 6.5 o AEM 6.5 LTS non sono operativi, scaricalo dalle seguenti posizioni. Dopo aver scaricato AEM, per istruzioni su come configurare un&#39;istanza di AEM Author, vedi [distribuzione e manutenzione](https://helpx.adobe.com/it/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
+* Se AEM 6.5 o AEM 6.5 LTS non sono operativi, scaricalo dalle seguenti posizioni. Dopo aver scaricato AEM, per istruzioni su come configurare un&#39;istanza di AEM Author, vedi [distribuzione e manutenzione](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
 
    * Se sei già un cliente di AEM, scarica AEM 6.5 o AEM 6.5 LTS dal [sito Web Adobe Licensing](http://licensing.adobe.com).
 
    * Se sei un partner Adobe, utilizza il [Programma di formazione per i partner Adobe](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) per richiedere AEM 6.5 o AEM 6.5 LTS.
 
-* Se utilizzi AEM Forms as a Cloud Service, consulta onboarding per [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=it#setup-environment) e [configurare un ambiente di sviluppo locale](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=it#setup-environment).
+* Se utilizzi AEM Forms as a Cloud Service, consulta onboarding per [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment) e [configurare un ambiente di sviluppo locale](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment).
 
 
 ### (Solo per AEM 6.5 e AEM 6.5 LTS) Scarica e installa il Service Pack più recente di AEM {#servicepack}
 
-Scarica e installa il Service Pack più recente di AEM. Per istruzioni dettagliate, consulta [Note sulla versione di AEM 6.5 Service Pack](https://helpx.adobe.com/it/experience-manager/6-5/release-notes/sp-release-notes.html).
+Scarica e installa il Service Pack più recente di AEM. Per istruzioni dettagliate, consulta [Note sulla versione di AEM 6.5 Service Pack](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html).
 
 ### Scarica e installa il pacchetto del componente aggiuntivo AEM Forms (solo per AEM 6.5 e AEM 6.5 LTS)  {#downloadaemformsaddon}
 
-Un’istanza di AEM contiene funzionalità di base per i moduli. Il servizio di conversione richiede le funzionalità complete di AEM Forms. Scarica e installa il pacchetto del componente aggiuntivo AEM Forms per usufruire di tutte le funzionalità di AEM Forms. Il pacchetto è necessario per configurare ed eseguire il servizio di conversione. Per istruzioni dettagliate, vedere [Installare e configurare le funzionalità di acquisizione dati.](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+Un’istanza di AEM contiene funzionalità di base per i moduli. Il servizio di conversione richiede le funzionalità complete di AEM Forms. Scarica e installa il pacchetto del componente aggiuntivo AEM Forms per usufruire di tutte le funzionalità di AEM Forms. Il pacchetto è necessario per configurare ed eseguire il servizio di conversione. Per istruzioni dettagliate, vedere [Installare e configurare le funzionalità di acquisizione dati.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 
 >[!NOTE]
 > Dopo l’installazione del pacchetto aggiuntivo, assicurati di eseguire le configurazioni obbligatorie di post-installazione.
@@ -94,7 +100,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 **AEM Forms as a Cloud Service:** Puoi utilizzare i modelli predefiniti o crearne di personalizzati e indirizzarvi [configurazione del servizio](#configure-the-cloud-service).
 
-**(Solo per AEM 6.5 e AEM 6.5 LTS)** Il servizio di conversione automatica dei moduli (AFCS) richiede almeno un tema e un modello per convertire un modulo PDF in un modulo adattivo. Se desideri utilizzare modelli e temi basati su Componenti core modulo adattivo, devi [abilitare i componenti core modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=it). Le istruzioni sono documentate qui. Se si avvia AEM 6.5 o AEM 6.5 LTS in [modalità di produzione](https://helpx.adobe.com/it/experience-manager/6-5/sites/administering/using/production-ready.html) (modalità di esecuzione nosamplecontent), i pacchetti di riferimento non vengono installati. Crea un tema e un modello personalizzato oppure scarica e installa il pacchetto [AEM Forms Reference Assets](https://experience.adobe.com/#/downloads/content/software-distribution/it/aemcloud.html) nell&#39;istanza Autore per ottenere temi e modelli di riferimento. Quindi puntare [configurazione del servizio](#configure-the-cloud-service) per utilizzare i modelli e i temi prima di utilizzare il servizio.
+**(Solo per AEM 6.5 e AEM 6.5 LTS)** Il servizio di conversione automatica dei moduli (AFCS) richiede almeno un tema e un modello per convertire un modulo PDF in un modulo adattivo. Se desideri utilizzare modelli e temi basati su Componenti core modulo adattivo, devi [abilitare i componenti core modulo adattivo](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=it). Le istruzioni sono documentate qui. Se si avvia AEM 6.5 o AEM 6.5 LTS in [modalità di produzione](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (modalità di esecuzione nosamplecontent), i pacchetti di riferimento non vengono installati. Crea un tema e un modello personalizzato oppure scarica e installa il pacchetto [AEM Forms Reference Assets](https://experience.adobe.com/#/downloads/content/software-distribution/it/aemcloud.html) nell&#39;istanza Autore per ottenere temi e modelli di riferimento. Quindi puntare [configurazione del servizio](#configure-the-cloud-service) per utilizzare i modelli e i temi prima di utilizzare il servizio.
 
 ## Configurare l’accesso e le autorizzazioni
 
@@ -146,7 +152,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=it#sending-email).
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 -->
 
 ### Aggiungi utente al gruppo forms-users {#adduserstousergroup}
@@ -256,7 +262,7 @@ Accedi all’istanza di authoring per creare le configurazioni Adobe IMS. Utiliz
 
    Una volta stabilita la connessione, viene visualizzato il messaggio *Token recuperato correttamente*.
 
-   ![Se la connessione ha esito positivo, viene visualizzato il messaggio token recuperato correttamente. &#x200B;](/help/using/assets/healthy-dialog.png)
+   ![Se la connessione ha esito positivo, viene visualizzato il messaggio token recuperato correttamente. ](/help/using/assets/healthy-dialog.png)
 
 1. Fai clic su **Chiudi**.
 

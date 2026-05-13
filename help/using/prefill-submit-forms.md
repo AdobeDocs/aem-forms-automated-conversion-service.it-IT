@@ -1,6 +1,6 @@
 ---
 title: Workflow di preriempimento basato su origine di dati e invio consigliati per i moduli adattivi
-description: Flussi di lavoro di preriempimento e invio basati su origini dati per moduli adattivi generati utilizzando il servizio di Automated forms conversion (AFCS).
+description: Flussi di lavoro di preriempimento e invio basati su origini dati per moduli adattivi generati utilizzando il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service).
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,16 +9,22 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: 2555
 ht-degree: 1%
 
 ---
 
 # Workflow di preriempimento basato su origine di dati e invio consigliati per i moduli adattivi {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
-Con i moduli adattivi convertiti tramite il servizio di Automated forms conversion (AFCS) è possibile utilizzare una delle seguenti origini dati:
+Con i moduli adattivi convertiti mediante il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service) puoi utilizzare una qualsiasi delle seguenti origini dati:
 
 * Modello dati modulo, OData o qualsiasi altro servizio di terze parti
 * Schema JSON
@@ -37,12 +43,12 @@ Questo articolo descrive i flussi di lavoro consigliati per precompilare i valor
   <tr> 
    <td><p>Modello dati modulo, OData o qualsiasi altro servizio di terze parti</p></td> 
    <td> 
-    <p><strong>Opzione 1</strong>: è possibile selezionare come origine dati modello dati modulo, OData o qualsiasi altro servizio di terze parti. <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di Automated forms conversion (AFCS). I campi del modulo adattivo vengono associati manualmente alle entità del modello dati del modulo e per precompilare i valori dei campi viene utilizzata l’opzione Servizio di precompilazione modello dati modulo. Per inviare il modulo adattivo, utilizza l’opzione Invia utilizzando il modello dati del modulo.</p></td> 
+    <p><strong>Opzione 1</strong>: è possibile selezionare come origine dati modello dati modulo, OData o qualsiasi altro servizio di terze parti. <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di conversione automatica dei moduli (AFCS). I campi del modulo adattivo vengono associati manualmente alle entità del modello dati del modulo e per precompilare i valori dei campi viene utilizzata l’opzione Servizio di precompilazione modello dati modulo. Per inviare il modulo adattivo, utilizza l’opzione Invia utilizzando il modello dati del modulo.</p></td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-   <p><strong>Opzione 2</strong>: è possibile selezionare come origine dati modello dati modulo, OData o qualsiasi altro servizio di terze parti. <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di Automated forms conversion (AFCS). Per precompilare i valori dei campi, associa i campi del modulo adattivo utilizzando l’editor di regole. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p>
+   <p><strong>Opzione 2</strong>: è possibile selezionare come origine dati modello dati modulo, OData o qualsiasi altro servizio di terze parti. <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di conversione automatica dei moduli (AFCS). Per precompilare i valori dei campi, associa i campi del modulo adattivo utilizzando l’editor di regole. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p>
     </td> 
   </tr>
   <tr> 
@@ -58,7 +64,7 @@ Questo articolo descrive i flussi di lavoro consigliati per precompilare i valor
   <tr>
   <td></td> 
    <td> 
-    <p><strong>Opzione 1</strong>: <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di Automated forms conversion (AFCS) e configurare lo schema JSON come origine dati. Associa manualmente i campi del modulo adattivo allo schema JSON e <a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">utilizza uno dei protocolli supportati</a> per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p></td> 
+    <p><strong>Opzione 1</strong>: <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio di conversione automatica dei moduli (AFCS) e configurare lo schema JSON come origine dati. Associa manualmente i campi del modulo adattivo allo schema JSON e <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">utilizza uno dei protocolli supportati</a> per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -68,7 +74,7 @@ Questo articolo descrive i flussi di lavoro consigliati per precompilare i valor
   <tr>
   <td></td> 
    <td> 
-    <p><strong>Opzione 2</strong>: <a href="#generate-adaptive-forms-with-json-binding">generare un modulo adattivo con associazione dati JSON</a> utilizzando il servizio di Automated forms conversion (AFCS). Il servizio di precompilazione e l’invio dei moduli funzionano senza problemi. Non è necessario alcun passaggio di configurazione.</p> </td> 
+    <p><strong>Opzione 2</strong>: <a href="#generate-adaptive-forms-with-json-binding">generare un modulo adattivo con associazione dati JSON</a> utilizzando il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service). Il servizio di precompilazione e l’invio dei moduli funzionano senza problemi. Non è necessario alcun passaggio di configurazione.</p> </td> 
   </tr>
    <tr>
   <td></td> 
@@ -78,7 +84,7 @@ Questo articolo descrive i flussi di lavoro consigliati per precompilare i valor
   <tr>
   <td><p>Schema XSD</p></td> 
    <td> 
-    <p>Seleziona lo schema XSD come origine dati. In base all'origine dati selezionata, si <a href="#generate-adaptive-forms-with-no-data-binding">genera un modulo adattivo senza associazione dati</a> utilizzando il servizio di Automated forms conversion (AFCS) e si configura lo schema XSD come origine dati. I campi del modulo adattivo vengono associati manualmente allo schema XSD e <a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">utilizza uno dei protocolli supportati</a> per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p>
+    <p>Seleziona lo schema XSD come origine dati. In base all'origine dati selezionata, è possibile <a href="#generate-adaptive-forms-with-no-data-binding">generare un modulo adattivo senza associazione dati</a> utilizzando il servizio AFCS (Automated Forms Conversion Service) e configurare lo schema XSD come origine dati. I campi del modulo adattivo vengono associati manualmente allo schema XSD e <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">utilizza uno dei protocolli supportati</a> per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.</p>
     </td> 
   </tr>
   <tr>
@@ -91,10 +97,10 @@ Questo articolo descrive i flussi di lavoro consigliati per precompilare i valor
 </table>
 
 
-Per ulteriori informazioni sul servizio di Automated forms conversion (AFCS), vedere i seguenti articoli:
+Per ulteriori informazioni sul servizio di conversione automatica dei moduli (AFCS), consulta i seguenti articoli:
 
-* [Introduzione al servizio Automated forms conversion](introduction.md)
-* [Configurare il servizio di Automated forms conversion](configure-service.md)
+* [Introduzione al servizio di conversione automatica dei moduli](introduction.md)
+* [Configurare il servizio di conversione automatica dei moduli](configure-service.md)
 * [Conversione di moduli per la stampa in moduli adattivi](convert-existing-forms-to-adaptive-forms.md)
 * [Rivedere e correggere i moduli convertiti](review-correct-ui-edited.md)
 
@@ -102,8 +108,8 @@ Le informazioni fornite in questo articolo si basano sul presupposto che chiunqu
 
 ## Prerequisiti {#pre-requisites}
 
-* Configura un&#39;istanza [dell&#39;autore dell&#39;AEM](https://helpx.adobe.com/it/experience-manager/6-5/sites/deploying/using/deploy.html)
-* Configura il servizio di Automated forms conversion [&#x200B; nell&#39;istanza di creazione dell&#39;AEM](configure-service.md)
+* Configura un&#39;istanza di authoring [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
+* Configura [il servizio di conversione automatica dei moduli (AFCS) nell&#39;istanza di authoring di AEM](configure-service.md)
 
 ## Modulo adattivo di esempio {#sample-adaptive-form}
 
@@ -111,15 +117,15 @@ Per eseguire i casi d’uso per precompilare i valori dei campi in un modulo ada
 
 Modulo di richiesta di prestito di esempio
 
-[Ottieni file](assets/sample_loan_application_form.pdf)
+[Ottieni il file](assets/sample_loan_application_form.pdf)
 
-Il file PDF funge da input per il servizio di Automated forms conversion (AFCS). Il servizio converte questo file in un modulo adattivo. L’immagine seguente illustra l’esempio di richiesta di prestito in formato PDF.
+Il file PDF funge da input per il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service). Il servizio converte questo file in un modulo adattivo. L’immagine seguente mostra l’esempio di richiesta di prestito in formato PDF.
 
 ![modulo di richiesta di prestito di esempio](assets/sample_form_new.png)
 
 ## Prepara dati per modello modulo {#prepare-data-for-form-model}
 
-L’integrazione dei dati di AEM Forms consente di configurare e connettersi a diverse origini dati. Dopo aver generato un modulo adattivo utilizzando il processo di conversione, puoi definire il modello del modulo in base a un modello di dati del modulo, XSD o uno schema JSON. È possibile utilizzare un database, Microsoft Dynamics o qualsiasi altro servizio di terze parti per creare un modello di dati modulo.
+L’integrazione dei dati di AEM Forms consente di configurare e connettersi a diverse origini dati. Dopo aver generato un modulo adattivo utilizzando il processo di conversione, puoi definire il modello del modulo in base a un modello di dati del modulo, XSD o uno schema JSON. È possibile utilizzare un database, un Microsoft Dynamics o qualsiasi altro servizio di terze parti per creare un modello di dati modulo.
 
 Questa esercitazione utilizza il database MySQL come origine per la creazione di un modello di dati modulo. Crea uno schema **loanapplication** nel database e aggiungi una tabella **candidate** allo schema in base ai campi disponibili nel modulo adattivo.
 
@@ -169,9 +175,9 @@ Oppure scarica lo schema XSD nel file system locale.
 
 Esempio di schema XSD per la richiesta di prestito
 
-[Ottieni file](assets/loanapplication.xsd)
+[Ottieni il file](assets/loanapplication.xsd)
 
-Per ulteriori informazioni sull&#39;utilizzo dello schema XSD come modello di modulo nei moduli adattivi, vedere [Creazione di moduli adattivi tramite lo schema XML](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html).
+Per ulteriori informazioni sull&#39;utilizzo dello schema XSD come modello di modulo nei moduli adattivi, vedere [Creazione di moduli adattivi tramite lo schema XML](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html).
 
 Se utilizzi uno schema JSON come modello del modulo per eseguire i casi d’uso, crea un file JSON con il testo seguente:
 
@@ -219,13 +225,13 @@ In alternativa, scarica lo schema JSON nel file system locale.
 
 Esempio di schema JSON per richiesta di prestito
 
-[Ottieni file](assets/demo_schema.json)
+[Ottieni il file](assets/demo_schema.json)
 
-Per ulteriori informazioni sull&#39;utilizzo dello schema JSON come modello di modulo nei moduli adattivi, vedi [Creazione di moduli adattivi utilizzando lo schema JSON](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html).
+Per ulteriori informazioni sull&#39;utilizzo dello schema JSON come modello di modulo nei moduli adattivi, vedi [Creazione di moduli adattivi utilizzando lo schema JSON](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html).
 
 ## Generare moduli adattivi senza associazione dati {#generate-adaptive-forms-with-no-data-binding}
 
-Utilizza il servizio [Automated forms conversion per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo senza associazione dati. Accertati di selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** per generare il modulo adattivo senza associazione dati.
+Utilizza il servizio di conversione automatica dei moduli [per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo senza associazione di dati. Accertati di selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** per generare il modulo adattivo senza associazione dati.
 
 ![Modulo adattivo senza associazione dati](assets/generate_af_without_binding.png)
 
@@ -236,19 +242,19 @@ Dopo aver generato un modulo adattivo senza alcuna associazione di dati, selezio
 * [Schema XSD](#xsddatasource)
 
 >[!NOTE]
-> Se il modulo adattivo convertito con il servizio di Automated forms conversion (AFCS) contiene più campi con lo stesso nome, assicurati che tali campi siano associati alle entità dell’origine dati per evitare una possibile perdita di dati durante l’invio.
+> Se il modulo adattivo convertito con il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service) contiene più campi con lo stesso nome, assicurati che tali campi siano associati alle entità dell’origine dati per evitare una possibile perdita di dati durante l’invio.
 >
 
 ### Utilizza database, OData o qualsiasi servizio di terze parti come origine dati {#sqldatasource}
 
-Caso d’uso: viene generato un modulo adattivo senza associazione di dati utilizzando il servizio di Automated forms conversion (AFCS) e viene configurato il database MYSQL come origine di dati. Associare manualmente i campi del modulo adattivo alle entità del modello dati del modulo e utilizzare l’opzione **[!UICONTROL Form Data Model Prefill Service]** per precompilare i valori dei campi. Utilizza l’opzione **[!UICONTROL Submit using Form Data Model]** per inviare il modulo adattivo.
+Caso d’uso: viene generato un modulo adattivo senza associazione di dati utilizzando il servizio AFCS (Automated Forms Conversion Service) e viene configurato il database MYSQL come origine di dati. Associare manualmente i campi del modulo adattivo alle entità del modello dati del modulo e utilizzare l’opzione **[!UICONTROL Form Data Model Prefill Service]** per precompilare i valori dei campi. Utilizza l’opzione **[!UICONTROL Submit using Form Data Model]** per inviare il modulo adattivo.
 
 Prima di eseguire il caso d’uso:
 
-* [Configurare il database MySQL come origine dati](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
-* [Crea modello dati modulo](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/work-with-form-data-model.html)
+* [Configurare il database MySQL come origine dati](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
+* [Creare il modello dati del modulo](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-In base al caso d&#39;uso, creare il modello dati del modulo **loanapplication** e associare l&#39;argomento del servizio di lettura a un valore **[!UICONTROL Literal]**. Il valore letterale del numero di telefono deve essere di uno dei record configurati nello schema **richiedente** del database MySQL. I servizi utilizzano il valore come argomento per recuperare i dettagli dall’origine dati. È inoltre possibile selezionare [Attributo profilo utente o Attributo richiesta](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument) dall&#39;elenco a discesa **[!UICONTROL Binding To]**
+In base al caso d&#39;uso, creare il modello dati del modulo **loanapplication** e associare l&#39;argomento del servizio di lettura a un valore **[!UICONTROL Literal]**. Il valore letterale del numero di telefono deve essere di uno dei record configurati nello schema **richiedente** del database MySQL. I servizi utilizzano il valore come argomento per recuperare i dettagli dall’origine dati. È inoltre possibile selezionare [Attributo profilo utente o Attributo richiesta](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument) dall&#39;elenco a discesa **[!UICONTROL Binding To]**
 
 ![Configura modello dati modulo](assets/configure_model_object.png)
 
@@ -281,9 +287,9 @@ Esegui i passaggi seguenti:
 1. Tocca **[!UICONTROL Preview]** per visualizzare i valori dei campi del modulo adattivo precompilati.
 1. Se necessario, modifica i valori dei campi e invia il modulo adattivo. I valori dei campi vengono inviati al database MySQL. È possibile aggiornare la tabella **candidato** nel database per visualizzare i valori aggiornati nella tabella.
 
-**Caso d&#39;uso:** viene generato un modulo adattivo senza associazione dati utilizzando il servizio di Automated forms conversion (AFCS) e viene configurato il database MYSQL come origine dati. Per precompilare i valori dei campi, associa i campi del modulo adattivo utilizzando l’editor di regole. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
+**Caso d&#39;uso:** viene generato un modulo adattivo senza associazione dati utilizzando il servizio AFCS (Automated Forms Conversion Service) e viene configurato il database MYSQL come origine dati. Per precompilare i valori dei campi, associa i campi del modulo adattivo utilizzando l’editor di regole. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
 
-Esegui la procedura seguente per utilizzare [l&#39;editor di regole](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/rule-editor.html) per richiamare il servizio del modello di dati del modulo per associare campi e precompilare valori in un modulo adattivo:
+Esegui la procedura seguente per utilizzare [l&#39;editor di regole](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) per richiamare il servizio del modello di dati del modulo per associare campi e precompilare valori in un modulo adattivo:
 
 1. Selezionare il **modulo di richiesta di prestito di esempio** nella cartella **[!UICONTROL output]** e toccare **[!UICONTROL Edit]**.
 1. Nella scheda **[!UICONTROL Content]**, toccare l&#39;icona di configurazione:
@@ -323,7 +329,7 @@ Esegui la procedura seguente per utilizzare [l&#39;editor di regole](https://hel
 
 ### Utilizza lo schema JSON come origine di dati {#jsondatasource}
 
-**Caso d&#39;uso:** è possibile generare un modulo adattivo senza associazione dati utilizzando il servizio di Automated forms conversion (AFCS) e configurare lo schema JSON come origine dati. Associa manualmente i campi del modulo adattivo allo schema JSON e utilizza l&#39;opzione **Anteprima con dati** per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
+**Caso d&#39;uso:** utilizzando il servizio AFCS (Automated Forms Conversion Service) si genera un modulo adattivo senza associazione dati e si configura lo schema JSON come origine dati. Associa manualmente i campi del modulo adattivo allo schema JSON e utilizza l&#39;opzione **Anteprima con dati** per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
 
 Prima di eseguire il caso d’uso, assicurati di disporre di:
 
@@ -351,7 +357,7 @@ Esegui i passaggi seguenti:
 
 ### Utilizza lo schema XSD come origine di dati {#xsddatasource}
 
-**Caso d&#39;uso:** è possibile generare un modulo adattivo senza associazione dati utilizzando il servizio di Automated forms conversion (AFCS) e configurare lo schema XSD come origine dati. Associare manualmente i campi del modulo adattivo allo schema XSD e utilizzare l&#39;**Anteprima con dati** per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
+**Caso d&#39;uso:** viene generato un modulo adattivo senza associazione dati utilizzando il servizio AFCS (Automated Forms Conversion Service) e si configura lo schema XSD come origine dati. Associare manualmente i campi del modulo adattivo allo schema XSD e utilizzare l&#39;**Anteprima con dati** per precompilare i valori dei campi. Se necessario, modifica i valori dei campi e invia i dati all’archivio crx.
 
 Prima di eseguire il caso d’uso, assicurati di disporre di:
 
@@ -379,13 +385,13 @@ Nel campo Riferimento binding, selezionare **Candidato** > **Nome**, quindi tocc
 
 ## Generare moduli adattivi con binding JSON {#generate-adaptive-forms-with-json-binding}
 
-Utilizza il servizio di Automated forms conversion [&#x200B; per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
+Utilizza il servizio di conversione automatica dei moduli (AFCS) di [ per convertire](convert-existing-forms-to-adaptive-forms.md) il [modulo di esempio per la richiesta di prestito](#sample-adaptive-form) in un modulo adattivo con associazione dati. Assicurati di non selezionare la casella di controllo **[!UICONTROL Generate adaptive form(s) without data bindings]** durante la generazione del modulo adattivo.
 
 ![Modulo adattivo con associazione JSON](assets/generate_af_with_data_bindings.png)
 
 ### Utilizza lo schema JSON come origine di dati {#jsonwithdatabinding}
 
-**Caso d&#39;uso:** viene generato un modulo adattivo con associazione dati JSON utilizzando il servizio di Automated forms conversion (AFCS). Il servizio di precompilazione e l’invio dei moduli funzionano senza problemi. Non è necessario alcun passaggio di configurazione.
+**Caso d&#39;uso:** viene generato un modulo adattivo con associazione dati JSON utilizzando il servizio di conversione automatica dei moduli (AFCS). Il servizio di precompilazione e l’invio dei moduli funzionano senza problemi. Non è necessario alcun passaggio di configurazione.
 
 Prima di eseguire il caso d&#39;uso, assicurati di disporre di [un modulo adattivo con associazione dati](#generate-adaptive-forms-with-json-binding).
 

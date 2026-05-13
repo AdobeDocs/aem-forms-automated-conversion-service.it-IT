@@ -8,10 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/stoZAgMJGYjT1IKCcXBAe2JxWAvPJfwq0znNs757b0U
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 53%
+source-wordcount: 769
+ht-degree: 57%
 
 ---
 
@@ -25,7 +31,7 @@ Il servizio AFCS (Automated Forms Conversion Service) consente di accelerare la 
 * Raggruppare i campi più comuni in frammenti di modulo riutilizzabili
 * Abilita Adobe Analytics durante la conversione
 
-![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. &#x200B;](assets/pdf-to-adaptive-form-gitx50.gif)
+![È semplice. Tu ci fornisci i moduli di origine e ci lasci tutto. Ti forniamo splendidi moduli adattivi. Puoi sempre regolare l’output nel modo che preferisci. ](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## Onboarding {#onboarding}
 
@@ -49,9 +55,9 @@ Il servizio di conversione automatica dei moduli (AFCS) viene eseguito su Adobe 
 
 ### &#x200B;1. Configurare l’ambiente {#set-up-the-environment}
 
-Il servizio di conversione automatica dei moduli (AFCS) viene eseguito su Adobe Cloud. [Configura l&#39;account Adobe I/O della tua organizzazione e connetti la tua istanza AEM locale](configure-service.md) al servizio di conversione in esecuzione su Adobe Cloud. Per AEM 6.5 e AEM 6.5 LTS, è necessario abilitare i componenti core modulo adattivo se si utilizzano modelli e temi basati su Componenti core. Vedere [Configurazione del servizio](configure-service.md#referencepackage).
+Il servizio di conversione automatica dei moduli (AFCS) viene eseguito su Adobe Cloud. [Configura l’account Adobe I/O della tua organizzazione e connetti la tua istanza AEM locale](configure-service.md) al servizio di conversione in esecuzione su Adobe Cloud. Per AEM 6.5 e AEM 6.5 LTS, è necessario abilitare i componenti core modulo adattivo se si utilizzano modelli e temi basati su Componenti core. Vedere [Configurazione del servizio](configure-service.md#referencepackage).
 
-### &#x200B;2. Convertire PDF forms in moduli adattivi {#use-the-conversion-service}
+### &#x200B;2. Conversione di PDF forms in moduli adattivi {#use-the-conversion-service}
 
 Dopo aver configurato l’ambiente di AEM Forms per convertire i moduli PDF in moduli adattivi, [carica i moduli PDF](convert-existing-forms-to-adaptive-forms.md) nella tua istanza AEM e [avvia la conversione](convert-existing-forms-to-adaptive-forms.md#run-the-conversion). Prima di caricare i moduli, considera quanto segue:
 
@@ -62,7 +68,7 @@ Dopo aver configurato l’ambiente di AEM Forms per convertire i moduli PDF in m
 * Apporta ai moduli PDF le modifiche descritte nell’articolo [Procedure consigliate e considerazioni](styles-and-pattern-considerations-and-best-practices.md).
 * Leggi l’articolo [Problemi noti](known-issues.md) per evitare malfunzionamenti.
 
-### &#x200B;3. Revisione dei moduli convertiti {#review-converted-forms}
+### &#x200B;3. Rivedere i moduli convertiti {#review-converted-forms}
 
 I moduli reali possono presentare requisiti di acquisizione dati complessi in termini di layout dei campi, denominazione o suggerimenti impliciti che potrebbero non essere acquisiti con precisione da una logica di rilevamento basata su AI/ML. Una volta completata la conversione automatica, è possibile utilizzare l’[editor di revisione e correzione](review-correct-ui-edited.md) per rivedere il modulo convertito, apportare gli aggiornamenti necessari e generare un output migliorato più simile all’esperienza desiderata. Dopo aver apportato le modifiche necessarie, invia nuovamente il modulo per convertirlo.
 

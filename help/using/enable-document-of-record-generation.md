@@ -10,9 +10,15 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -24,13 +30,13 @@ Il DoR utilizza un modello base per definirne il layout. Puoi generare un DoR ut
 
 ![Documento di record generato](assets/document_of_record.gif)
 
-Per ulteriori informazioni sulla generazione di un documento record, vedere [Generate Document of Record for adaptive forms](https://helpx.adobe.com/it/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
+Per ulteriori informazioni sulla generazione di un documento record, vedere [Generate Document of Record for adaptive forms](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-Il servizio di Automated forms conversion [&#x200B; (AFCS)](/help/using/introduction.md) converte i seguenti moduli di origine in moduli adattivi:
+Il servizio di conversione automatica dei moduli [AFCS](/help/using/introduction.md) converte i seguenti moduli di origine in moduli adattivi:
 
-* PDF forms non interattivi
+* PDF forms non interattivo
 * Acro Forms
-* PDF forms basati su XFA
+* PDF forms basato su XFA
 
 In base al modulo di origine utilizzato per la conversione, è possibile generare un documento record utilizzando:
 
@@ -67,7 +73,7 @@ Questo articolo descrive i percorsi consigliati per generare un DoR basato sui t
    <th><strong>Metodi per generare il DoR</strong></th> 
   </tr> 
   <tr> 
-   <td><p>PDF forms non interattivi</p></td> 
+   <td><p>PDF forms non interattivo</p></td> 
    <td> 
     <ul> 
      <li><a href="#generate-document-of-record-using-cloud-configuration">Abilita la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando un modello predefinito</a></li> 
@@ -75,7 +81,7 @@ Questo articolo descrive i percorsi consigliati per generare un DoR basato sui t
     </ul> </td> 
   </tr>
   <tr> 
-   <td><p>Acro Forms o PDF forms basati su XFA</p></td> 
+   <td><p>Acro Forms o PDF forms basato su XFA</p></td> 
    <td> 
     <ul> 
      <li><a href="#use-input-form-as-template-to-generate-document-of-record">Abilita la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando il modulo di origine come modello</a></li> 
@@ -85,9 +91,9 @@ Questo articolo descrive i percorsi consigliati per generare un DoR basato sui t
  </tbody> 
 </table>
 
-## Genera documento di record per PDF forms non interattivi {#generate-document-of-record-non-interactive-pdf}
+## Genera documento di record per PDF forms non interattivo {#generate-document-of-record-non-interactive-pdf}
 
-Se si utilizza un modulo di PDF non interattivo come modulo di origine per il servizio di Automated forms conversion (AFCS), è possibile:
+Se si utilizza un modulo non interattivo di PDF come modulo di origine per il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service), è possibile:
 
 * abilitare la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando un modello predefinito
 * o modificare le proprietà dei moduli adattivi dopo la conversione dei moduli adattivi per abilitare la generazione DoR utilizzando l’impostazione predefinita o qualsiasi altro modello di modulo
@@ -119,9 +125,9 @@ Se non abiliti la generazione DoR prima di convertire il modulo di origine in un
 
 All’invio del modulo adattivo convertito, il DoR viene generato automaticamente utilizzando il modello predefinito. Se si desidera associare qualsiasi altro modello DoR al modulo adattivo convertito, è possibile selezionare l&#39;opzione **[!UICONTROL Associate form template as the Document of Record template]**.
 
-## Genera documento di record per PDF forms basati su Acro Forms o XFA {#generate-document-of-record-acroform-xfaform}
+## Genera documento di record per Acro Forms o PDF forms basato su XFA {#generate-document-of-record-acroform-xfaform}
 
-Se si utilizza un modulo Acro o un modulo PDF basato su XFA come modulo di origine per il servizio di Automated forms conversion (AFCS), è possibile:
+Se utilizzi un modulo Acro Form o un modulo PDF basato su XFA come modulo di origine per il servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service), puoi:
 
 * abilitare la generazione DoR prima della conversione del modulo adattivo per generare DoR utilizzando il modulo di origine come modello
 
@@ -134,7 +140,7 @@ Se si utilizza un modulo Acro o un modulo PDF basato su XFA come modulo di origi
 1. Tocca **[!UICONTROL Save & Close]** per salvare le impostazioni.
 
 1. [Esegui la conversione](/help/using/convert-existing-forms-to-adaptive-forms.md). Assicurati di utilizzare la configurazione cloud modificata nel passaggio 1 di queste istruzioni.
-Il servizio di conversione associa automaticamente il modulo Acro Form o il modulo PDF basato su XFA al modulo adattivo convertito come modello DoR.
+Il servizio di conversione associa automaticamente il modulo Acro Form o PDF basato su XFA al modulo adattivo convertito come modello DoR.
 È possibile aprire le proprietà del modulo adattivo per visualizzare il modello DoR nella sezione **[!UICONTROL Document of Record Template Configuration]** della scheda **[!UICONTROL Form Model]**.
 
    ![Modifica le proprietà del modulo adattivo per generare il documento record](assets/generate_dor_af_properties_xdp_acro.png)
