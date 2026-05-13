@@ -1,6 +1,6 @@
 ---
 title: Estendere il metamodello predefinito
-description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di Automated forms conversion (AFCS).
+description: Estendi il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione e applica le configurazioni ai campi dei moduli adattivi durante l’esecuzione del servizio di conversione automatica dei moduli (AFCS).
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,24 +8,39 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: 2659
 ht-degree: 1%
 
 ---
 
 # Estendere il metamodello predefinito {#extend-the-default-meta-model}
 
-Il servizio di automated forms conversion (AFCS) identifica ed estrae gli oggetti dai moduli di origine. La funzione di mappatura semantica consente al servizio di decidere in che modo gli oggetti estratti vengono rappresentati in un modulo adattivo. Ad esempio, un modulo di origine può avere diversi tipi di rappresentazioni di una data. La mappatura semantica consente di mappare tutte le rappresentazioni degli oggetti modulo data del modulo di origine con il componente data dei moduli adattivi. La funzione di mappatura semantica consente inoltre al servizio di preconfigurare e applicare convalide, regole, pattern di dati, testo della Guida e proprietà di accessibilità ai componenti dei moduli adattivi durante la conversione.
+Il servizio di conversione automatica dei moduli (AFCS) identifica ed estrae gli oggetti dai moduli di origine. La funzione di mappatura semantica consente al servizio di decidere in che modo gli oggetti estratti vengono rappresentati in un modulo adattivo. Ad esempio, un modulo di origine può avere diversi tipi di rappresentazioni di una data. La mappatura semantica consente di mappare tutte le rappresentazioni degli oggetti modulo data del modulo di origine con il componente data dei moduli adattivi. La funzione di mappatura semantica consente inoltre al servizio di preconfigurare e applicare convalide, regole, pattern di dati, testo della Guida e proprietà di accessibilità ai componenti dei moduli adattivi durante la conversione.
 
 ![](assets/meta-model.gif)
 
-Il metamodello è uno schema JSON. Prima di iniziare con il metamodello, assicurati di avere familiarità con JSON. È necessaria un’esperienza di creazione, modifica e lettura dei dati salvati in formato JSON.
+Il modello Meta è uno schema JSON. Prima di iniziare con il metamodello, assicurati di avere familiarità con JSON. È necessaria un’esperienza di creazione, modifica e lettura dei dati salvati in formato JSON.
 
 ## Metamodello predefinito {#default-meta-model}
 
-Il servizio di automated forms conversion (AFCS) dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di Automated forms conversion (AFCS). È possibile trovare una copia del metamodello sul proprio server AEM locale all&#39;indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Puoi anche [fare clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json) e [Portoghese](assets/pt_br.globalschema.json) lingue è disponibile per il download.
+Il servizio AFCS (Automated Forms Conversion Service) dispone di un metamodello predefinito. Si tratta di uno schema JSON che risiede su Adobe Cloud con altri componenti del servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service). Puoi trovare una copia del metamodello sul tuo server AEM locale all’indirizzo: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Puoi anche [fare clic qui](assets/en.globalschema.json) per accedere o scaricare lo schema in lingua inglese. Il metamodello per [Francese](assets/fr.globalschema.json), [Tedesco](assets/de.globalschema.json) [Spagnolo](assets/es.globalschema.json), [Italiano](assets/it.globalschema.json) e [Portoghese](assets/pt_br.globalschema.json) lingue è disponibile per il download.
 
 Lo schema del metamodello deriva dalle entità dello schema in https://schema.org/docs/schemas.html. Dispone di Persona, IndirizzoPostale, LocalBusiness e più entità come definito su https://schema.org. Ogni entità del metamodello aderisce al tipo di oggetto dello schema JSON. Il codice che segue rappresenta una struttura di metamodello di esempio:
 
@@ -112,15 +127,15 @@ Ogni proprietà può inoltre includere:
 * [Ricerca basata su parole chiave per applicare proprietà ai campi del modulo adattivo generati](#keywordsearch)
 * [Proprietà aggiuntive](#additionalproperties)
 
-![Proprietà metamodello](assets/meta_model_elements.gif)
+![Proprietà modello Meta](assets/meta_model_elements.gif)
 
 In base alle parole chiave a cui si fa riferimento utilizzando **aem:affKeyword**, il servizio di conversione esegue un&#39;operazione di ricerca nei campi del modulo di origine. Il servizio di conversione applica le proprietà dello schema JSON e proprietà aggiuntive ai campi che soddisfano i criteri di ricerca.
 
-In questo esempio, il servizio di conversione cerca le parole chiave relative a telefono, telefono, cellulare, telefono di lavoro, telefono di casa, numero di telefono, numero di telefono e numero di telefono nel modulo di origine. In base ai campi che includono queste parole chiave, il servizio di conversione applica il tipo, il pattern e aem:afProperties ai campi del modulo adattivo dopo la conversione.
+In questo esempio, il servizio di conversione cerca le parole chiave relative a telefono, telefono, cellulare, telefono di lavoro, telefono di casa, numero di telefono, numero di telefono e numero di telefono nel modulo di origine. In base ai campi che includono queste parole chiave, il servizio di conversione applica il tipo, il modello e aem:afProperties ai campi del modulo adattivo dopo la conversione.
 
 ### Proprietà dello schema JSON per i campi del modulo adattivo generati {#jsonschemaproperties}
 
-Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i campi del modulo adattivo generati utilizzando il servizio di Automated forms conversion (AFCS):
+Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i campi del modulo adattivo generati utilizzando il servizio AFCS (Automated Forms Conversion Service):
 
 <table> 
  <tbody> 
@@ -149,7 +164,7 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
   </tr>
   <td><p>pattern</p></td> 
    <td> 
-    <p>La proprietà pattern limita il valore del campo modulo adattivo generato basato su un’espressione regolare. Ad esempio, il codice seguente nel metamodello limita il valore del campo del modulo adattivo generato a dieci cifre:<br>"pattern": "/\\d{10}/"<br>Analogamente, il codice seguente nel metamodello limita il valore di un campo a un formato di data specifico."pattern" <br>: "date{DD MMMM, YYYY}",</p> </td> 
+    <p>La proprietà pattern limita il valore del campo modulo adattivo generato basato su un’espressione regolare. Ad esempio, il codice seguente nel metamodello limita il valore del campo modulo adattivo generato a dieci cifre:<br>"pattern": "/\\d{10}/"<br>Analogamente, il codice seguente nel metamodello limita il valore di un campo a un formato di data specifico.<br> "pattern": "date{DD MMMM, YYYY}",</p> </td> 
   </tr>
   <td><p>formato</p></td> 
    <td> 
@@ -164,7 +179,7 @@ Il metamodello supporta le seguenti proprietà comuni dello schema JSON per i ca
 
 ### Ricerca basata su parole chiave per applicare proprietà ai campi del modulo adattivo generati {#keywordsearch}
 
-Il servizio di automated forms conversion (AFCS) esegue una ricerca per parola chiave nel modulo di origine durante la conversione. Dopo aver filtrato i campi che soddisfano i criteri di ricerca, il servizio di conversione applica le proprietà definite per tali campi nel metamodello ai campi del modulo adattivo generato.
+Il servizio AFCS (Automated Forms Conversion Service) esegue una ricerca per parola chiave nel modulo di origine durante la conversione. Dopo aver filtrato i campi che soddisfano i criteri di ricerca, il servizio di conversione applica le proprietà definite per tali campi nel metamodello ai campi del modulo adattivo generato.
 
 Viene fatto riferimento alle parole chiave utilizzando la proprietà **aem:affKeyword**.
 
@@ -177,11 +192,11 @@ Viene fatto riferimento alle parole chiave utilizzando la proprietà **aem:affKe
 }
 ```
 
-In questo esempio, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo **numero** utilizzando la proprietà **tipo**.
+In questo esempio, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo **numero** utilizzando la proprietà **tipo**.
 
 ### Proprietà aggiuntive per i campi modulo adattivo generati {#additionalproperties}
 
-Puoi utilizzare la proprietà **aem:afProperties** nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati tramite il servizio di Automated forms conversion (AFCS):
+Puoi utilizzare la proprietà **aem:afProperties** nel metamodello per definire le seguenti proprietà aggiuntive per i campi dei moduli adattivi generati tramite il servizio AFCS (Automated Forms Conversion Service):
 
 <table> 
  <tbody> 
@@ -217,7 +232,7 @@ Puoi utilizzare la proprietà **aem:afProperties** nel metamodello per definire 
 
 ## Creare un metamodello personalizzato nella propria lingua{#language-specific-meta-model}
 
-Puoi creare un metamodello specifico per la lingua. Questo metamodello consente di creare regole di mappatura nel linguaggio desiderato. Il servizio di automated forms conversion (AFCS) consente di creare metamodelli nelle seguenti lingue:
+Puoi creare un metamodello specifico per la lingua. Questo metamodello consente di creare regole di mappatura nel linguaggio desiderato. Il servizio AFCS (Automated Forms Conversion Service) consente di creare metamodelli nelle seguenti lingue:
 
 * Inglese (en)
 * Francese (fr)
@@ -226,7 +241,7 @@ Puoi creare un metamodello specifico per la lingua. Questo metamodello consente 
 * Italiano (it)
 * Portoghese (pt-br)
 
-Aggiungi il tag metatag *aem:Language* in alto a un metamodello per specificarne la lingua. Ad esempio:
+Aggiungi il tag metatag *aem:Language* in alto a un metamodello per specificarne la lingua. Ad esempio,
 
 ```JSON
 "metaTags": {
@@ -248,7 +263,7 @@ Se non viene specificata alcuna lingua, il servizio considera che il metamodello
    * shortDescription
    * validatePictureClauseMessage
 
-  Ad esempio, quando la lingua del metamodello è il francese (&quot;aem:Language&quot;: &quot;fr&quot;), accertati che tutte le descrizioni e i messaggi siano in lingua francese.
+  Ad esempio, quando la lingua del metamodello è il francese (&quot;aem:Language&quot;: &quot;fr&quot;), assicurati che tutte le descrizioni e i messaggi siano in lingua francese.
 
 * Assicurati che tutte le [proprietà dello schema JSON](#jsonschemaproperties) utilizzino solo valori supportati. Ad esempio, la proprietà type può estendersi solo su valori selezionati di String, Number, Integer e Boolean.
 
@@ -258,9 +273,9 @@ L’immagine seguente mostra alcuni esempi di metamodello in lingua inglese e de
 
 ## Modificare i campi del modulo adattivo utilizzando un metamodello personalizzato {#modify-adaptive-form-fields-using-custom-meta-model}
 
-Nell’organizzazione possono essere presenti modelli e convalide oltre a quelli elencati nel metamodello predefinito. Puoi estendere il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione. Il servizio di automated forms conversion (AFCS) applica il metamodello personalizzato ai campi del modulo durante la conversione. Puoi continuare ad aggiornare il metamodello man mano che vengono rilevati nuovi modelli, convalide ed entità specifiche della tua organizzazione.
+Nell’organizzazione possono essere presenti modelli e convalide oltre a quelli elencati nel metamodello predefinito. Puoi estendere il metamodello predefinito per aggiungere pattern, convalide ed entità specifiche per la tua organizzazione. Il servizio di conversione automatica dei moduli (AFCS) applica il metamodello personalizzato ai campi del modulo durante la conversione. Puoi continuare ad aggiornare il metamodello man mano che vengono rilevati nuovi modelli, convalide ed entità specifiche della tua organizzazione.
 
-Il servizio di automated forms conversion (AFCS) utilizza un metamodello predefinito salvato nella posizione seguente per mappare i campi del modulo di origine ai campi del modulo adattivo durante la conversione:
+Il servizio di conversione automatica dei moduli (AFCS) utilizza un metamodello predefinito salvato nella posizione seguente per mappare i campi del modulo di origine ai campi del modulo adattivo durante la conversione:
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
@@ -296,7 +311,7 @@ Alcuni esempi comuni di utilizzo di un metamodello personalizzato per modificare
 
 **Esempio:** dopo la conversione, modifica l&#39;etichetta del numero di conto bancario nel modulo in Numero di conto personalizzato nel modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza la proprietà **title** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione sostituisce il testo con la stringa **numero di conto cliente** indicata con la proprietà **jcr:title** nella sezione **aem:afProperties**.
+In questo metamodello personalizzato, il servizio di conversione utilizza la proprietà **title** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione sostituisce il testo con la stringa del **numero di conto cliente** indicata con la proprietà **jcr:title** nella sezione **aem:afProperties**.
 
 ```
 {
@@ -314,7 +329,7 @@ In questo metamodello personalizzato, il servizio di conversione utilizza la pro
 
 **Esempio**: modifica il campo **Numero conto bancario** di tipo testo nel modulo prima della conversione in un campo di tipo numero nel modulo adattivo dopo la conversione.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo numerico utilizzando la proprietà **type**.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **numero di conto bancario** nel modulo, il servizio di conversione converte il campo in un tipo numerico utilizzando la proprietà **type**.
 
 ```
 {
@@ -329,7 +344,7 @@ In questo metamodello personalizzato, il servizio di conversione utilizza il tes
 
 **Esempio**: aggiungi il testo della Guida al campo **Numero conto bancario** del modulo adattivo.
 
-In questo metamodello personalizzato, il servizio di conversione utilizza il testo contenuto in **aem:affKeyword** come parola chiave di ricerca. Dopo aver recuperato il testo del **conto bancario** nel modulo, il servizio di conversione aggiunge il testo della Guida al campo del modulo adattivo utilizzando la proprietà **description**.
+In questo metamodello personalizzato, il servizio di conversione utilizza come parola chiave di ricerca il testo contenuto in **aem:affKeyword**. Dopo aver recuperato il testo del **conto bancario** nel modulo, il servizio di conversione aggiunge il testo della Guida al campo del modulo adattivo utilizzando la proprietà **description**.
 
 ```
 {

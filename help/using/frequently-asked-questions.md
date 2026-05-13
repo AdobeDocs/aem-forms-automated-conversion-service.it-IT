@@ -8,10 +8,25 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1806'
-ht-degree: 3%
+source-wordcount: 1918
+ht-degree: 4%
 
 ---
 
@@ -23,7 +38,7 @@ ht-degree: 3%
 
 1. **È possibile installare il servizio on-premise?**
    <p>Adobe addestra regolarmente gli algoritmi AI e ML del servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service) con nuovi set di dati per migliorare l’accuratezza della conversione. Gli algoritmi aggiornati vengono distribuiti periodicamente al servizio di conversione in esecuzione su Adobe Cloud. Tutti i clienti del servizio usufruiscono degli algoritmi aggiornati. Pertanto, l’implementazione centrale ospitata sul cloud è ideale per consentire al servizio di conversione automatica dei moduli (AFCS, Automated Forms Conversion Service) di apprendere e apportare miglioramenti continui a tutti i clienti.</p> 
-    <p>Il servizio converte i moduli vuoti in moduli adattivi. Il servizio non supporta i moduli compilati e l’estrazione di dati dai moduli compilati. Inserire nell'elenco Consentiti Rimuovere i dati dai moduli compilati e rimuovere o le informazioni proprietarie dai moduli prima di inviarli al servizio per la conversione</p> <br>
+    <p>Il servizio converte i moduli vuoti in moduli adattivi. Il servizio non supporta i moduli compilati e l’estrazione di dati dai moduli compilati. Rimuovere i dati dai moduli compilati e rimuovere o le informazioni proprietarie dai moduli prima di inviarli al servizio per la conversione</p> <br>
 
 1. **Il servizio supporta tutti i formati di PDF forms? Quali sono tutte le lingue supportate?**
    <p>Il servizio può convertire PDF forms non interattivo, XDP e PDF forms basati su XFA e AcroForms in moduli adattivi. Il servizio non supporta moduli digitalizzati o compilati. Per altre limitazioni, consulta l'articolo <a href="known-issues.md">problemi noti</a>.<br /> </p> 
@@ -100,7 +115,7 @@ Il servizio supporta solo moduli vuoti o non compilati. Non caricare moduli comp
 1. **Quanto tempo viene risparmiato dal servizio rispetto al processo manuale di pianificazione, creazione di risorse (temi, modelli), creazione e pubblicazione di un modulo adattivo?**
    <p>La quantità di tempo dipende dalle dimensioni e dalla complessità dei moduli di input e dal numero di richieste. Il servizio intende ridurre in modo significativo il time-to-value convertendo PDF forms in moduli adattivi a un ritmo molto più rapido rispetto al processo manuale di conversione dei moduli. </p> <br />
 
-1. **Come procedere in caso di errore relativo alle librerie RSA? Il messaggio di errore è simile al seguente:** <br/>
+1. **Come procedere in caso di errore relativo alle librerie RSA? Il messaggio di errore è simile al messaggio indicato di seguito:** <br/>
    `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 L&#39;errore sopra riportato si verifica quando la delega di avvio non è configurata per le librerie RSA/BouncyCastle. Per risolvere il problema, effettua le seguenti operazioni:
    <p> </p>

@@ -8,9 +8,25 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: 1356
 ht-degree: 4%
 
 ---
@@ -69,11 +85,11 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
 
 | Pattern | Esempio |
 |--- |--- |
-| **Pattern** <br>Il servizio non converte PDF forms compilato in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizzare moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
-| **Pattern** <br>Il servizio potrebbe non riconoscere il testo e i campi in un formato denso. <br><br>**Risoluzione** <br> Aumentare la larghezza tra il testo e i campi di una forma densa prima di avviare la conversione. |  |
+| **Pattern** <br>Il servizio non converte PDF forms compilato in un modulo adattivo. <br><br>**Risoluzione** <br>Utilizza moduli adattivi vuoti. | ![Modulo compilato](assets/best-practice-filled-forms.png) |
+| **Pattern** <br>Il servizio potrebbe non riconoscere il testo e i campi in un formato denso. <br><br>**Risoluzione** <br> Aumenta la larghezza tra il testo e i campi di un modulo denso prima di avviare la conversione. |  |
 | **Pattern** <br>Il servizio non supporta i moduli digitalizzati. <br><br>**Risoluzione** <br>Non utilizzare moduli digitalizzati. | ![Modulo digitalizzato](assets/scanned-forms.png) |
-| **Pattern** <br>Il servizio non estrae immagini e testo all&#39;interno delle immagini. <br><br>**Risoluzione** <br> Aggiunta manuale di immagini o testo ai moduli convertiti. | ![Immagine con modulo testo](assets/best-practice-image-with-text.png) |
-| **Pattern** <br>Le tabelle con limiti e bordi punteggiati o non chiari non vengono convertite. <br><br>**Risoluzione** <br>Utilizzare tabelle con bordi e bordi espliciti e chiari. supportati. | ![Modulo tabella non chiaro](assets/best-practice-table-dotted-non-clear.png) |
+| **Pattern** <br>Il servizio non estrae immagini e testo all&#39;interno delle immagini. <br><br>**Risoluzione** <br> Aggiungere manualmente immagini o testo ai moduli convertiti. | ![Immagine con modulo testo](assets/best-practice-image-with-text.png) |
+| **Pattern** <br>Le tabelle con limiti e bordi punteggiati o non chiari non vengono convertite. <br><br>**Risoluzione** <br>Utilizzare tabelle con bordi e bordi espliciti. supportati. | ![Modulo tabella non chiaro](assets/best-practice-table-dotted-non-clear.png) |
 | **Pattern** <br> I moduli adattivi non supportano il testo verticale preconfigurato. Pertanto, il servizio non converte il testo verticale nel testo di Adaptive Forms corrispondente. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di moduli adattivi per aggiungere testo verticale, se necessario. | ![Modulo tabella non chiaro](assets/vertical-text.png) |
 
 
@@ -82,16 +98,16 @@ Il servizio inizierebbe a identificare e assegnare campi o pannelli corretti a q
 
 | Pattern | Risoluzione |
 |--- |--- |
-| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modificare le opzioni di scelta delle forme in caselle o cerchi oppure utilizzare l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta &#x200B;](assets/best-practice-choice-group-options.png) |
+| **Pattern** <br> Le opzioni del gruppo di scelte con forme diverse da riquadro o cerchio non vengono convertite nei corrispondenti componenti del modulo adattivo. <br><br>**Risoluzione** <br> Modifica le opzioni di scelta delle forme in forma di riquadro o cerchio oppure utilizza l&#39;editor di revisione e correzione per identificare le forme. | ![Campo scelta &#x200B;](assets/best-practice-choice-group-options.png) |
 
 ### Campi modulo {#form-fields}
 
 | Pattern | Risoluzione |
 |--- |--- |
-| Il servizio **Pattern** <br> non identifica i campi senza cancellare i bordi. <br><br>**Risoluzione** <br> Utilizzare l&#39;editor di revisione e correzione per identificare tali campi. | ![campi con limiti non chiari](assets/best-practice-fields-without-clear-borders.png) |
+| Il servizio **Pattern** <br> non identifica i campi senza cancellare i bordi. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi. | ![campi con limiti non chiari](assets/best-practice-fields-without-clear-borders.png) |
 | **Pattern** <br> Il servizio potrebbe non identificare alcuni campi modulo del gruppo di scelte con didascalie nella parte inferiore o destra di un modulo. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi | ![Campo di scelta](assets/best-practice-caption-bottom-right.png) |
-| **Pattern** <br> Il servizio unisce o assegna un tipo errato ad alcuni campi modulo che sono molto vicini tra loro o che non hanno bordi chiari. <br><br>**Risoluzione** <br> Utilizzare l&#39;editor di revisione e correzione per identificare tali campi. | ![Campo di scelta](assets/best-practice-placed-very-near.png) |
-| **Pattern** <br> Il servizio potrebbe non riconoscere i campi con didascalie lontane o una linea tratteggiata tra la didascalia e il campo di input. <br><br>**Risoluzione** <br> Utilizzare i campi dei moduli con limiti cancellati o utilizzare l&#39;editor di revisione e correzione per risolvere tali problemi. | ![Campi lontani o linea tratteggiata tra il campo della didascalia](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **Pattern** <br> Il servizio unisce o assegna un tipo errato ad alcuni campi modulo che sono molto vicini tra loro o che non hanno bordi chiari. <br><br>**Risoluzione** <br> Utilizza l&#39;editor di revisione e correzione per identificare tali campi. | ![Campo di scelta](assets/best-practice-placed-very-near.png) |
+| **Pattern** <br> Il servizio potrebbe non riconoscere i campi con didascalie lontane o una linea tratteggiata tra la didascalia e il campo di input. <br><br>**Risoluzione** <br> Utilizza i campi dei moduli con limiti chiari o utilizza l&#39;editor di revisione e correzione per risolvere tali problemi. | ![Campi lontani o linea tratteggiata tra il campo della didascalia](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### Elenchi {#lists}
 
