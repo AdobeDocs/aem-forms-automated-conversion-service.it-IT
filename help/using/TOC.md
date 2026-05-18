@@ -13,7 +13,7 @@ user-guide-description: Converti i moduli PDF in moduli HTML dinamici e pronti p
 breadcrumb-title: Guida alla conversione automatizzata dei moduli
 feature: Adaptive Forms
 role: User
-source-git-commit: 7761622ea90a4d5e144e14ff4014f271d78c2f06
+source-git-commit: 5ab30094bb9f1d4a343088fdd3a523925544fbc8
 workflow-type: tm+mt
 source-wordcount: 90
 ht-degree: 40%
