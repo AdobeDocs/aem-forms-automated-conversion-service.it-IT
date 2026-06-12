@@ -216,7 +216,7 @@ Puoi utilizzare la proprietà **aem:afProperties** nel metamodello per definire 
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>La proprietà jcr:title, con la proprietà schema JSON title, consente di modificare l’etichetta di un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, vedere <strong>Modificare l'etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a><br>Consulta <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Creazione di moduli adattivi utilizzando lo schema JSON</a> per informazioni su altre proprietà che puoi applicare ai campi del modulo adattivo utilizzando lo schema JSON.</p>
+    <p>La proprietà jcr:title, con la proprietà schema JSON title, consente di modificare l’etichetta di un campo di un modulo adattivo dopo la conversione.<br>Per ulteriori informazioni, vedere <strong>Modificare l'etichetta di un campo modulo</strong> in <a href="#custommetamodelexamples">Esempi di metamodello personalizzato.</a><br>Consulta <a href="https://helpx.adobe.com/it/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Creazione di moduli adattivi utilizzando lo schema JSON</a> per informazioni su altre proprietà che puoi applicare ai campi del modulo adattivo utilizzando lo schema JSON.</p>
     <p></p></td> 
   </tr>
   <td><p>sling:resourceType e guideNodeClass</p></td> 
