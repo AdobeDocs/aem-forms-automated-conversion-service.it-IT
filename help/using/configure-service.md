@@ -30,8 +30,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2663
-ht-degree: 5%
+source-wordcount: 2448
+ht-degree: 6%
 
 ---
 
@@ -209,7 +209,7 @@ Per configurare l’API del servizio di conversione automatica dei moduli su Ado
 
    ![Crea nuovo progetto API](/help/using/assets/create-new-api-project.png)
 
-1. Fai clic su **[!UICONTROL Add API]**. Viene visualizzata una schermata con l’elenco di tutte le API abilitate per l’account.
+1. Fare clic su **[!UICONTROL Add API]**. Viene visualizzata una schermata con l’elenco di tutte le API abilitate per l’account.
    ![Aggiungi API](/help/using/assets/add-api.png)
 
 1. Selezionare **[!UICONTROL Automated Forms Conversion service]** e fare clic su **[!UICONTROL Next]**. Viene visualizzata una schermata per configurare l’API.
