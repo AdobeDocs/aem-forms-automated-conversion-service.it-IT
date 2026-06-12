@@ -1,61 +1,61 @@
 ---
 source-git-commit: 1cef5bea746a63d0c8f8819f919c75f5d6aa96e9
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 96%
+source-wordcount: '537'
+ht-degree: 1%
 
 ---
-# Contributo alla documentazione del servizio di conversione automatica AEM Forms
+# Contribuire alla documentazione del servizio di conversione automatica di AEM Forms
 
-Grazie per aver scelto di contribuire alla documentazione del Servizio di conversione automatica AEM Forms! Accogliamo con favore i contributi offerti dalla nostra comunità di lettori e dai colleghi che collaborano con Adobe.
+Grazie per aver scelto di contribuire alla documentazione del Servizio di conversione automatica di AEM Forms. Accogliamo con favore i contributi offerti dalla nostra comunità di lettori e da altri dipendenti Adobe.
 
-Questo file descrive le modalità con cui è possibile apportare il proprio contributo e specifica le linee guida da seguire.
+Questo file descrive come contribuire e indica le linee guida da seguire per apportare i contributi.
 
-## Codice di condotta per open source Adobe
+## Codice di condotta di Adobe Open Source
 
-Questo progetto ha adottato il [Codice di condotta per open source Adobe](code-of-conduct.md). Contribuendo alla documentazione di AEM si accetta implicitamente di aderire a questo codice di condotta. Puoi segnalare eventuali condotte scorrette a [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of-conduct.md). Contribuendo alla documentazione di AEM accetti di aderire a questo codice di condotta. Segnala eventuali condotte scorrette a [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Linee guida per contribuire
 
-Pur accogliendo con favore qualsiasi contributo volto a migliorare la documentazione AEM, richiediamo che i partecipanti rispettino, ove possibile, determinati standard e linee guida. Per ulteriori informazioni, consulta le [Linee guida per contribuire alla documentazione di AEM](guidelines.md).
+Pur accogliendo con favore qualsiasi contributo volto a migliorare la documentazione di AEM, richiediamo che i partecipanti rispettino, ove possibile, determinati standard e linee guida. Per ulteriori informazioni, consulta le [Linee guida per contribuire alla documentazione di AEM](guidelines.md).
 
 ## Come contribuire
 
-La procedura per apportare il proprio contributo è molto semplice. È possibile contribuire in due modi:
+La procedura per inviare i contributi è molto semplice. Puoi contribuire in due modi:
 
 * [Segnalare un problema](#create-an-issue)
-* [Creare una richiesta pull](#create-a-pull-request)
+* [Creare una richiesta di pull](#create-a-pull-request)
 
 Il metodo scelto dipende dal grado di familiarità con le procedure di modifica della documentazione in GitHub.
 
 >[!NOTE]
 >
->I contributi inviati sono soggetti alle [condizioni d’uso di Adobe.](https://www.adobe.com/it/legal/terms.html)
+>I contributi inviati sono soggetti alle [condizioni per l&#39;utilizzo di Adobe.](https://www.adobe.com/it/legal/terms.html)
 
 ### Segnalare un problema {#create-an-issue}
 
-Desideri proporre un suggerimento o un’osservazione sulla documentazione corrente o segnalare un potenziale errore nella descrizione di una funzione? In questo caso puoi segnalare un problema. Questa modalità è appropriata anche se intendi proporre un tuo contributo ma non hai familiarità con le procedure per modificare la documentazione o creare una richiesta.
+Desideri proporre un suggerimento o un’osservazione sulla documentazione corrente oppure dubitare della descrizione di un elemento? Quindi crea un problema. I problemi sono eccellenti anche se hai qualcosa con cui contribuire, ma non ti senti a tuo agio a modificare la documentazione o a creare una richiesta.
 
-La segnalazione di un problema consente di descrivere facilmente la tua proposta per migliorare la documentazione, che verrà esaminata da un membro del team addetto alla documentazione dei AEM. A tale scopo, fai clic sul collegamento **Log an issue** (Registra un problema) in alto nel riquadro di navigazione a destra di qualsiasi pagina.
+La segnalazione di un problema consente di descrivere facilmente la tua proposta per migliorare la documentazione, che verrà esaminata da un membro del team addetto alla documentazione di AEM. A tale scopo, fai clic sul collegamento **Segnala un problema** in alto nel riquadro di navigazione a destra di qualsiasi pagina.
 
-### Creare una richiesta pull {#create-a-pull-request}
+### Creare una richiesta {#create-a-pull-request}
 
-Se noti un problema e sai con esattamente come correggerlo, puoi creare una richiesta. Le richieste consentono di apportare alla documentazione le modifiche desiderate che, prima di essere pubblicate, saranno esaminate da un membro del team addetto alla documentazione di AEM. A tale scopo, fai clic sul collegamento **Edit this page** (Modifica questa pagina) in alto nel riquadro di navigazione a destra di qualsiasi pagina.
+Se noti un problema e sai esattamente come correggerlo, puoi creare una richiesta. Le richieste pull ti consentono di apportare alla documentazione le modifiche desiderate, che verranno poi esaminate da un membro del team addetto alla documentazione di AEM. A tale scopo, fai clic sul collegamento **Modifica questa pagina** nella parte superiore del pannello di navigazione a destra di qualsiasi pagina.
 
-Tutte le richieste devono essere accompagnate da un [contratto di licenza per i collaboratori (CLA) firmato.](https://opensource.adobe.com/cla.html) In questo modo si concede ad Adobe il permesso di ridistribuire i contributi come parte del progetto. È sufficiente inviare un CLA di Adobe una sola volta; se lo hai già inviato in passato, non è necessario ripetere questa operazione.
+Tutte le richieste devono essere accompagnate da un [contratto di licenza del collaboratore o da un CLA firmato.](https://opensource.adobe.com/cla.html)  In questo modo si concede ad Adobe il permesso di ridistribuire i contributi come parte del progetto. È sufficiente inviare un CLA di Adobe una sola volta; se ne hai già inviato uno in precedenza, non è necessario ripetere questa operazione.
 
-### Breve video introduttivo
+### Video introduttivo
 
-Nel video seguente viene brevemente illustrato come segnalare un problema e creare una richiesta.
+Guarda il video seguente per una breve panoramica su come creare problemi e richieste di pull.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27069)
 
 ### Contributi da dipendenti Adobe
 
-I dipendenti di Adobe che desiderano fornire un contributo possono utilizzare l’organizzazione `AdobeDocs` nell’archivio git aziendale.
+Se sei un dipendente di Adobe e vuoi fornire un contributo, utilizza l&#39;organizzazione `AdobeDocs` nell&#39;archivio Git aziendale.
 
-Anche se saremo lieti di accogliere ed esaminare qualsiasi contributo presentato tramite l’archivio pubblico, le richieste da parte dei dipendenti Adobe sono più facili da elaborare e possono essere approvate più velocemente nell’archivio aziendale. Assicurati tuttavia che eventuali le informazioni proprietarie vengano affrontate solo nell’archivio aziendale.
+Naturalmente, siamo lieti di accogliere qualsiasi contributo e lo esamineremo se verrà inserito nell’archivio pubblico; tuttavia, le richieste pull dei dipendenti Adobe sono più facili da elaborare e possono essere approvate più rapidamente nell’archivio aziendale. Assicurati che eventuali informazioni proprietarie vengano discusse solo sull’archivio aziendale.
 
 ## Ulteriori informazioni
 
-Per ulteriori informazioni su come utilizzare la piattaforma di authoring GitHub, consulta la [Guida per i collaboratori alla documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
+Per ulteriori informazioni su come utilizzare la piattaforma di authoring GitHub, consulta la [Guida per i collaboratori alla documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
