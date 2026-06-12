@@ -8,9 +8,15 @@ topic-tags: forms
 feature: Adaptive Forms
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
 TQID: https://experienceleague.adobe.com/t3Ng0VnihUMkisnaGzTBaw2QIR93l-fSHApCaOvz0r0
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 1790
@@ -117,7 +123,7 @@ Se selezioni questa opzione, il servizio di conversione genera un modulo adattiv
    >[!NOTE]
    >
    >
-   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL  Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
+   > * È possibile utilizzare solo l&#39;opzione **[!UICONTROL &#x200B; Extract Fragment]** o **[!UICONTROL Use existing adaptive form fragments]** alla volta. Non è possibile utilizzare entrambe le opzioni contemporaneamente.
    > * È possibile utilizzare l&#39;opzione **[!UICONTROL Use existing adaptive form fragments]** solo con PDF forms non interattivo. Altri tipi di modulo non sono ancora supportati.
    > * Con il servizio di conversione automatica è possibile utilizzare solo frammenti non associati o frammenti associati a uno schema JSON. Non utilizzare frammenti XFA. Frammenti XFA non supportati.
    >
