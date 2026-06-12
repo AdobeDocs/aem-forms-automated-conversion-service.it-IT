@@ -6,8 +6,8 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 2%
 
 ---
 
@@ -269,7 +269,7 @@ Per installare e configurare l’esempio in tutte le istanze di authoring e pubb
 
 1. Scarica il seguente pacchetto **aem-fp-db-integration-sample-pkg-6.1.2.zip** nel file system.
 
-[Ottieni il file](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+   [Ottieni il file](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. Vai a Gestione pacchetti AEM all&#39;indirizzo *http://[host]:[porta]/crx/packmgr/*.
 1. Fai clic su **[!UICONTROL Upload Package]**.
