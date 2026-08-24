@@ -1,13 +1,17 @@
 ---
 cloud: Experience Cloud
+solution: Experience Manager, Experience Manager Forms
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+usetq: true
+type: Documentation
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.it-IT
+git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.en
 index: true
 feature-set: Experience Manager Forms
 recommendations: noDisplay
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+source-git-commit: d3ee235cef30cf36a529e2d5d4872bb25d9e3b5c
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: 151
 ht-degree: 1%
 
 ---
