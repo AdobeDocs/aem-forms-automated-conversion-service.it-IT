@@ -1,7 +1,9 @@
 ---
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Forms
-product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
 usetq: true
 type: Documentation
 mini-toc-levels: 2
